@@ -8,6 +8,8 @@
 import SwiftUI
 import ComposableArchitecture
 
+// MARK: - CounterView
+
 struct CounterView: View {
     let store: StoreOf<Counter>
     
@@ -34,6 +36,7 @@ struct CounterView: View {
     }
 }
 
+// MARK: - CounterDemoView
 
 struct CounterDemoView: View {
   @State var store = Store(initialState: Counter.State()) {

@@ -8,6 +8,8 @@
 import SwiftUI
 import ComposableArchitecture
 
+// MARK: - CounterStore
+
 struct Counter: Reducer {
     // так же могут быть вынесены в extension State и Action
     struct State: Equatable {

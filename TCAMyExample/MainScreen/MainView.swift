@@ -8,6 +8,8 @@
 import SwiftUI
 import ComposableArchitecture
 
+// MARK: - MainView
+
 struct MainView: View {
     var body: some View {
         NavigationStack {
@@ -20,6 +22,7 @@ struct MainView: View {
                         TwoCountersView()
                     }
                 }
+                .navigationTitle("Two counters")
             }
         }
     }
