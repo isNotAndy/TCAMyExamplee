@@ -16,7 +16,7 @@ struct CounterView: View {
     
     // MARK: -  View
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
+        WithViewStore(store, observe: { $0 }) { viewStore in
             HStack(spacing: 4) {
                 Button {
                     viewStore.send(.substruct)
@@ -49,8 +49,8 @@ public struct CounterDemoView: View {
     public var body: some View {
     Form {
       Section {
-        CounterView(store: self.store)
-          .frame(maxWidth: .infinity)
+        CounterView(store: store)
+          .frame(maxWidth: .greatestFiniteMagnitude)
       }
     }
     .buttonStyle(.borderless)

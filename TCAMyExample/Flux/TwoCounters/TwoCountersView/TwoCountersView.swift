@@ -21,11 +21,13 @@ public struct TwoCountersView: View {
         VStack(spacing: 4) {
             HStack(spacing: 4) {
                 Text("Counter 1")
-                CounterView(store: store.scope(state: \.firstCounter, action: { .firstCounter($0) }))
+                CounterView(store: store.scope(state: \.firstCounter, 
+                                               action: { .firstCounter($0) }))
             }
             HStack(spacing: 4) {
                 Text("Counter 2")
-                CounterView(store: store.scope(state: \.secondCounter, action: { .secondCounter($0) }))
+                CounterView(store: store.scope(state: \.secondCounter, 
+                                               action: { .secondCounter($0) }))
             }
         }
     }

@@ -27,11 +27,9 @@ public struct Counter: Reducer {
         switch action {
         case .substruct:
             state.counterValue -= 1
-            return .none
         case .add:
             state.counterValue += 1
-            return .none
         }
+        return .none
     }
-    
 }

@@ -26,10 +26,12 @@ public struct TwoCounters: Reducer {
     
     // MARK: -  View
     public var body: some Reducer<State, Action> {
-        Scope(state: \.firstCounter, action: /Action.firstCounter) {
+        Scope(state: \.firstCounter, 
+              action: /Action.firstCounter) {
             Counter()
         }
-        Scope(state: \.secondCounter, action: /Action.secondCounter) {
+        Scope(state: \.secondCounter, 
+              action: /Action.secondCounter) {
             Counter()
         }
     }
