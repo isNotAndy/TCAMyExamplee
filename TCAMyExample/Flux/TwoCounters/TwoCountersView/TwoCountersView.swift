@@ -10,12 +10,12 @@ import ComposableArchitecture
 
 // MARK: -  TwoCountersView
 
-struct TwoCountersView: View {
-    let store = Store(initialState: TwoCounters.State()) {
+public struct TwoCountersView: View {
+    public let store = Store(initialState: TwoCounters.State()) {
         TwoCounters()
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack {
                 Text("Counter 1")

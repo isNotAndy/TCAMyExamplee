@@ -38,12 +38,12 @@ struct CounterView: View {
 
 // MARK: - CounterDemoView
 
-struct CounterDemoView: View {
+public struct CounterDemoView: View {
   @State var store = Store(initialState: Counter.State()) {
     Counter()
   }
 
-  var body: some View {
+    public var body: some View {
     Form {
       Section {
         CounterView(store: self.store)

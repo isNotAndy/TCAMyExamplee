@@ -10,18 +10,18 @@ import ComposableArchitecture
 
 // MARK: - TwoCountersStore
 
-struct TwoCounters: Reducer {
-    struct State: Equatable {
+public struct TwoCounters: Reducer {
+    public struct State: Equatable {
         var firstCounter = Counter.State()
         var secondCounter = Counter.State()
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case firstCounter(Counter.Action)
         case secondCounter(Counter.Action)
     }
     
-    var body: some Reducer<State, Action> {
+    public var body: some Reducer<State, Action> {
         Scope(state: \.firstCounter, action: /Action.firstCounter) {
             Counter()
         }
