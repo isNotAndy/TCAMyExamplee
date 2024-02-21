@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -196,7 +196,6 @@
 			);
 			mainGroup = FB567F542B82312000FA3D3E;
 			packageReferences = (
-				FBEF40942B851F7D00FAE771 /* XCLocalSwiftPackageReference "../Desktop/swift-composable-architecture" */,
 			);
 			productRefGroup = FB567F5E2B82312000FA3D3E /* Products */;
 			projectDirPath = "";
@@ -437,13 +436,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		FBEF40942B851F7D00FAE771 /* XCLocalSwiftPackageReference "../Desktop/swift-composable-architecture" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../Desktop/swift-composable-architecture";
-		};
-/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		FB567F702B8231E700FA3D3E /* ComposableArchitecture */ = {
