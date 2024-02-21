@@ -11,16 +11,18 @@ import ComposableArchitecture
 // MARK: - CounterStore
 
 public struct Counter: Reducer {
-    // так же могут быть вынесены в extension State и Action
+    // MARK: -  State
     public struct State: Equatable {
         var counterValue = 0
     }
     
+    // MARK: -  Action
     public enum Action: Equatable {
         case add
         case substruct
     }
     
+    // MARK: -  Reducer
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .substruct:

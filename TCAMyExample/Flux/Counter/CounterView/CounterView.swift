@@ -11,10 +11,11 @@ import ComposableArchitecture
 // MARK: - CounterView
 
 struct CounterView: View {
+    // MARK: -  Store
     let store: StoreOf<Counter>
     
+    // MARK: -  View
     var body: some View {
-        // WithViewStore - обычная суи вьюха
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             HStack {
                 Button {
@@ -39,12 +40,12 @@ struct CounterView: View {
 // MARK: - CounterDemoView
 
 public struct CounterDemoView: View {
+    // MARK: -  Store
   @State var store = Store(initialState: Counter.State()) {
     Counter()
   }
 
     // MARK: -  View
-    
     public var body: some View {
     Form {
       Section {

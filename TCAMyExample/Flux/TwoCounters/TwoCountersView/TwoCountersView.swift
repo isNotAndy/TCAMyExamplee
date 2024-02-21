@@ -11,12 +11,12 @@ import ComposableArchitecture
 // MARK: -  TwoCountersView
 
 public struct TwoCountersView: View {
+    // MARK: -  Store
     public let store = Store(initialState: TwoCounters.State()) {
         TwoCounters()
     }
     
     // MARK: -  View
-    
     public var body: some View {
         VStack {
             HStack {
