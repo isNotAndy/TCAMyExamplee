@@ -12,10 +12,10 @@ import ComposableArchitecture
 
 public struct MainView: View {
     
-    // MARK: -  View
+    // MARK: - View
     
     public var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section {
                     NavigationLink("Easy Counter") {
@@ -30,6 +30,8 @@ public struct MainView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     MainView()

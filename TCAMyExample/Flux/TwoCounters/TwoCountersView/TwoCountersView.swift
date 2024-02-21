@@ -8,30 +8,35 @@
 import SwiftUI
 import ComposableArchitecture
 
-// MARK: -  TwoCountersView
+// MARK: - TwoCountersView
 
 public struct TwoCountersView: View {
-    // MARK: -  Store
+    
+    // MARK: - Store
+    
     public let store = Store(initialState: TwoCounters.State()) {
         TwoCounters()
     }
     
-    // MARK: -  View
+    // MARK: - View
+    
     public var body: some View {
         VStack(spacing: 4) {
             HStack(spacing: 4) {
                 Text("Counter 1")
-                CounterView(store: store.scope(state: \.firstCounter, 
+                CounterView(store: store.scope(state: \.firstCounter,
                                                action: { .firstCounter($0) }))
             }
             HStack(spacing: 4) {
                 Text("Counter 2")
-                CounterView(store: store.scope(state: \.secondCounter, 
+                CounterView(store: store.scope(state: \.secondCounter,
                                                action: { .secondCounter($0) }))
             }
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     TwoCountersView()

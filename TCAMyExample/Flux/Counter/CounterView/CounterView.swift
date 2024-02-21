@@ -10,12 +10,15 @@ import ComposableArchitecture
 
 // MARK: - CounterView
 
-struct CounterView: View {
-    // MARK: -  Store
-    let store: StoreOf<Counter>
+public struct CounterView: View {
     
-    // MARK: -  View
-    var body: some View {
+    // MARK: - Store
+    
+    public let store: StoreOf<Counter>
+    
+    // MARK: - View
+    
+    public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             HStack(spacing: 4) {
                 Button {
@@ -40,23 +43,28 @@ struct CounterView: View {
 // MARK: - CounterDemoView
 
 public struct CounterDemoView: View {
-    // MARK: -  Store
-  @State var store = Store(initialState: Counter.State()) {
-    Counter()
-  }
-
-    // MARK: -  View
-    public var body: some View {
-    Form {
-      Section {
-        CounterView(store: store)
-          .frame(maxWidth: .greatestFiniteMagnitude)
-      }
+    
+    // MARK: - Store
+    
+    @State var store = Store(initialState: Counter.State()) {
+        Counter()
     }
-    .buttonStyle(.borderless)
-    .navigationTitle("Counter demo")
-  }
+    
+    // MARK: - View
+    
+    public var body: some View {
+        Form {
+            Section {
+                CounterView(store: store)
+                    .frame(maxWidth: .greatestFiniteMagnitude)
+            }
+        }
+        .buttonStyle(.borderless)
+        .navigationTitle("Counter demo")
+    }
 }
+
+// MARK: - Preview
 
 #Preview {
     CounterDemoView()

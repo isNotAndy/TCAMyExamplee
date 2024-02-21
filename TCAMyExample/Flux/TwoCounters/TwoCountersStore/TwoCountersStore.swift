@@ -12,19 +12,22 @@ import ComposableArchitecture
 
 public struct TwoCounters: Reducer {
     
-    // MARK: -  State
+    // MARK: - State
+    
     public struct State: Equatable {
         var firstCounter = Counter.State()
         var secondCounter = Counter.State()
     }
     
-    // MARK: -  Action
+    // MARK: - Action
+    
     public enum Action: Equatable {
         case firstCounter(Counter.Action)
         case secondCounter(Counter.Action)
     }
     
-    // MARK: -  View
+    // MARK: - View
+    
     public var body: some Reducer<State, Action> {
         Scope(state: \.firstCounter, 
               action: /Action.firstCounter) {
