@@ -11,6 +11,9 @@ import ComposableArchitecture
 // MARK: - MainView
 
 public struct MainView: View {
+    
+    // MARK: -  View
+    
     public var body: some View {
         NavigationStack {
             List {

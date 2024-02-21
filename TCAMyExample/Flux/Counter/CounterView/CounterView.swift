@@ -43,6 +43,8 @@ public struct CounterDemoView: View {
     Counter()
   }
 
+    // MARK: -  View
+    
     public var body: some View {
     Form {
       Section {

@@ -21,6 +21,8 @@ public struct TwoCounters: Reducer {
         case secondCounter(Counter.Action)
     }
     
+    // MARK: -  View
+    
     public var body: some Reducer<State, Action> {
         Scope(state: \.firstCounter, action: /Action.firstCounter) {
             Counter()

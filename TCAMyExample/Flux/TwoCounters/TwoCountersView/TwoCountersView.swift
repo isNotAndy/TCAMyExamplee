@@ -15,6 +15,8 @@ public struct TwoCountersView: View {
         TwoCounters()
     }
     
+    // MARK: -  View
+    
     public var body: some View {
         VStack {
             HStack {
