@@ -18,12 +18,12 @@ public struct TwoCountersView: View {
     
     // MARK: -  View
     public var body: some View {
-        VStack {
-            HStack {
+        VStack(spacing: 4) {
+            HStack(spacing: 4) {
                 Text("Counter 1")
                 CounterView(store: store.scope(state: \.firstCounter, action: { .firstCounter($0) }))
             }
-            HStack {
+            HStack(spacing: 4) {
                 Text("Counter 2")
                 CounterView(store: store.scope(state: \.secondCounter, action: { .secondCounter($0) }))
             }

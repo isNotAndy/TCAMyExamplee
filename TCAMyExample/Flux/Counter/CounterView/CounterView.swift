@@ -17,7 +17,7 @@ struct CounterView: View {
     // MARK: -  View
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            HStack {
+            HStack(spacing: 4) {
                 Button {
                     viewStore.send(.substruct)
                 } label: {
