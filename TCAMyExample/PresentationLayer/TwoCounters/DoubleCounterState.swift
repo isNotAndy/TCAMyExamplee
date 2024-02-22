@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 // MARK: - DoubleCounterState
 
-/// `DoubleCounterState` module state
+/// `DoubleCounter` module state
 ///
 /// Basically, `DoubleCounterState` is a type that describes the data
 /// `DoubleCounterState` feature needs to perform its logic and render its UI.
