@@ -83,4 +83,4 @@ fastlane/test_output
 /Podfile.lock
 /Podfile.lock
 .sentryclirc
-
+*.xcuserstate

@@ -28,7 +28,6 @@
 		FB4814E22B8739410068D161 /* CounterAction .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CounterAction .swift"; sourceTree = "<group>"; };
 		FB4814E42B873DF00068D161 /* DoubleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterState.swift; sourceTree = "<group>"; };
 		FB4814E62B873EE30068D161 /* DoubleCounterActon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterActon.swift; sourceTree = "<group>"; };
-		FB4814EF2B8754110068D161 /* .gitgnore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitgnore.md; sourceTree = "<group>"; };
 		FB567F5D2B82312000FA3D3E /* TCAMyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAMyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMyExampleApp.swift; sourceTree = "<group>"; };
 		FB567F642B82312100FA3D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		FB567F542B82312000FA3D3E = {
 			isa = PBXGroup;
 			children = (
-				FB4814EF2B8754110068D161 /* .gitgnore.md */,
 				FB567F5F2B82312000FA3D3E /* TCAMyExample */,
 				FB567F5E2B82312000FA3D3E /* Products */,
 			);
