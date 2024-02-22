@@ -12,7 +12,7 @@ import ComposableArchitecture
 
 public struct CounterReducer: Reducer {
     
-    // MARK: - Feature
+    // MARK: - Reducer
     
     public var body: some Reducer<CounterState, CounterAction> {
         Reduce { state, action in

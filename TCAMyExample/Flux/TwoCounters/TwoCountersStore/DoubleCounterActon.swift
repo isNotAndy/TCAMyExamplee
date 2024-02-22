@@ -21,7 +21,17 @@ public enum DoubleCounterAction: Equatable {
     
     // MARK: - Cases
     
+    /// Child action for `CounterAction` module.
+    ///
+    /// It's necessary as we use `pullback` operator in current module's reducer.
+    /// In short, the `counter1` case means that every action in `CounterAction` module
+    /// will be sent to current module through it
     case counter1(CounterAction)
     
+    /// Child action for `CounterAction` module.
+    ///
+    /// It's necessary as we use `pullback` operator in current module's reducer.
+    /// In short, the `counter2` case means that every action in `CounterAction` module
+    /// will be sent to current module through it
     case counter2(CounterAction)
 }

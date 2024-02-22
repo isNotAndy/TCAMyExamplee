@@ -12,7 +12,7 @@ import ComposableArchitecture
 
 public struct DoubleCounterReducer: Reducer {
     
-    // MARK: - Feature
+    // MARK: - Reducer
     
     public var body: some Reducer<DoubleCounterState, DoubleCounterAction> {
         Scope(state: \.counter1, action: /DoubleCounterAction.counter1) {
