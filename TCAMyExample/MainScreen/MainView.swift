@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import ComposableArchitecture
+import OldTCA
 
 // MARK: - MainView
 
@@ -19,10 +19,12 @@ public struct MainView: View {
             List {
                 Section {
                     NavigationLink("Easy Counter") {
-                        CounterDemoView()
+                        CounterView(store: .init(initialState: CounterState(), 
+                                                 reducer: CounterFeature()))
                     }
                     NavigationLink("Two Counters") {
-                        TwoCountersView()
+                        DoubleCounterView(store: .init(initialState: DoubleCounterState(), 
+                                                       reducer: DoubleCounterFeature()))
                     }
                 }
                 .navigationTitle("Two counters")

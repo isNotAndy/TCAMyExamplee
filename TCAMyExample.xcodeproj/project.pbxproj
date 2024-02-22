@@ -9,27 +9,33 @@
 /* Begin PBXBuildFile section */
 		FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0DC82E2B83D549000B2EC4 /* MainView.swift */; };
 		FB4814DF2B87368B0068D161 /* OldTCA in Frameworks */ = {isa = PBXBuildFile; productRef = FB4814DE2B87368B0068D161 /* OldTCA */; };
+		FB4814E12B8738320068D161 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E02B8738320068D161 /* CounterState.swift */; };
+		FB4814E32B8739410068D161 /* CounterAction .swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E22B8739410068D161 /* CounterAction .swift */; };
+		FB4814E52B873DF00068D161 /* DoubleCountersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E42B873DF00068D161 /* DoubleCountersState.swift */; };
+		FB4814E72B873EE30068D161 /* DoubleCountersActon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E62B873EE30068D161 /* DoubleCountersActon.swift */; };
 		FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */; };
 		FB567F652B82312100FA3D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F642B82312100FA3D3E /* Assets.xcassets */; };
 		FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F672B82312100FA3D3E /* Preview Assets.xcassets */; };
-		FB567F712B8231E700FA3D3E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FB567F702B8231E700FA3D3E /* ComposableArchitecture */; };
-		FB567F732B8232CB00FA3D3E /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F722B8232CB00FA3D3E /* CounterStore.swift */; };
+		FB567F732B8232CB00FA3D3E /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F722B8232CB00FA3D3E /* CounterFeature.swift */; };
 		FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F742B823C2500FA3D3E /* CounterView.swift */; };
-		FB88AE862B85263D0081FCCF /* TwoCountersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /* TwoCountersView.swift */; };
-		FBEF40962B851F7D00FAE771 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FBEF40952B851F7D00FAE771 /* ComposableArchitecture */; };
-		FBFDECAB2B851EB2004C5101 /* TwoCountersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /* TwoCountersStore.swift */; };
+		FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */; };
+		FBFDECAB2B851EB2004C5101 /*  DoubleCounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB0DC82E2B83D549000B2EC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FB4814E02B8738320068D161 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		FB4814E22B8739410068D161 /* CounterAction .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CounterAction .swift"; sourceTree = "<group>"; };
+		FB4814E42B873DF00068D161 /* DoubleCountersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCountersState.swift; sourceTree = "<group>"; };
+		FB4814E62B873EE30068D161 /* DoubleCountersActon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCountersActon.swift; sourceTree = "<group>"; };
 		FB567F5D2B82312000FA3D3E /* TCAMyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAMyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMyExampleApp.swift; sourceTree = "<group>"; };
 		FB567F642B82312100FA3D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB567F672B82312100FA3D3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB567F722B8232CB00FA3D3E /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
+		FB567F722B8232CB00FA3D3E /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		FB567F742B823C2500FA3D3E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		FB88AE852B85263D0081FCCF /* TwoCountersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCountersView.swift; sourceTree = "<group>"; };
-		FBFDECAA2B851EB2004C5101 /* TwoCountersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCountersStore.swift; sourceTree = "<group>"; };
+		FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterView.swift"; sourceTree = "<group>"; };
+		FBFDECAA2B851EB2004C5101 /*  DoubleCounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterFeature.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,23 +43,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBEF40962B851F7D00FAE771 /* ComposableArchitecture in Frameworks */,
 				FB4814DF2B87368B0068D161 /* OldTCA in Frameworks */,
-				FB567F712B8231E700FA3D3E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB0DC82C2B83D4C4000B2EC4 /* CounterView */ = {
-			isa = PBXGroup;
-			children = (
-				FB567F742B823C2500FA3D3E /* CounterView.swift */,
-			);
-			path = CounterView;
-			sourceTree = "<group>";
-		};
 		FB0DC82D2B83D535000B2EC4 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +106,10 @@
 		FBFDECA52B851D55004C5101 /* CounterStore */ = {
 			isa = PBXGroup;
 			children = (
-				FB567F722B8232CB00FA3D3E /* CounterStore.swift */,
+				FB4814E02B8738320068D161 /* CounterState.swift */,
+				FB4814E22B8739410068D161 /* CounterAction .swift */,
+				FB567F722B8232CB00FA3D3E /* CounterFeature.swift */,
+				FB567F742B823C2500FA3D3E /* CounterView.swift */,
 			);
 			path = CounterStore;
 			sourceTree = "<group>";
@@ -118,7 +117,6 @@
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				FB0DC82C2B83D4C4000B2EC4 /* CounterView */,
 				FBFDECA52B851D55004C5101 /* CounterStore */,
 			);
 			path = Counter;
@@ -128,23 +126,17 @@
 			isa = PBXGroup;
 			children = (
 				FBFDECA92B851E74004C5101 /* TwoCountersStore */,
-				FBFDECA82B851E63004C5101 /* TwoCountersView */,
 			);
 			path = TwoCounters;
-			sourceTree = "<group>";
-		};
-		FBFDECA82B851E63004C5101 /* TwoCountersView */ = {
-			isa = PBXGroup;
-			children = (
-				FB88AE852B85263D0081FCCF /* TwoCountersView.swift */,
-			);
-			path = TwoCountersView;
 			sourceTree = "<group>";
 		};
 		FBFDECA92B851E74004C5101 /* TwoCountersStore */ = {
 			isa = PBXGroup;
 			children = (
-				FBFDECAA2B851EB2004C5101 /* TwoCountersStore.swift */,
+				FB4814E42B873DF00068D161 /* DoubleCountersState.swift */,
+				FB4814E62B873EE30068D161 /* DoubleCountersActon.swift */,
+				FBFDECAA2B851EB2004C5101 /*  DoubleCounterFeature.swift */,
+				FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */,
 			);
 			path = TwoCountersStore;
 			sourceTree = "<group>";
@@ -166,8 +158,6 @@
 			);
 			name = TCAMyExample;
 			packageProductDependencies = (
-				FB567F702B8231E700FA3D3E /* ComposableArchitecture */,
-				FBEF40952B851F7D00FAE771 /* ComposableArchitecture */,
 				FB4814DE2B87368B0068D161 /* OldTCA */,
 			);
 			productName = TCAMyExample;
@@ -228,11 +218,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */,
-				FBFDECAB2B851EB2004C5101 /* TwoCountersStore.swift in Sources */,
-				FB567F732B8232CB00FA3D3E /* CounterStore.swift in Sources */,
+				FB4814E72B873EE30068D161 /* DoubleCountersActon.swift in Sources */,
+				FBFDECAB2B851EB2004C5101 /*  DoubleCounterFeature.swift in Sources */,
+				FB567F732B8232CB00FA3D3E /* CounterFeature.swift in Sources */,
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
-				FB88AE862B85263D0081FCCF /* TwoCountersView.swift in Sources */,
+				FB4814E32B8739410068D161 /* CounterAction .swift in Sources */,
+				FB4814E52B873DF00068D161 /* DoubleCountersState.swift in Sources */,
+				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
+				FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,14 +451,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FB4814DD2B87368B0068D161 /* XCRemoteSwiftPackageReference "old-tca" */;
 			productName = OldTCA;
-		};
-		FB567F702B8231E700FA3D3E /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ComposableArchitecture;
-		};
-		FBEF40952B851F7D00FAE771 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
