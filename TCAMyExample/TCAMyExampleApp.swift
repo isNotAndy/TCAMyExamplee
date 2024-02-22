@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import OldTCA
+import ComposableArchitecture
 
 @main
 struct TCAMyExampleApp: App {

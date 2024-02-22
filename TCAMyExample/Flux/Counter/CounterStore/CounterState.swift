@@ -6,14 +6,18 @@
 //
 
 import Foundation
-import OldTCA
+import ComposableArchitecture
 
 // MARK: - CounterState
 
+/// `CounterState` module state
+///
+/// Basically, `CounterState` is a type that describes the data
+/// `CounterState` feature needs to perform its logic and render its UI.
 public struct CounterState: Equatable {
     
     // MARK: - Properties
     
-    /// Counter State
+    /// Counter count value
     public var count = 0
 }

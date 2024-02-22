@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
-import OldTCA
+import ComposableArchitecture
 
 // MARK: - DoubleCounterView
 
+/// A visual representation of `DoubleCounterView` module.
+/// Here we define the view that displays the feature.
+/// It holds onto a `Store<DoubleCounterState, DoubleCounterAction>` so that it can observe
+/// all changes to the state and re-render, and we can send all user actions
+/// to the store so that state changes.
 public struct DoubleCounterView: View {
     
     // MARK: - Properties
     
-    /// The store powering the `DoubleCounter` feature
-    public let store: StoreOf<DoubleCounterFeature>
+    /// `DoubleCounterView` module `Store` instance
+    public let store: StoreOf<DoubleCounterReducer>
     
     // MARK: - View
     
@@ -51,5 +56,5 @@ public struct DoubleCounterView: View {
 
 #Preview {
     DoubleCounterView(store: .init(initialState: DoubleCounterState(), 
-                                   reducer: DoubleCounterFeature()))
+                                   reducer: DoubleCounterReducer()))
 }

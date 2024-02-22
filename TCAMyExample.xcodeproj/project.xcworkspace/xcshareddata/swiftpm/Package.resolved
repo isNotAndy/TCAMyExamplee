@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "old-tca",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Incetro/old-tca.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "6048ad21ca5987939dd151ac26379ff188b40135"
-      }
-    },
-    {
       "identity" : "swift-case-paths",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-case-paths",
@@ -97,6 +88,15 @@
       "state" : {
         "revision" : "d9e72f3083c08375794afa216fb2f89c0114f303",
         "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "tca",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/TCA.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "acbc77f315947bd5e6ec1e8072223e7dda985240"
       }
     },
     {

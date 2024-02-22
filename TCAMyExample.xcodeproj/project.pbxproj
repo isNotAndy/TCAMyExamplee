@@ -8,34 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0DC82E2B83D549000B2EC4 /* MainView.swift */; };
-		FB4814DF2B87368B0068D161 /* OldTCA in Frameworks */ = {isa = PBXBuildFile; productRef = FB4814DE2B87368B0068D161 /* OldTCA */; };
 		FB4814E12B8738320068D161 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E02B8738320068D161 /* CounterState.swift */; };
 		FB4814E32B8739410068D161 /* CounterAction .swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E22B8739410068D161 /* CounterAction .swift */; };
-		FB4814E52B873DF00068D161 /* DoubleCountersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E42B873DF00068D161 /* DoubleCountersState.swift */; };
-		FB4814E72B873EE30068D161 /* DoubleCountersActon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E62B873EE30068D161 /* DoubleCountersActon.swift */; };
+		FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E42B873DF00068D161 /* DoubleCounterState.swift */; };
+		FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E62B873EE30068D161 /* DoubleCounterActon.swift */; };
+		FB4814EA2B8747400068D161 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FB4814E92B8747400068D161 /* ComposableArchitecture */; };
 		FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */; };
 		FB567F652B82312100FA3D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F642B82312100FA3D3E /* Assets.xcassets */; };
 		FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F672B82312100FA3D3E /* Preview Assets.xcassets */; };
-		FB567F732B8232CB00FA3D3E /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F722B8232CB00FA3D3E /* CounterFeature.swift */; };
+		FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F722B8232CB00FA3D3E /* CounterReducer.swift */; };
 		FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F742B823C2500FA3D3E /* CounterView.swift */; };
 		FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */; };
-		FBFDECAB2B851EB2004C5101 /*  DoubleCounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterFeature.swift */; };
+		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB0DC82E2B83D549000B2EC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FB4814E02B8738320068D161 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		FB4814E22B8739410068D161 /* CounterAction .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CounterAction .swift"; sourceTree = "<group>"; };
-		FB4814E42B873DF00068D161 /* DoubleCountersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCountersState.swift; sourceTree = "<group>"; };
-		FB4814E62B873EE30068D161 /* DoubleCountersActon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCountersActon.swift; sourceTree = "<group>"; };
+		FB4814E42B873DF00068D161 /* DoubleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterState.swift; sourceTree = "<group>"; };
+		FB4814E62B873EE30068D161 /* DoubleCounterActon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterActon.swift; sourceTree = "<group>"; };
 		FB567F5D2B82312000FA3D3E /* TCAMyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAMyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMyExampleApp.swift; sourceTree = "<group>"; };
 		FB567F642B82312100FA3D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB567F672B82312100FA3D3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB567F722B8232CB00FA3D3E /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		FB567F722B8232CB00FA3D3E /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		FB567F742B823C2500FA3D3E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterView.swift"; sourceTree = "<group>"; };
-		FBFDECAA2B851EB2004C5101 /*  DoubleCounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterFeature.swift"; sourceTree = "<group>"; };
+		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4814DF2B87368B0068D161 /* OldTCA in Frameworks */,
+				FB4814EA2B8747400068D161 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +97,8 @@
 		FB567F6E2B82317400FA3D3E /* Flux */ = {
 			isa = PBXGroup;
 			children = (
-				FBFDECA72B851DA6004C5101 /* TwoCounters */,
 				FBFDECA62B851D8A004C5101 /* Counter */,
+				FBFDECA72B851DA6004C5101 /* TwoCounters */,
 			);
 			path = Flux;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 			children = (
 				FB4814E02B8738320068D161 /* CounterState.swift */,
 				FB4814E22B8739410068D161 /* CounterAction .swift */,
-				FB567F722B8232CB00FA3D3E /* CounterFeature.swift */,
+				FB567F722B8232CB00FA3D3E /* CounterReducer.swift */,
 				FB567F742B823C2500FA3D3E /* CounterView.swift */,
 			);
 			path = CounterStore;
@@ -133,9 +133,9 @@
 		FBFDECA92B851E74004C5101 /* TwoCountersStore */ = {
 			isa = PBXGroup;
 			children = (
-				FB4814E42B873DF00068D161 /* DoubleCountersState.swift */,
-				FB4814E62B873EE30068D161 /* DoubleCountersActon.swift */,
-				FBFDECAA2B851EB2004C5101 /*  DoubleCounterFeature.swift */,
+				FB4814E42B873DF00068D161 /* DoubleCounterState.swift */,
+				FB4814E62B873EE30068D161 /* DoubleCounterActon.swift */,
+				FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */,
 				FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */,
 			);
 			path = TwoCountersStore;
@@ -158,7 +158,7 @@
 			);
 			name = TCAMyExample;
 			packageProductDependencies = (
-				FB4814DE2B87368B0068D161 /* OldTCA */,
+				FB4814E92B8747400068D161 /* ComposableArchitecture */,
 			);
 			productName = TCAMyExample;
 			productReference = FB567F5D2B82312000FA3D3E /* TCAMyExample.app */;
@@ -189,7 +189,7 @@
 			);
 			mainGroup = FB567F542B82312000FA3D3E;
 			packageReferences = (
-				FB4814DD2B87368B0068D161 /* XCRemoteSwiftPackageReference "old-tca" */,
+				FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */,
 			);
 			productRefGroup = FB567F5E2B82312000FA3D3E /* Products */;
 			projectDirPath = "";
@@ -218,13 +218,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */,
-				FB4814E72B873EE30068D161 /* DoubleCountersActon.swift in Sources */,
-				FBFDECAB2B851EB2004C5101 /*  DoubleCounterFeature.swift in Sources */,
-				FB567F732B8232CB00FA3D3E /* CounterFeature.swift in Sources */,
+				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
+				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
+				FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */,
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
 				FB4814E32B8739410068D161 /* CounterAction .swift in Sources */,
-				FB4814E52B873DF00068D161 /* DoubleCountersState.swift in Sources */,
+				FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
 				FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */,
 			);
@@ -436,21 +436,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FB4814DD2B87368B0068D161 /* XCRemoteSwiftPackageReference "old-tca" */ = {
+		FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Incetro/old-tca.git";
+			repositoryURL = "https://github.com/Incetro/TCA.git";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FB4814DE2B87368B0068D161 /* OldTCA */ = {
+		FB4814E92B8747400068D161 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FB4814DD2B87368B0068D161 /* XCRemoteSwiftPackageReference "old-tca" */;
-			productName = OldTCA;
+			package = FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
