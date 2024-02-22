@@ -19,10 +19,20 @@ public struct MainView: View {
             List {
                 Section {
                     NavigationLink("Easy Counter") {
-                        CounterDemoView()
+                        CounterView(
+                            store: Store(
+                                initialState: CounterState(),
+                                reducer: CounterReducer()
+                            )
+                        )
                     }
                     NavigationLink("Two Counters") {
-                        TwoCountersView()
+                        DoubleCounterView(
+                            store: Store(
+                                initialState: DoubleCounterState(),
+                                reducer: DoubleCounterReducer()
+                            )
+                        )
                     }
                 }
                 .navigationTitle("Two counters")
