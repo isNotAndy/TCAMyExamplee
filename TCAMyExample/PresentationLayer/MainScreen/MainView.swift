@@ -40,6 +40,12 @@ public struct MainView: View {
                             )
                         )
                     }
+                    NavigationLink("Simple Effect") {
+                        SimpleOptionalView(store: Store(initialState: SimpleOptionalState(),
+                                                      reducer: SimpleOptionalReducer()
+                            )
+                        )
+                    }
                 }
                 .navigationTitle("Two counters")
             }

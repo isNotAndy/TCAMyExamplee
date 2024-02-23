@@ -69,30 +69,6 @@ public struct SimpleEffectView: View {
 
 // MARK: - Constants
 
-extension SimpleEffectView {
-
-    private enum Constants {
-
-        static let summary = """
-        This screen demonstrates how to use side effects with a feature built with the TCA.
-
-        A side effect is a work item that needs to be performed in the outside world. For example, \
-        an API request to an external service over HTTP
-
-        Many things  in our applications can be represented as side effects, such as timers, network requests, \
-        database requests, events observing, socket connections debouncing, throttling and delaying, etc.
-
-        This application has two simple side effects:
-
-        • Tapping "Generate fact" will trigger an API request to load a fact about the number
-        • Tapping "Random fact" will change current number value and do the same
-
-        Both effects are handled by the reducer, and a full test suite is written to confirm \
-        that the effects behave in the way we expect.
-
-        """
-    }
-}
 
 #Preview {
     SimpleEffectView(store: Store(initialState: SimpleEffectState(),

@@ -24,6 +24,10 @@
 		FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F672B82312100FA3D3E /* Preview Assets.xcassets */; };
 		FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F722B8232CB00FA3D3E /* CounterReducer.swift */; };
 		FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F742B823C2500FA3D3E /* CounterView.swift */; };
+		FB5A4CBF2B8892E7001F98AA /* SimpleOptionalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CBE2B8892E7001F98AA /* SimpleOptionalState.swift */; };
+		FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC02B8892F7001F98AA /* SimpleOptionalAction.swift */; };
+		FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC22B889309001F98AA /* SimpleOptionalReducer.swift */; };
+		FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC42B889324001F98AA /* SimpleOptionalView.swift */; };
 		FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +51,10 @@
 		FB567F672B82312100FA3D3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB567F722B8232CB00FA3D3E /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		FB567F742B823C2500FA3D3E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		FB5A4CBE2B8892E7001F98AA /* SimpleOptionalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalState.swift; sourceTree = "<group>"; };
+		FB5A4CC02B8892F7001F98AA /* SimpleOptionalAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalAction.swift; sourceTree = "<group>"; };
+		FB5A4CC22B889309001F98AA /* SimpleOptionalReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalReducer.swift; sourceTree = "<group>"; };
+		FB5A4CC42B889324001F98AA /* SimpleOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalView.swift; sourceTree = "<group>"; };
 		FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterView.swift"; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,11 +148,23 @@
 			isa = PBXGroup;
 			children = (
 				FB0DC82D2B83D535000B2EC4 /* MainScreen */,
+				FB5A4CBD2B889280001F98AA /* Simple Optional  */,
 				FB15E9E42B877B0F00F01DE2 /* SimpleEffect */,
 				FBFDECA62B851D8A004C5101 /* Counter */,
 				FBFDECA72B851DA6004C5101 /* TwoCounters */,
 			);
 			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		FB5A4CBD2B889280001F98AA /* Simple Optional  */ = {
+			isa = PBXGroup;
+			children = (
+				FB5A4CBE2B8892E7001F98AA /* SimpleOptionalState.swift */,
+				FB5A4CC02B8892F7001F98AA /* SimpleOptionalAction.swift */,
+				FB5A4CC22B889309001F98AA /* SimpleOptionalReducer.swift */,
+				FB5A4CC42B889324001F98AA /* SimpleOptionalView.swift */,
+			);
+			path = "Simple Optional ";
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
@@ -246,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */,
+				FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
 				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
@@ -254,12 +275,15 @@
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
+				FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */,
 				FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */,
 				FB00561E2B87892B00BE7E12 /* NumberFactService.swift in Sources */,
+				FB5A4CBF2B8892E7001F98AA /* SimpleOptionalState.swift in Sources */,
 				FB00561C2B87891C00BE7E12 /* NumberFactServiceImplementation.swift in Sources */,
 				FB4814E32B8739410068D161 /* CounterAction .swift in Sources */,
 				FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
+				FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */,
 				FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
