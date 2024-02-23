@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB00561C2B87891C00BE7E12 /* NumberFactServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */; };
+		FB00561E2B87892B00BE7E12 /* NumberFactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00561D2B87892B00BE7E12 /* NumberFactService.swift */; };
 		FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0DC82E2B83D549000B2EC4 /* MainView.swift */; };
+		FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9E52B87808F00F01DE2 /* SimpleEffectState.swift */; };
+		FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */; };
+		FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */; };
+		FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */; };
 		FB4814E12B8738320068D161 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E02B8738320068D161 /* CounterState.swift */; };
 		FB4814E32B8739410068D161 /* CounterAction .swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E22B8739410068D161 /* CounterAction .swift */; };
 		FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E42B873DF00068D161 /* DoubleCounterState.swift */; };
@@ -23,7 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactServiceImplementation.swift; sourceTree = "<group>"; };
+		FB00561D2B87892B00BE7E12 /* NumberFactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactService.swift; sourceTree = "<group>"; };
+		FB00561F2B879DF400BE7E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB0DC82E2B83D549000B2EC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FB15E9E52B87808F00F01DE2 /* SimpleEffectState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectState.swift; sourceTree = "<group>"; };
+		FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectAction.swift; sourceTree = "<group>"; };
+		FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectReducer.swift; sourceTree = "<group>"; };
+		FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectView.swift; sourceTree = "<group>"; };
 		FB4814E02B8738320068D161 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		FB4814E22B8739410068D161 /* CounterAction .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CounterAction .swift"; sourceTree = "<group>"; };
 		FB4814E42B873DF00068D161 /* DoubleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterState.swift; sourceTree = "<group>"; };
@@ -50,12 +63,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB0056182B8788C900BE7E12 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FB0056192B8788FE00BE7E12 /* NumberFactService */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		FB0056192B8788FE00BE7E12 /* NumberFactService */ = {
+			isa = PBXGroup;
+			children = (
+				FB00561D2B87892B00BE7E12 /* NumberFactService.swift */,
+				FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */,
+			);
+			path = NumberFactService;
+			sourceTree = "<group>";
+		};
 		FB0DC82D2B83D535000B2EC4 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
 				FB0DC82E2B83D549000B2EC4 /* MainView.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		FB15E9E42B877B0F00F01DE2 /* SimpleEffect */ = {
+			isa = PBXGroup;
+			children = (
+				FB15E9E52B87808F00F01DE2 /* SimpleEffectState.swift */,
+				FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */,
+				FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */,
+				FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */,
+			);
+			path = SimpleEffect;
 			sourceTree = "<group>";
 		};
 		FB567F542B82312000FA3D3E = {
@@ -77,8 +118,9 @@
 		FB567F5F2B82312000FA3D3E /* TCAMyExample */ = {
 			isa = PBXGroup;
 			children = (
-				FB0DC82D2B83D535000B2EC4 /* MainScreen */,
-				FB567F6E2B82317400FA3D3E /* Flux */,
+				FB00561F2B879DF400BE7E12 /* Info.plist */,
+				FB567F6E2B82317400FA3D3E /* PresentationLayer */,
+				FB0056182B8788C900BE7E12 /* BusinessLayer */,
 				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
 				FB567F642B82312100FA3D3E /* Assets.xcassets */,
 				FB567F662B82312100FA3D3E /* Preview Content */,
@@ -94,16 +136,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FB567F6E2B82317400FA3D3E /* Flux */ = {
+		FB567F6E2B82317400FA3D3E /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FB0DC82D2B83D535000B2EC4 /* MainScreen */,
+				FB15E9E42B877B0F00F01DE2 /* SimpleEffect */,
 				FBFDECA62B851D8A004C5101 /* Counter */,
 				FBFDECA72B851DA6004C5101 /* TwoCounters */,
 			);
-			path = Flux;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		FBFDECA52B851D55004C5101 /* CounterStore */ = {
+		FBFDECA62B851D8A004C5101 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
 				FB4814E02B8738320068D161 /* CounterState.swift */,
@@ -111,26 +155,10 @@
 				FB567F722B8232CB00FA3D3E /* CounterReducer.swift */,
 				FB567F742B823C2500FA3D3E /* CounterView.swift */,
 			);
-			path = CounterStore;
-			sourceTree = "<group>";
-		};
-		FBFDECA62B851D8A004C5101 /* Counter */ = {
-			isa = PBXGroup;
-			children = (
-				FBFDECA52B851D55004C5101 /* CounterStore */,
-			);
 			path = Counter;
 			sourceTree = "<group>";
 		};
 		FBFDECA72B851DA6004C5101 /* TwoCounters */ = {
-			isa = PBXGroup;
-			children = (
-				FBFDECA92B851E74004C5101 /* TwoCountersStore */,
-			);
-			path = TwoCounters;
-			sourceTree = "<group>";
-		};
-		FBFDECA92B851E74004C5101 /* TwoCountersStore */ = {
 			isa = PBXGroup;
 			children = (
 				FB4814E42B873DF00068D161 /* DoubleCounterState.swift */,
@@ -138,7 +166,7 @@
 				FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */,
 				FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */,
 			);
-			path = TwoCountersStore;
+			path = TwoCounters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +248,15 @@
 				FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
+				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
+				FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */,
 				FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */,
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
+				FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
+				FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */,
+				FB00561E2B87892B00BE7E12 /* NumberFactService.swift in Sources */,
+				FB00561C2B87891C00BE7E12 /* NumberFactServiceImplementation.swift in Sources */,
 				FB4814E32B8739410068D161 /* CounterAction .swift in Sources */,
 				FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
@@ -360,9 +394,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TCAMyExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAMyExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -390,9 +425,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TCAMyExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAMyExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
