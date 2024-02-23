@@ -31,6 +31,7 @@
 /* Begin PBXFileReference section */
 		FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactServiceImplementation.swift; sourceTree = "<group>"; };
 		FB00561D2B87892B00BE7E12 /* NumberFactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactService.swift; sourceTree = "<group>"; };
+		FB00561F2B879DF400BE7E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB0DC82E2B83D549000B2EC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FB15E9E52B87808F00F01DE2 /* SimpleEffectState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectState.swift; sourceTree = "<group>"; };
 		FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectAction.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		FB567F5F2B82312000FA3D3E /* TCAMyExample */ = {
 			isa = PBXGroup;
 			children = (
+				FB00561F2B879DF400BE7E12 /* Info.plist */,
 				FB567F6E2B82317400FA3D3E /* PresentationLayer */,
 				FB0056182B8788C900BE7E12 /* BusinessLayer */,
 				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
@@ -392,9 +394,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TCAMyExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAMyExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,9 +425,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TCAMyExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAMyExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

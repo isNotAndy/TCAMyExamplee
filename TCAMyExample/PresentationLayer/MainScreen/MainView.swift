@@ -34,6 +34,12 @@ public struct MainView: View {
                             )
                         )
                     }
+                    NavigationLink("Simple Effect") {
+                        SimpleEffectView(store: Store(initialState: SimpleEffectState(),
+                                                      reducer: SimpleEffectReducer()
+                            )
+                        )
+                    }
                 }
                 .navigationTitle("Two counters")
             }

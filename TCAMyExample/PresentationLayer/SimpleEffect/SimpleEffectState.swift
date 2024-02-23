@@ -19,7 +19,7 @@ public struct SimpleEffectState: Equatable {
     // MARK: - Properties
     
     /// True if a request is being in flight
-    public var ifFactRequestInFlight = false
+    public var isFactRequestInFlight = false
     
     /// Last obtained fact
     public var numberFact: String?

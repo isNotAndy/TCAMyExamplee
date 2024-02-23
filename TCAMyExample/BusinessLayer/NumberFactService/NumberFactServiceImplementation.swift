@@ -31,7 +31,7 @@ extension NumberFactServiceImplementation: NumberFactService {
 
     public func generateFact(number: Int) async throws -> String {
         let (data, _) = try await session.data(from: URL(string: "http://numbersapi.com/\(number)/trivia").unsafelyUnwrapped)
-        sleep(2)
+        sleep(3)
         return String(decoding: data, as: UTF8.self)
     }
 }

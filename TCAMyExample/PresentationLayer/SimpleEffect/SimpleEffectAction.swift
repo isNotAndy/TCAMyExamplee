@@ -29,9 +29,6 @@ public enum SimpleEffectAction: Equatable {
     /// Generates fact for the random number
     case randomFactButtonTapped
     
-    /// Responce of the `NumberFactService` generation method
-    case numberFactResponse(TaskResult<String>)
-    
     // MARK: - Children
     
     /// Child action for `Counter` module.
@@ -40,4 +37,9 @@ public enum SimpleEffectAction: Equatable {
     /// In short, the `counter` case means that every action in `Counter` module
     /// will be sent to current module through it
     case counter(CounterAction)
+    
+    // MARK: - Service
+    
+    /// Responce of the `NumberFactService` generation method
+    case numberFactResponse(TaskResult<String>)
 }
