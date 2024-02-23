@@ -30,6 +30,7 @@ public struct CounterView: View {
                 } label: {
                     Image(systemName: "minus")
                 }
+                .buttonStyle(PlainButtonStyle())
                 
                 Text("\(viewStore.count)")
                     .monospacedDigit()
@@ -39,6 +40,7 @@ public struct CounterView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
+                .buttonStyle(PlainButtonStyle())
             }
         }
     }

@@ -19,10 +19,11 @@ public struct SimpleEffectView: View {
     
     // MARK: - View
     
+    
     public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
-                HStack {
+                HStack(spacing: 4) {
                     CounterView(
                         store: store.scope(
                             state: \.counter,
@@ -32,21 +33,26 @@ public struct SimpleEffectView: View {
                     Button {
                         viewStore.send(.factButtonTapped)
                     } label: {
-                        HStack {
+                        HStack(spacing: 4) {
+                            Spacer(minLength: 0)
                             Text("Generate fact")
-                            Spacer()
                             Text("🔥")
                         }
                     }
-                    Button {
-                        viewStore.send(.randomFactButtonTapped)
-                    } label: {
-                        HStack {
-                            Text("Random fact")
-                            Spacer()
-                            Text("🎲")
-                        }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                Button {
+                    viewStore.send(.randomFactButtonTapped)
+                } label: {
+                    HStack(spacing: 4) {
+                        Spacer(minLength: 0)
+                        Text("Random fact")
+                        Text("🎲")
                     }
+                }
+                .buttonStyle(PlainButtonStyle())
+                HStack(spacing: 4) {
+                    Spacer(minLength: 0)
                     if viewStore.isFactRequestInFlight {
                         ProgressView()
                     }
@@ -54,6 +60,7 @@ public struct SimpleEffectView: View {
                         Text($0)
                     }
                 }
+                .buttonStyle(PlainButtonStyle())
             }
             .navigationBarTitle("Effect")
         }
@@ -85,4 +92,9 @@ extension SimpleEffectView {
 
         """
     }
+}
+
+#Preview {
+    SimpleEffectView(store: Store(initialState: SimpleEffectState(),
+                                  reducer: SimpleEffectReducer()))
 }
