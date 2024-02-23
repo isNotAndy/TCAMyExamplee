@@ -22,28 +22,25 @@ public struct SimpleOptionalView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
-                Section {
-                    IfLetStore(
-                        store.scope(
-                            state: \.counter,
-                            action: SimpleOptionalAction.counter
-                        ),
-                        then: { store in
-                            HStack {
-                                Text(viewStore.counterDescription)
-                                Spacer()
-                                CounterView(store: store)
-                                    .buttonStyle(BorderlessButtonStyle())
-                            }
-                        },
-                        else: { Text(viewStore.counterDescription) }
-                    )
-                    Button("Toggle") {
-                        viewStore.send(.toggleOptional)
-                    }
+                Button("Toggle") {
+                    viewStore.send(.toggleOptional)
                 }
+                
+                IfLetStore(
+                    store.scope(
+                        state: \.counter,
+                        action: SimpleOptionalAction.binding
+                    ),
+                    then: { store in
+                        Text(viewStore.counterDescription)
+                        SimpleBindingView(store: store)
+                    },
+                    else: { Text(viewStore.counterDescription) }
+                )
+                .padding(.bottom, 8)
+                .padding(.top, 8)
             }
-            .navigationTitle("Simple optional")
+            .animation(.bouncy(duration: 0.1))
         }
     }
 }
