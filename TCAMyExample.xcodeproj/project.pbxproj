@@ -28,6 +28,10 @@
 		FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC02B8892F7001F98AA /* SimpleOptionalAction.swift */; };
 		FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC22B889309001F98AA /* SimpleOptionalReducer.swift */; };
 		FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC42B889324001F98AA /* SimpleOptionalView.swift */; };
+		FB5A4CC82B88A7A8001F98AA /* SimpleBindingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC72B88A7A8001F98AA /* SimpleBindingState.swift */; };
+		FB5A4CCA2B88A7E0001F98AA /* SimpleBindingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC92B88A7E0001F98AA /* SimpleBindingAction.swift */; };
+		FB5A4CCC2B88A824001F98AA /* SimpleBindingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CCB2B88A824001F98AA /* SimpleBindingReducer.swift */; };
+		FB5A4CCE2B88A833001F98AA /* SimpleBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CCD2B88A833001F98AA /* SimpleBindingView.swift */; };
 		FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		FB5A4CC02B8892F7001F98AA /* SimpleOptionalAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalAction.swift; sourceTree = "<group>"; };
 		FB5A4CC22B889309001F98AA /* SimpleOptionalReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalReducer.swift; sourceTree = "<group>"; };
 		FB5A4CC42B889324001F98AA /* SimpleOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalView.swift; sourceTree = "<group>"; };
+		FB5A4CC72B88A7A8001F98AA /* SimpleBindingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingState.swift; sourceTree = "<group>"; };
+		FB5A4CC92B88A7E0001F98AA /* SimpleBindingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingAction.swift; sourceTree = "<group>"; };
+		FB5A4CCB2B88A824001F98AA /* SimpleBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingReducer.swift; sourceTree = "<group>"; };
+		FB5A4CCD2B88A833001F98AA /* SimpleBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingView.swift; sourceTree = "<group>"; };
 		FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterView.swift"; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FB0DC82D2B83D535000B2EC4 /* MainScreen */,
+				FB5A4CC62B88A76F001F98AA /* SimpleBindingScreen */,
 				FB5A4CBD2B889280001F98AA /* Simple Optional  */,
 				FB15E9E42B877B0F00F01DE2 /* SimpleEffect */,
 				FBFDECA62B851D8A004C5101 /* Counter */,
@@ -165,6 +174,17 @@
 				FB5A4CC42B889324001F98AA /* SimpleOptionalView.swift */,
 			);
 			path = "Simple Optional ";
+			sourceTree = "<group>";
+		};
+		FB5A4CC62B88A76F001F98AA /* SimpleBindingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FB5A4CC72B88A7A8001F98AA /* SimpleBindingState.swift */,
+				FB5A4CC92B88A7E0001F98AA /* SimpleBindingAction.swift */,
+				FB5A4CCB2B88A824001F98AA /* SimpleBindingReducer.swift */,
+				FB5A4CCD2B88A833001F98AA /* SimpleBindingView.swift */,
+			);
+			path = SimpleBindingScreen;
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
@@ -270,18 +290,22 @@
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
 				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
+				FB5A4CCA2B88A7E0001F98AA /* SimpleBindingAction.swift in Sources */,
 				FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */,
 				FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */,
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */,
+				FB5A4CCE2B88A833001F98AA /* SimpleBindingView.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
 				FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */,
+				FB5A4CCC2B88A824001F98AA /* SimpleBindingReducer.swift in Sources */,
 				FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */,
 				FB00561E2B87892B00BE7E12 /* NumberFactService.swift in Sources */,
 				FB5A4CBF2B8892E7001F98AA /* SimpleOptionalState.swift in Sources */,
 				FB00561C2B87891C00BE7E12 /* NumberFactServiceImplementation.swift in Sources */,
 				FB4814E32B8739410068D161 /* CounterAction .swift in Sources */,
 				FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */,
+				FB5A4CC82B88A7A8001F98AA /* SimpleBindingState.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
 				FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */,
 				FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */,
