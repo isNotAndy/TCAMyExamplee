@@ -40,22 +40,29 @@ public struct MainView: View {
                     NavigationLink("Simple Effect") {
                         SimpleEffectView(store: Store(initialState: SimpleEffectState(),
                                                       reducer: SimpleEffectReducer()
-                            )
+                                                     )
                         )
                     }
                     
                     NavigationLink("Simple Binding") {
                         SimpleBindingView(store: Store(initialState: SimpleBindingState(),
-                                                      reducer: SimpleBindingReducer()
-                            )
+                                                       reducer: SimpleBindingReducer()
+                                                      )
                         )
                         .navigationTitle("Simple Binding")
                     }
                     
                     NavigationLink("Simple Optional") {
                         SimpleOptionalView(store: Store(initialState: SimpleOptionalState(),
-                                                      reducer: SimpleOptionalReducer()
-                            )
+                                                        reducer: SimpleOptionalReducer()
+                                                       )
+                        )
+                        .navigationTitle("Simple optional")
+                    }
+                    NavigationLink("Alert And Sheet") {
+                        AlertAndSheetView(store: Store(initialState: AlertAndSheetState(),
+                                                       reducer: AlertAndSheetReducer()
+                                                      )
                         )
                         .navigationTitle("Simple optional")
                     }
