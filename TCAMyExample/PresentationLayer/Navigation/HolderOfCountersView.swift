@@ -27,7 +27,7 @@ public struct HolderOfCountersView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            VStack {
+            VStack(spacing: 16) {
                 Button("Open Counter") {
                     viewStore.send(.counterButtonTapped)
                 }
@@ -39,34 +39,25 @@ public struct HolderOfCountersView: View {
                 Text("Evrything click on dec counter: \(viewStore.totalNegativeClicks)")
             }
             .background(
-                NavigationLink(
-                    isActive: viewStore.$isDoubleCounterActive,
-                    destination: {
-                        IfLetStore(
-                            store.scope(
-                                state: \.doubleCounter,
-                                action: HolderOfCountersAction.doubleCounter
-                            ),
-                            then: DoubleCounterView.init
-                        )
-                    },
+                NavigationLinkStore(
+                    store.scope(
+                        state: \.$doubleCounter,
+                        action: HolderOfCountersAction.doubleCounter
+                    ),
+                    onTap: {},
+                    destination: DoubleCounterView.init,
                     label: {
                         EmptyView()
                     }
                 )
             )
             .background(
-                NavigationLink(
-                    isActive: viewStore.$isCounterActive,
-                    destination: {
-                        IfLetStore(
-                            store.scope(
-                                state: \.counter,
-                                action: HolderOfCountersAction.counter
-                            ),
-                            then: CounterView.init
-                        )
-                    },
+                NavigationLinkStore(
+                    store.scope(
+                        state: \.$counter, 
+                        action: HolderOfCountersAction.counter),
+                    onTap: {},
+                    destination: CounterView.init,
                     label: {
                         EmptyView()
                     }

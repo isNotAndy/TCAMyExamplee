@@ -14,40 +14,40 @@ public struct HolderOfCountersReducer: Reducer {
     // MARK: - Reducer
     
     public var body: some Reducer<HolderOfCountersState, HolderOfCountersAction> {
-        BindingReducer()
+//        BindingReducer()
         Reduce { state, action in
             switch action {
-            case .counter(.decrementButtonTapped),
-                 .doubleCounter(.counter1(.decrementButtonTapped)),
-                 .doubleCounter(.counter2(.decrementButtonTapped)):
+            case .counter(.presented(.decrementButtonTapped)),
+                 .doubleCounter(.presented(.counter1(.decrementButtonTapped))),
+                 .doubleCounter(.presented(.counter2(.decrementButtonTapped))):
                 state.totalNegativeClicks += 1
-            case .counter(.incrementButtonTapped),
-                 .doubleCounter(.counter1(.incrementButtonTapped)),
-                 .doubleCounter(.counter2(.incrementButtonTapped)):
+            case .counter(.presented(.incrementButtonTapped)),
+                 .doubleCounter(.presented(.counter1(.incrementButtonTapped))),
+                 .doubleCounter(.presented(.counter2(.incrementButtonTapped))):
                 state.totalPositiveClicks += 1
             case .counterButtonTapped:
                 state.counter = CounterState()
-                state.isCounterActive = true
-            case .binding(\.$isCounterActive):
-                if !state.isCounterActive {
-                    state.counter = nil
-                }
+//                state.isCounterActive = true
+//            case .binding(\.$isCounterActive):
+//                if !state.isCounterActive {
+//                    state.counter = nil
+//                }
             case .doubleCounterButtonTapped:
                 state.doubleCounter = DoubleCounterState()
-                state.isDoubleCounterActive = true
-            case .binding(\.$isDoubleCounterActive):
-                if !state.isDoubleCounterActive {
-                    state.doubleCounter = nil
-                }
+//                state.isDoubleCounterActive = true
+//            case .binding(\.$isDoubleCounterActive):
+//                if !state.isDoubleCounterActive {
+//                    state.doubleCounter = nil
+//                }
             default:
                 break
             }
             return .none
         }
-        .ifLet(\.counter, action: /HolderOfCountersAction.counter) {
+        .ifLet(\.$counter, action: /HolderOfCountersAction.counter) {
             CounterReducer()
         }
-        .ifLet(\.doubleCounter, action: /HolderOfCountersAction.doubleCounter) {
+        .ifLet(\.$doubleCounter, action: /HolderOfCountersAction.doubleCounter) {
             DoubleCounterReducer()
         }
     }

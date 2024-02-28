@@ -33,7 +33,7 @@ public struct HolderOfCountersState: Equatable {
     /// We use it here to be able to integrate `counter` feature into a current module logic.
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `counter` module all changes will be saved here.
-    public var counter: CounterState?
+    @PresentationState public var counter: CounterState?
     
     /// `DoubleCounterState` instance
     ///
@@ -41,11 +41,11 @@ public struct HolderOfCountersState: Equatable {
     /// We use it here to be able to integrate `doubleCounter` feature into a current module logic.
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `doubleCounter` module all changes will be saved here.
-    public var doubleCounter: DoubleCounterState?
+    @PresentationState public var doubleCounter: DoubleCounterState?
     
-    // MARK: - Navigation
-    
-    /// Indicates is user transport module active
-    @BindingState public var isCounterActive = false
-    @BindingState public var isDoubleCounterActive = false
+//    // MARK: - Navigation
+//    
+//    /// Indicates is user transport module active
+//    @BindingState public var isCounterActive = false
+//    @BindingState public var isDoubleCounterActive = false
 }

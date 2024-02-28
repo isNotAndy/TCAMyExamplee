@@ -9,7 +9,7 @@ import ComposableArchitecture
 
 // MARK: - HolderOfCountersAction
 
-public enum HolderOfCountersAction: Equatable, BindableAction {
+public enum HolderOfCountersAction: Equatable {
     
     // MARK: - Cases
     
@@ -26,14 +26,14 @@ public enum HolderOfCountersAction: Equatable, BindableAction {
     /// It's necessary as we use `Scope` reducer in current module's reducer.
     /// In short, the `counter` case means that every action in `counter` module
     /// will be sent to current module through it
-    case counter(CounterAction)
+    case counter(PresentationAction<CounterAction>)
     
     /// Child action for `DoubleCounter` module.
     ///
     /// It's necessary as we use `Scope` reducer in current module's reducer.
     /// In short, the `doubleCounter` case means that every action in `doubleCounter` module
     /// will be sent to current module through it
-    case doubleCounter(DoubleCounterAction)
+    case doubleCounter(PresentationAction<DoubleCounterAction>)
     
     // MARK: - Binding
     
@@ -46,5 +46,5 @@ public enum HolderOfCountersAction: Equatable, BindableAction {
     /// associated with mutating multiple fields in state.
     ///
     /// See the documentation for `BindableState` for more details.
-    case binding(BindingAction<HolderOfCountersState>)
+//    case binding(BindingAction<HolderOfCountersState>)
 }
