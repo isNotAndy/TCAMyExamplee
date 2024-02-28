@@ -14,6 +14,10 @@
 		FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */; };
 		FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */; };
 		FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */; };
+		FB3EEB672B8D1DC00092DDB2 /* AlertAndSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */; };
+		FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */; };
+		FB3EEB6B2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB6A2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift */; };
+		FB3EEB6D2B8D1E600092DDB2 /* AlertAndSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB6C2B8D1E600092DDB2 /* AlertAndSheetView.swift */; };
 		FB4814E12B8738320068D161 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E02B8738320068D161 /* CounterState.swift */; };
 		FB4814E32B8739410068D161 /* CounterAction .swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E22B8739410068D161 /* CounterAction .swift */; };
 		FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4814E42B873DF00068D161 /* DoubleCounterState.swift */; };
@@ -45,6 +49,10 @@
 		FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectAction.swift; sourceTree = "<group>"; };
 		FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectReducer.swift; sourceTree = "<group>"; };
 		FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectView.swift; sourceTree = "<group>"; };
+		FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetState.swift; sourceTree = "<group>"; };
+		FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetAction.swift; sourceTree = "<group>"; };
+		FB3EEB6A2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetReducer.swift; sourceTree = "<group>"; };
+		FB3EEB6C2B8D1E600092DDB2 /* AlertAndSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetView.swift; sourceTree = "<group>"; };
 		FB4814E02B8738320068D161 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		FB4814E22B8739410068D161 /* CounterAction .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CounterAction .swift"; sourceTree = "<group>"; };
 		FB4814E42B873DF00068D161 /* DoubleCounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterState.swift; sourceTree = "<group>"; };
@@ -115,6 +123,17 @@
 			path = SimpleEffect;
 			sourceTree = "<group>";
 		};
+		FB3EEB652B8D1D100092DDB2 /* AlertAndSheet */ = {
+			isa = PBXGroup;
+			children = (
+				FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */,
+				FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */,
+				FB3EEB6A2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift */,
+				FB3EEB6C2B8D1E600092DDB2 /* AlertAndSheetView.swift */,
+			);
+			path = AlertAndSheet;
+			sourceTree = "<group>";
+		};
 		FB567F542B82312000FA3D3E = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +174,7 @@
 		FB567F6E2B82317400FA3D3E /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FB3EEB652B8D1D100092DDB2 /* AlertAndSheet */,
 				FB0DC82D2B83D535000B2EC4 /* MainScreen */,
 				FB5A4CC62B88A76F001F98AA /* SimpleBindingScreen */,
 				FB5A4CBD2B889280001F98AA /* Simple Optional  */,
@@ -286,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */,
+				FB3EEB6D2B8D1E600092DDB2 /* AlertAndSheetView.swift in Sources */,
+				FB3EEB672B8D1DC00092DDB2 /* AlertAndSheetState.swift in Sources */,
 				FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
@@ -296,6 +318,7 @@
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */,
 				FB5A4CCE2B88A833001F98AA /* SimpleBindingView.swift in Sources */,
+				FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
 				FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */,
 				FB5A4CCC2B88A824001F98AA /* SimpleBindingReducer.swift in Sources */,
@@ -308,6 +331,7 @@
 				FB5A4CC82B88A7A8001F98AA /* SimpleBindingState.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
 				FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */,
+				FB3EEB6B2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift in Sources */,
 				FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
