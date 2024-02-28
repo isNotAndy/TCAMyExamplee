@@ -12,7 +12,9 @@ import ComposableArchitecture
 struct TCAMyExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            NavigationView {
+                HolderOfCountersView(store: Store(initialState: HolderOfCountersState(), reducer: HolderOfCountersReducer()))
+            }
         }
     }
 }
