@@ -27,3 +27,45 @@ extension String {
         funnyString(preferredLength: 8)
     }
 }
+
+// MARK: - String+Color
+
+extension String {
+    
+    /// get random element in `colors`
+    public static func randomColor() -> String {
+        
+        /// `hex` colors
+        let colors = [
+            "#033270",
+            "#1368AA",
+            "#4091C9",
+            "#9DCEE2",
+            "#FEDFD4",
+            "#F29479",
+            "#F26A4F",
+            "#EF3C2D",
+            "#CB1B16",
+            "#65010C"
+        ]
+        return colors.randomElement().unsafelyUnwrapped
+    }
+}
+
+// MARK: - String+Images
+
+extension String {
+    
+    /// get random element in `images`
+    public static func randomImage() -> String {
+        
+        /// array of `SF Symbol`
+        let images = [
+            "sun.max.fill",
+            "heart.fill",
+            "allergens",
+            "hourglass"
+        ]
+        return images.randomElement().unsafelyUnwrapped
+    }
+}

@@ -33,12 +33,14 @@ public struct InteractiveListReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                state.items = IdentifiedArray(uniqueElements: randomizeItems())
-            case .addRandomTappted:
-                state.items.insert(randomizeItem(index: state.items.count), at: 0)
+                state.items = IdentifiedArray(
+                    uniqueElements: [CellState].randomizeItems()
+                )
+            case .addRandomTapped:
+                state.items.insert(.randomizeItem(index: state.items.count), at: 0)
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
-            case .deleteItemTappted(let offset):
+            case .deleteItemTapped(let offset):
                 state.items.remove(atOffsets: offset)
             case .item(id: _, action: .checkBoxToggle):
                 return .send(.removeCheckedItems)
@@ -47,48 +49,16 @@ public struct InteractiveListReducer: Reducer {
                         for: 1,
                         scheduler: DispatchQueue.main.animation()
                     )
+            case .item(id: let itemID, action: .itemTapped):
+                guard let item = state.items[id: itemID] else {
+                    return .none
+                }
+                state.title = item.title
             }
             return . none
         }
         .forEach(\.items, action: /InteractiveListAction.item) {
             CellReducer()
         }
-    }
-}
-
-// MARK: - Private
-
-private let colors = [
-    "#033270",
-    "#1368AA",
-    "#4091C9",
-    "#9DCEE2",
-    "#FEDFD4",
-    "#F29479",
-    "#F26A4F",
-    "#EF3C2D",
-    "#CB1B16",
-    "#65010C"
-]
-
-private let images = [
-    "sun.max.fill",
-    "heart.fill",
-    "allergens",
-    "hourglass"
-]
-
-private func randomizeItem(index: Int) -> CellState {
-    CellState(
-        id: UUID(),
-        title: .generatedName,
-        image: images.randomElement().unsafelyUnwrapped,
-        color: colors.randomElement().unsafelyUnwrapped
-    )
-}
-
-private func randomizeItems() -> [CellState] {
-    (0..<Int.random(in: 10...13)).map { index in
-        randomizeItem(index: index)
     }
 }

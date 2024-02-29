@@ -18,6 +18,8 @@ public struct CellReducer: Reducer {
             switch action {
             case .checkBoxToggle:
                 state.isChecked.toggle()
+            default:
+                break
             }
             return .none
         }

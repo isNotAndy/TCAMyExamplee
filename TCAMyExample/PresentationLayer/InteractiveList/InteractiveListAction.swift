@@ -27,14 +27,14 @@ public enum InteractiveListAction: Equatable {
     case onAppear
     
     /// An action that triggers the addition of a random item to the list.
-    case addRandomTappted
+    case addRandomTapped
     
     /// An action that triggers the removal of all checked items from the list.
     case removeCheckedItems
     
     /// An action that triggers the deletion of one or more items from the list.
     ///  The `IndexSet` parameter specifies the indices of the items to be deleted.
-    case deleteItemTappted(IndexSet)
+    case deleteItemTapped(IndexSet)
     
     /// An action that triggers a specific action on a single item in the list.
     /// The `id` parameter specifies the unique identifier of the item,

@@ -24,4 +24,7 @@ public enum CellAction: Equatable {
     
     /// Toggle `isChecked` state value
     case checkBoxToggle
+    
+    /// An action that calls when some item tapped
+    case itemTapped
 }

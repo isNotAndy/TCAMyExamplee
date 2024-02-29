@@ -27,6 +27,11 @@ public struct InteractiveListView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
+                Text(viewStore.title)
+                    .opacity(0.5)
+                    .animation(.easeInOut(duration: 0.15), value: viewStore.title)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 Section {
                     ForEachStore(
                         store.scope(
@@ -35,17 +40,16 @@ public struct InteractiveListView: View {
                         ),
                         content: CellView.init
                     )
-                    .onDelete { viewStore.send(.deleteItemTappted($0)) }
+                    .onDelete { viewStore.send(.deleteItemTapped($0)) }
                 }.textCase(nil)
             }
             .navigationBarItems(trailing:
                 Button {
-                    viewStore.send(.addRandomTappted, animation: .default)
+                    viewStore.send(.addRandomTapped, animation: .default)
                 } label: {
                     Text("Add")
                 }
             )
-            .navigationTitle("Basic list")
             .onAppear {
                 viewStore.send(.onAppear)
             }
