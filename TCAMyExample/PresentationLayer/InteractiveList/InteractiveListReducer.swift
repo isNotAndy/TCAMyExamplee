@@ -49,6 +49,11 @@ public struct InteractiveListReducer: Reducer {
                         for: 1,
                         scheduler: DispatchQueue.main.animation()
                     )
+            case .item(id: let itemID, action: .itemTapped):
+                guard let item = state.items[id: itemID] else {
+                    return .none
+                }
+                state.title = item.title
             }
             return . none
         }

@@ -22,4 +22,7 @@ public struct InteractiveListState: Equatable {
     /// The `items` property is of type `IdentifiedArrayOf<CellState>`, where `CellState` is a type
     /// describing the state of individual cells in the interactive list.
     public var items: IdentifiedArrayOf<CellState> = []
+    
+    /// title of element in `items`
+    public var title: String
 }

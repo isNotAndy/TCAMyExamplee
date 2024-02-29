@@ -50,6 +50,9 @@ public struct CellView: View {
             }
             .foregroundColor(viewStore.isChecked ? .gray : nil)
             .frame(height: 40)
+            .onTapGesture {
+                viewStore.send(.itemTapped)
+            }
         }
     }
 }
