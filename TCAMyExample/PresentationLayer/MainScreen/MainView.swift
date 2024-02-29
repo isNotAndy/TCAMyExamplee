@@ -38,33 +38,61 @@ public struct MainView: View {
                     }
                     
                     NavigationLink("Simple Effect") {
-                        SimpleEffectView(store: Store(initialState: SimpleEffectState(),
-                                                      reducer: SimpleEffectReducer()
+                        SimpleEffectView(
+                            store: Store(
+                                initialState: SimpleEffectState(),
+                                reducer: SimpleEffectReducer()
                                                      )
                         )
                     }
                     
                     NavigationLink("Simple Binding") {
-                        SimpleBindingView(store: Store(initialState: SimpleBindingState(),
-                                                       reducer: SimpleBindingReducer()
+                        SimpleBindingView(
+                            store: Store(
+                                initialState: SimpleBindingState(),
+                                reducer: SimpleBindingReducer()
                                                       )
                         )
                         .navigationTitle("Simple Binding")
                     }
                     
                     NavigationLink("Simple Optional") {
-                        SimpleOptionalView(store: Store(initialState: SimpleOptionalState(),
-                                                        reducer: SimpleOptionalReducer()
+                        SimpleOptionalView(
+                            store: Store(
+                                initialState: SimpleOptionalState(),
+                                reducer: SimpleOptionalReducer()
                                                        )
                         )
                         .navigationTitle("Simple optional")
                     }
+                    
                     NavigationLink("Alert And Sheet") {
-                        AlertAndSheetView(store: Store(initialState: AlertAndSheetState(),
-                                                       reducer: AlertAndSheetReducer()
+                        AlertAndSheetView(
+                            store: Store(
+                                initialState: AlertAndSheetState(),
+                                reducer: AlertAndSheetReducer()
                                                       )
                         )
                         .navigationTitle("Simple optional")
+                    }
+                    
+                    NavigationLink("Holder of Counters") {
+                        HolderOfCountersView(
+                            store: Store(
+                                initialState: HolderOfCountersState(),
+                                reducer: HolderOfCountersReducer()
+                                                         )
+                        )
+                        .navigationTitle("Holder of Counters")
+                    }
+                    NavigationLink("Interactive List") {
+                        InteractiveListView(
+                            store: Store(
+                                initialState: InteractiveListState(),
+                                reducer: InteractiveListReducer()
+                                                         )
+                        )
+                        .navigationTitle("Interactive List")
                     }
                 }
             }

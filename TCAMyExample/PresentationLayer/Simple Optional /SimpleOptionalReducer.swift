@@ -5,7 +5,6 @@
 //  Created by Андрей Барсуков on 23.02.2024.
 //
 
-import Foundation
 import ComposableArchitecture
 
 // MARK: - SimpleOptionalReducer
@@ -13,7 +12,6 @@ import ComposableArchitecture
 public struct SimpleOptionalReducer: Reducer {
     
     // MARK: - Reducer
-    
     
     public var body: some Reducer<SimpleOptionalState, SimpleOptionalAction> {
         Reduce { state, action in

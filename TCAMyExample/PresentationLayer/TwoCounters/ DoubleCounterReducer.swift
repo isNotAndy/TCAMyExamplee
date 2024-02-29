@@ -5,7 +5,6 @@
 //  Created by Андрей Барсуков on 20.02.2024.
 //
 
-import SwiftUI
 import ComposableArchitecture
 
 // MARK: - DoubleCounterReducer
