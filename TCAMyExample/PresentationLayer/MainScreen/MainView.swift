@@ -85,6 +85,15 @@ public struct MainView: View {
                         )
                         .navigationTitle("Holder of Counters")
                     }
+                    NavigationLink("Interactive List") {
+                        InteractiveListView(
+                            store: Store(
+                                initialState: InteractiveListState(),
+                                reducer: InteractiveListReducer()
+                                                         )
+                        )
+                        .navigationTitle("Interactive List")
+                    }
                 }
             }
         }

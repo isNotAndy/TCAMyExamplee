@@ -5,7 +5,6 @@
 //  Created by Андрей Барсуков on 23.02.2024.
 //
 
-import Foundation
 import ComposableArchitecture
 
 // MARK: - SimpleOptionalReducer
