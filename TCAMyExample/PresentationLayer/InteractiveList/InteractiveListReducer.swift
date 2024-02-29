@@ -33,12 +33,14 @@ public struct InteractiveListReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                state.items = IdentifiedArray(uniqueElements: [CellState].randomizeItems())
-            case .addRandomTappted:
+                state.items = IdentifiedArray(
+                    uniqueElements: [CellState].randomizeItems()
+                )
+            case .addRandomTapped:
                 state.items.insert(.randomizeItem(index: state.items.count), at: 0)
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
-            case .deleteItemTappted(let offset):
+            case .deleteItemTapped(let offset):
                 state.items.remove(atOffsets: offset)
             case .item(id: _, action: .checkBoxToggle):
                 return .send(.removeCheckedItems)

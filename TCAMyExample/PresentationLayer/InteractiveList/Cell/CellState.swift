@@ -33,6 +33,8 @@ public struct CellState: Identifiable, Equatable {
     public var isChecked = false
 }
 
+// MARK: - Mock
+
 extension CellState {
     
     public static func randomizeItem(index: Int) -> Self {
@@ -44,6 +46,8 @@ extension CellState {
         )
     }
 }
+
+// MARK: - Array+Mock
 
 extension Array where Element == CellState {
     

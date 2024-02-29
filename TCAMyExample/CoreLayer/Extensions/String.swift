@@ -28,10 +28,14 @@ extension String {
     }
 }
 
+// MARK: - String+Color
+
 extension String {
+    
     /// get random element in `colors`
     public static func randomColor() -> String {
-        /// hex colors
+        
+        /// `hex` colors
         let colors = [
             "#033270",
             "#1368AA",
@@ -48,10 +52,14 @@ extension String {
     }
 }
 
+// MARK: - String+Images
 
 extension String {
+    
     /// get random element in `images`
     public static func randomImage() -> String {
+        
+        /// array of `SF Symbol`
         let images = [
             "sun.max.fill",
             "heart.fill",

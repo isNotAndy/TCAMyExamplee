@@ -35,12 +35,12 @@ public struct InteractiveListView: View {
                         ),
                         content: CellView.init
                     )
-                    .onDelete { viewStore.send(.deleteItemTappted($0)) }
+                    .onDelete { viewStore.send(.deleteItemTapped($0)) }
                 }.textCase(nil)
             }
             .navigationBarItems(trailing:
                 Button {
-                    viewStore.send(.addRandomTappted, animation: .default)
+                    viewStore.send(.addRandomTapped, animation: .default)
                 } label: {
                     Text("Add")
                 }
