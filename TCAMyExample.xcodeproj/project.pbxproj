@@ -50,7 +50,6 @@
 		FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */; };
 		FB9503602B906D26008A23E5 /* InteractiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035F2B906D26008A23E5 /* InteractiveListView.swift */; };
 		FB9503642B9075FC008A23E5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503632B9075FC008A23E5 /* String.swift */; };
-		FB9503662B9086FE008A23E5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503652B9086FE008A23E5 /* Color.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +98,6 @@
 		FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListReducer.swift; sourceTree = "<group>"; };
 		FB95035F2B906D26008A23E5 /* InteractiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListView.swift; sourceTree = "<group>"; };
 		FB9503632B9075FC008A23E5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		FB9503652B9086FE008A23E5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				FB9503632B9075FC008A23E5 /* String.swift */,
-				FB9503652B9086FE008A23E5 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,7 +391,6 @@
 				FB9503482B8F311B008A23E5 /* HolderOfCountersState.swift in Sources */,
 				FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */,
 				FB9503542B906CCA008A23E5 /* CellAction.swift in Sources */,
-				FB9503662B9086FE008A23E5 /* Color.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
 				FB9503582B906CE4008A23E5 /* CellView.swift in Sources */,

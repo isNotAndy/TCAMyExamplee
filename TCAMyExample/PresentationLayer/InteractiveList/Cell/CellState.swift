@@ -32,3 +32,24 @@ public struct CellState: Identifiable, Equatable {
     /// True if current item is checked
     public var isChecked = false
 }
+
+extension CellState {
+    
+    public static func randomizeItem(index: Int) -> Self {
+        CellState(
+            id: UUID(),
+            title: .generatedName,
+            image: .randomImage(),
+            color: .randomColor()
+        )
+    }
+}
+
+extension Array where Element == CellState {
+    
+    public static func randomizeItems() -> Self {
+        (0..<Int.random(in: 10...13)).map { index in
+            CellState.randomizeItem(index: index)
+        }
+    }
+}

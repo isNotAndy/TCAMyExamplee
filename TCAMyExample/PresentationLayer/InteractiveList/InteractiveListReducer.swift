@@ -33,9 +33,9 @@ public struct InteractiveListReducer: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                state.items = IdentifiedArray(uniqueElements: randomizeItems())
+                state.items = IdentifiedArray(uniqueElements: [CellState].randomizeItems())
             case .addRandomTappted:
-                state.items.insert(randomizeItem(index: state.items.count), at: 0)
+                state.items.insert(.randomizeItem(index: state.items.count), at: 0)
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
             case .deleteItemTappted(let offset):
@@ -53,42 +53,5 @@ public struct InteractiveListReducer: Reducer {
         .forEach(\.items, action: /InteractiveListAction.item) {
             CellReducer()
         }
-    }
-}
-
-// MARK: - Private
-
-private let colors = [
-    "#033270",
-    "#1368AA",
-    "#4091C9",
-    "#9DCEE2",
-    "#FEDFD4",
-    "#F29479",
-    "#F26A4F",
-    "#EF3C2D",
-    "#CB1B16",
-    "#65010C"
-]
-
-private let images = [
-    "sun.max.fill",
-    "heart.fill",
-    "allergens",
-    "hourglass"
-]
-
-private func randomizeItem(index: Int) -> CellState {
-    CellState(
-        id: UUID(),
-        title: .generatedName,
-        image: images.randomElement().unsafelyUnwrapped,
-        color: colors.randomElement().unsafelyUnwrapped
-    )
-}
-
-private func randomizeItems() -> [CellState] {
-    (0..<Int.random(in: 10...13)).map { index in
-        randomizeItem(index: index)
     }
 }
