@@ -41,5 +41,5 @@ public enum SimpleEffectAction: Equatable {
     // MARK: - Service
     
     /// Responce of the `NumberFactService` generation method
-    case numberFactResponse(TaskResult<String>)
+    case numberFactService(Result<NumberFactServiceAction, NSError>)
 }
