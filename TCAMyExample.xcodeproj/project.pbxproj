@@ -14,6 +14,7 @@
 		FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */; };
 		FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */; };
 		FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */; };
+		FB25D36D2B91C2BE0059D827 /* HTTPTransport in Frameworks */ = {isa = PBXBuildFile; productRef = FB25D36C2B91C2BE0059D827 /* HTTPTransport */; };
 		FB3EEB672B8D1DC00092DDB2 /* AlertAndSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */; };
 		FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */; };
 		FB3EEB6B2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB6A2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift */; };
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB25D36D2B91C2BE0059D827 /* HTTPTransport in Frameworks */,
 				FB4814EA2B8747400068D161 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +328,7 @@
 			name = TCAMyExample;
 			packageProductDependencies = (
 				FB4814E92B8747400068D161 /* ComposableArchitecture */,
+				FB25D36C2B91C2BE0059D827 /* HTTPTransport */,
 			);
 			productName = TCAMyExample;
 			productReference = FB567F5D2B82312000FA3D3E /* TCAMyExample.app */;
@@ -357,6 +360,7 @@
 			mainGroup = FB567F542B82312000FA3D3E;
 			packageReferences = (
 				FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */,
+				FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */,
 			);
 			productRefGroup = FB567F5E2B82312000FA3D3E /* Products */;
 			projectDirPath = "";
@@ -636,6 +640,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/http-transport.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Incetro/TCA.git";
@@ -647,6 +659,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FB25D36C2B91C2BE0059D827 /* HTTPTransport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */;
+			productName = HTTPTransport;
+		};
 		FB4814E92B8747400068D161 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */;
