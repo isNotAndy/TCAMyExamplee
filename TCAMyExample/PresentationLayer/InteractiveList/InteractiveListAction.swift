@@ -40,4 +40,7 @@ public enum InteractiveListAction: Equatable {
     /// The `id` parameter specifies the unique identifier of the item,
     /// and the `action` parameter represents the specific action to be performed on the item.
     case item(id: CellState.ID, action: CellAction)
+    
+    /// Responce of the `NumberFactService` generation method
+    case numberFactService(Result<NumberFactServiceAction, NSError>)
 }

@@ -7,6 +7,8 @@
 
 import Foundation
 import ComposableArchitecture
+import ServiceCore
+import HTTPTransport
 
 // MARK: - InteractiveListReducer
 
@@ -22,6 +24,9 @@ import ComposableArchitecture
 ///   must be on the main thread. You can use the `Publisher` method `receive(on:)` for make the
 ///   effect output its values on the thread of your choice.
 public struct InteractiveListReducer: Reducer {
+    
+    /// NumberFactService instance
+    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport())
     
     // MARK: - IDs
     
@@ -53,12 +58,23 @@ public struct InteractiveListReducer: Reducer {
                 guard let item = state.items[id: itemID] else {
                     return .none
                 }
-                state.title = item.title
+//                state.title = item.title
+                return numberFactService
+                    .generateFactt(number: item.number)
+                    .publish()
+                    .map(NumberFactServiceAction.factGenerated)
+                    .catchToEffect(InteractiveListAction.numberFactService)
+            case .numberFactService(.success(.factGenerated(let fact))):
+                state.title = fact
+
+            case .numberFactService(.failure):
+                state.title = "This fact doesn't exist"
             }
-            return . none
+            return .none
         }
         .forEach(\.items, action: /InteractiveListAction.item) {
             CellReducer()
         }
+            
     }
 }

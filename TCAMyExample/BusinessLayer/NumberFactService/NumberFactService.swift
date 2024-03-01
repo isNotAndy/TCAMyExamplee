@@ -19,4 +19,8 @@ public protocol NumberFactService {
     /// Obtain some number's fact
     /// - Returns: number fact string
     func generateFact(number: Int) -> ServiceCall<String>
+    
+    /// Obtain some number's fact
+    /// - Returns: number fact string
+    func generateFactt(number: String) -> ServiceCall<String>
 }

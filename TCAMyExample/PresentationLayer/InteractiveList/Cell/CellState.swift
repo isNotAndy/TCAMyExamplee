@@ -29,6 +29,9 @@ public struct CellState: Identifiable, Equatable {
     /// Hex name
     public let color: String
     
+    /// number value
+    public let number: String
+    
     /// True if current item is checked
     public var isChecked = false
 }
@@ -42,7 +45,8 @@ extension CellState {
             id: UUID(),
             title: .generatedName,
             image: .randomImage(),
-            color: .randomColor()
+            color: .randomColor(),
+            number: .randomNumber()
         )
     }
 }
@@ -52,7 +56,7 @@ extension CellState {
 extension Array where Element == CellState {
     
     public static func randomizeItems() -> Self {
-        (0..<Int.random(in: 10...13)).map { index in
+        (0..<Int.random(in: 10..<11)).map { index in
             CellState.randomizeItem(index: index)
         }
     }

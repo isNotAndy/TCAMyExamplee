@@ -25,4 +25,6 @@ public struct InteractiveListState: Equatable {
     
     /// title of element in `items`
     public var title: String
+    
+    public var number: String
 }

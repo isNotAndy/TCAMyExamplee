@@ -28,6 +28,23 @@ public final class NumberFactServiceImplementation: WebService {
 // MARK: - NumberFactService
 
 extension NumberFactServiceImplementation: NumberFactService {
+    public func generateFactt(number: String) -> ServiceCore.ServiceCall<String> {
+        createCall {
+            let request = HTTPRequest(
+                httpMethod: .get,
+                endpoint: "\(number)/trivia",
+                base: self.baseRequest
+            )
+            let result = self.transport.send(request: request)
+            switch result {
+            case .success(let response):
+                return .success(String(decoding: response.body.unsafelyUnwrapped, as: UTF8.self))
+            case .failure(let nsError):
+                return .failure(nsError)
+            }
+        }
+    }
+    
     
     public func generateFact(number: Int) -> ServiceCall<String> {
         createCall {
