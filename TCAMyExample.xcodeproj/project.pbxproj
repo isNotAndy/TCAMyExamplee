@@ -14,6 +14,8 @@
 		FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */; };
 		FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */; };
 		FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */; };
+		FB1A61052B91D153000930DF /* ServiceCore in Frameworks */ = {isa = PBXBuildFile; productRef = FB1A61042B91D153000930DF /* ServiceCore */; };
+		FB1A61082B91D844000930DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1A61072B91D844000930DF /* Constants.swift */; };
 		FB25D36D2B91C2BE0059D827 /* HTTPTransport in Frameworks */ = {isa = PBXBuildFile; productRef = FB25D36C2B91C2BE0059D827 /* HTTPTransport */; };
 		FB3EEB672B8D1DC00092DDB2 /* AlertAndSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */; };
 		FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */; };
@@ -63,6 +65,7 @@
 		FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectAction.swift; sourceTree = "<group>"; };
 		FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectReducer.swift; sourceTree = "<group>"; };
 		FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectView.swift; sourceTree = "<group>"; };
+		FB1A61072B91D844000930DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetState.swift; sourceTree = "<group>"; };
 		FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetAction.swift; sourceTree = "<group>"; };
 		FB3EEB6A2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetReducer.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB25D36D2B91C2BE0059D827 /* HTTPTransport in Frameworks */,
+				FB1A61052B91D153000930DF /* ServiceCore in Frameworks */,
 				FB4814EA2B8747400068D161 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +122,7 @@
 		FB0056182B8788C900BE7E12 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FB1A61062B91D825000930DF /* Common */,
 				FB0056192B8788FE00BE7E12 /* NumberFactService */,
 			);
 			path = BusinessLayer;
@@ -149,6 +154,22 @@
 				FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */,
 			);
 			path = SimpleEffect;
+			sourceTree = "<group>";
+		};
+		FB1A61062B91D825000930DF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FB1A61092B91D846000930DF /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB1A61092B91D846000930DF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FB1A61072B91D844000930DF /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		FB3EEB652B8D1D100092DDB2 /* AlertAndSheet */ = {
@@ -329,6 +350,7 @@
 			packageProductDependencies = (
 				FB4814E92B8747400068D161 /* ComposableArchitecture */,
 				FB25D36C2B91C2BE0059D827 /* HTTPTransport */,
+				FB1A61042B91D153000930DF /* ServiceCore */,
 			);
 			productName = TCAMyExample;
 			productReference = FB567F5D2B82312000FA3D3E /* TCAMyExample.app */;
@@ -361,6 +383,7 @@
 			packageReferences = (
 				FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */,
 				FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */,
+				FB1A61032B91D153000930DF /* XCRemoteSwiftPackageReference "service-core" */,
 			);
 			productRefGroup = FB567F5E2B82312000FA3D3E /* Products */;
 			projectDirPath = "";
@@ -399,6 +422,7 @@
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
 				FB9503582B906CE4008A23E5 /* CellView.swift in Sources */,
 				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
+				FB1A61082B91D844000930DF /* Constants.swift in Sources */,
 				FB95035C2B906D10008A23E5 /* InteractiveListAction.swift in Sources */,
 				FB95034E2B8F35B1008A23E5 /* HolderOfCountersView.swift in Sources */,
 				FB9503562B906CD6008A23E5 /* CellReducer.swift in Sources */,
@@ -640,6 +664,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FB1A61032B91D153000930DF /* XCRemoteSwiftPackageReference "service-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/service-core.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Incetro/http-transport.git";
@@ -659,6 +691,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FB1A61042B91D153000930DF /* ServiceCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB1A61032B91D153000930DF /* XCRemoteSwiftPackageReference "service-core" */;
+			productName = ServiceCore;
+		};
 		FB25D36C2B91C2BE0059D827 /* HTTPTransport */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */;

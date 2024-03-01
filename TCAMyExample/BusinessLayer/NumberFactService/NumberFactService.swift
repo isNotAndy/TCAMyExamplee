@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import ServiceCore
 
+public enum NumberFactServiceAction: Equatable {
+    
+    case factGenerated(String)
+}
 // MARK: - NumberFactService
 
 public protocol NumberFactService {
     
     /// Obtain some number's fact
     /// - Returns: number fact string
-    func generateFact(number: Int) async throws -> String
+    func generateFact(number: Int) -> ServiceCall<String>
 }

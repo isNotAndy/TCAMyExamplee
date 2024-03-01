@@ -6,32 +6,43 @@
 //
 
 import Foundation
+import HTTPTransport
+import Alamofire
+import ServiceCore
 
 // MARK: - NumberFactServiceImplementation
 
-public final class NumberFactServiceImplementation {
+public final class NumberFactServiceImplementation: WebService {
 
     // MARK: - Properties
-
-    /// URLSession instance
-    private let session: URLSession
 
     // MARK: - Initializers
 
     /// Default initializer
     /// - Parameter session: URLSession instance
-    public init(session: URLSession = .shared) {
-        self.session = session
+    public init(transport: HTTPTransport) {
+        super.init(baseURL: Constants.Network.apiURL, transport: transport)
     }
 }
 
 // MARK: - NumberFactService
 
 extension NumberFactServiceImplementation: NumberFactService {
-
-    public func generateFact(number: Int) async throws -> String {
-        let (data, _) = try await session.data(from: URL(string: "http://numbersapi.com/\(number)/trivia").unsafelyUnwrapped)
-        sleep(3)
-        return String(decoding: data, as: UTF8.self)
+    
+    public func generateFact(number: Int) -> ServiceCall<String> {
+        createCall {
+            let request = HTTPRequest(
+                httpMethod: .get,
+                endpoint: "\(number)/trivia",
+                base: self.baseRequest
+            )
+            let result = self.transport.send(request: request)
+            switch result {
+            case .success(let response):
+                return .success(String(decoding: response.body.unsafelyUnwrapped, as: UTF8.self))
+            case .failure(let nsError):
+                return .failure(nsError)
+            }
+        }
     }
 }
