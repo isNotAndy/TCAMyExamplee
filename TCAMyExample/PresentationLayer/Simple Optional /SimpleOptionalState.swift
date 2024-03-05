@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ComposableArchitecture
+
 // MARK: - SimpleOptionalState
 
 /// `SimpleOptional` module state

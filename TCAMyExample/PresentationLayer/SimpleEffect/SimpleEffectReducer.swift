@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import HTTPTransport
 
 // MARK: - SimpleEffectFeature
 
@@ -15,7 +16,7 @@ public struct SimpleEffectReducer: Reducer {
     // MARK: - Properties
     
     /// NumberFactService instance
-    public let numberFactService = NumberFactServiceImplementation()
+    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport())
     
     // MARK: - Reducer
     
@@ -28,20 +29,20 @@ public struct SimpleEffectReducer: Reducer {
             case .factButtonTapped:
                 state.numberFact = nil 
                 state.isFactRequestInFlight = true
-                return .run { [count = state.counter.count] send in
-                    await send(.numberFactResponse(
-                        TaskResult {
-                            try await numberFactService.generateFact(number: count)
-                        }
-                    ))
-                }
+                let count = state.counter.count
+                return numberFactService
+                        .generateFact(number: count)
+                        .publish()
+                        .map(NumberFactServiceAction.factGenerated)
+                        .catchToEffect(SimpleEffectAction.numberFactService)
             case .randomFactButtonTapped:
                 state.counter.count = Int(arc4random() % 100)
                 return .send(.factButtonTapped)
-            case let .numberFactResponse(.success(fact)):
+            case let .numberFactService(.success(.factGenerated(fact))):
                 state.isFactRequestInFlight = false
                 state.numberFact = fact
-            case .numberFactResponse(.failure):
+            case .numberFactService(.failure(let error)):
+                dump(error)
                 state.isFactRequestInFlight = false
             default:
                 break

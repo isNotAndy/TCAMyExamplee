@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ComposableArchitecture
+
 // MARK: - SimpleOptionalAction
 
 /// All available `SimpleOptional` module actions.

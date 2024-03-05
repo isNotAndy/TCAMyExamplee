@@ -1,12 +1,57 @@
 {
   "pins" : [
     {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "f96b619bcb2383b43d898402283924b80e2c4bae",
+        "version" : "5.4.3"
+      }
+    },
+    {
+      "identity" : "codex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/codex.git",
+      "state" : {
+        "revision" : "fa43df3cdda144ee97ad359d48f81e2d1063f81e",
+        "version" : "0.2.4"
+      }
+    },
+    {
+      "identity" : "combine-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/combine-extensions.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "200e01af030921bcc62a4910143cd624c7c30f93"
+      }
+    },
+    {
       "identity" : "combine-schedulers",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/combine-schedulers",
       "state" : {
         "revision" : "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "http-transport",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/http-transport.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5b40dc06de3db534b2df7e936f0061bf76da27d1"
+      }
+    },
+    {
+      "identity" : "service-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/service-core.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "800251a3948e10f9a9f541fd026be31c6fc93daf"
       }
     },
     {
