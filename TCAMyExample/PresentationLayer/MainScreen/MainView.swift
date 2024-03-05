@@ -25,9 +25,7 @@ public struct MainView: View {
                                 reducer: CounterReducer()
                             )
                         )
-                        .navigationTitle("Easy Counter")
                     }
-                    
                     NavigationLink("Two Counters") {
                         DoubleCounterView(
                             store: Store(
@@ -36,30 +34,20 @@ public struct MainView: View {
                             )
                         )
                     }
-                    
                     NavigationLink("Simple Effect") {
                         SimpleEffectView(store: Store(initialState: SimpleEffectState(),
                                                       reducer: SimpleEffectReducer()
                             )
                         )
                     }
-                    
-                    NavigationLink("Simple Binding") {
-                        SimpleBindingView(store: Store(initialState: SimpleBindingState(),
-                                                      reducer: SimpleBindingReducer()
-                            )
-                        )
-                        .navigationTitle("Simple Binding")
-                    }
-                    
-                    NavigationLink("Simple Optional") {
+                    NavigationLink("Simple Effect") {
                         SimpleOptionalView(store: Store(initialState: SimpleOptionalState(),
                                                       reducer: SimpleOptionalReducer()
                             )
                         )
-                        .navigationTitle("Simple optional")
                     }
                 }
+                .navigationTitle("Two counters")
             }
         }
     }

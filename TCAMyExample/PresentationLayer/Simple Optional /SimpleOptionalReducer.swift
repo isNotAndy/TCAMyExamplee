@@ -14,19 +14,18 @@ public struct SimpleOptionalReducer: Reducer {
     
     // MARK: - Reducer
     
-    
     public var body: some Reducer<SimpleOptionalState, SimpleOptionalAction> {
         Reduce { state, action in
             switch action {
             case .toggleOptional:
-                state.counter = state.counter == nil ? SimpleBindingState() : nil
+                state.counter = state.counter == nil ? CounterState() : nil
             default:
                 break
             }
             return .none
         }
-        .ifLet(\.counter, action: /SimpleOptionalAction.binding) {
-            SimpleBindingReducer()
+        .ifLet(\.counter, action: /SimpleOptionalAction.counter) {
+            CounterReducer()
         }
     }
 }

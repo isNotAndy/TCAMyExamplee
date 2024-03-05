@@ -19,11 +19,11 @@ public struct SimpleOptionalState: Equatable {
     
     /// Auxillary property for counter state description
     public var counterDescription: String {
-        "BindingView is " + (counter == nil ? "nil" : "non-nil")
+        "Counter is " + (counter == nil ? "nil" : "non-nil")
     }
     
     // MARK: - Children
     
     /// Optional CounterState instance
-    public var counter: SimpleBindingState?
+    public var counter: CounterState?
 }
