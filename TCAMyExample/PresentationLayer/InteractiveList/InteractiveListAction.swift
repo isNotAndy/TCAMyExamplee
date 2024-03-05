@@ -23,6 +23,9 @@ public enum InteractiveListAction: Equatable {
     
     // MARK: - Cases
     
+    /// Setter for `toggleEnabled` property binding
+    case switchToggle(Bool)
+    
     /// An action that triggers an update to the list's items.
     case onAppear
     
@@ -40,4 +43,13 @@ public enum InteractiveListAction: Equatable {
     /// The `id` parameter specifies the unique identifier of the item,
     /// and the `action` parameter represents the specific action to be performed on the item.
     case item(id: CellState.ID, action: CellAction)
+    
+    /// Responce of the `NumberFactService` generation method
+    case numberFactService(Result<NumberFactServiceAction, NSError>)
+    
+    /// Responce of the `MockNumberFactService` generation method
+    case mockFactService(Result<MockNumberFactServiceAction, NSError>)
+    
+    /// An action that calls when user taps on the `dismiss` button on the alert
+    case alertDismissed
 }

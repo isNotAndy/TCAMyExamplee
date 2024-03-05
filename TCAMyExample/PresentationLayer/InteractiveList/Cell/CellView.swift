@@ -30,6 +30,7 @@ public struct CellView: View {
                 Circle()
                     .fill(Color(viewStore.color))
                     .frame(width: 20, height: 20)
+                Text("\(viewStore.number)")
                 Text(viewStore.title)
                 Spacer(minLength: 4)
                 Image(systemName: viewStore.image)

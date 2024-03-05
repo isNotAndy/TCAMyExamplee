@@ -27,6 +27,13 @@ public struct InteractiveListView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
+                Toggle(isOn: viewStore.binding(
+                    get: \.toggle,
+                    send: InteractiveListAction.switchToggle)
+                ) {
+                    Text("Switch API/MOCK")
+                }
+
                 Text(viewStore.title)
                     .opacity(0.5)
                     .animation(.easeInOut(duration: 0.15), value: viewStore.title)
@@ -43,6 +50,8 @@ public struct InteractiveListView: View {
                     .onDelete { viewStore.send(.deleteItemTapped($0)) }
                 }.textCase(nil)
             }
+            .alert(store.scope(state: \.alert),
+                   dismiss: .alertDismissed)
             .navigationBarItems(trailing:
                 Button {
                     viewStore.send(.addRandomTapped, animation: .default)

@@ -19,4 +19,22 @@ public protocol NumberFactService {
     /// Obtain some number's fact
     /// - Returns: number fact string
     func generateFact(number: Int) -> ServiceCall<String>
+    
+    /// Obtain some number's fact
+    /// - Returns: number fact string
+    func generateFactt(number: String) -> ServiceCall<String>
 }
+
+public enum MockNumberFactServiceAction: Equatable {
+    
+    case mockFactGenerated(String)
+}
+// MARK: - MockNumberFactService
+
+public protocol MockNumberFactService {
+    
+    /// Obtain some number's fact
+    /// - Returns: number fact string
+    func generateFact(number: String) -> ServiceCall<String>
+}
+

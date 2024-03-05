@@ -25,4 +25,13 @@ public struct InteractiveListState: Equatable {
     
     /// title of element in `items`
     public var title: String
+    
+    /// number of element in `items`
+    public var number: String
+    
+    /// True if controls can be touched
+    public var toggle = false
+    
+    /// Currently displaying alert
+    public var alert: AlertState<InteractiveListAction>?
 }
