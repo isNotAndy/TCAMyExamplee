@@ -28,6 +28,9 @@ public struct InteractiveListReducer: Reducer {
     /// NumberFactService instance
     public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport())
     
+    /// MockNumberFactService instance
+    public let mockNumberFactService = MockNumberFactServiceImplementation()
+    
     // MARK: - IDs
     
     private struct ItemCheckingID: Hashable {}
@@ -58,23 +61,43 @@ public struct InteractiveListReducer: Reducer {
                 guard let item = state.items[id: itemID] else {
                     return .none
                 }
-//                state.title = item.title
-                return numberFactService
-                    .generateFactt(number: item.number)
-                    .publish()
-                    .map(NumberFactServiceAction.factGenerated)
-                    .catchToEffect(InteractiveListAction.numberFactService)
+                if state.toggle == true {
+                    return numberFactService
+                        .generateFactt(number: item.number)
+                        .publish()
+                        .map(NumberFactServiceAction.factGenerated)
+                        .catchToEffect(InteractiveListAction.numberFactService)
+                } else {
+                    return mockNumberFactService
+                        .generateFact(number: item.number)
+                        .publish()
+                        .map(MockNumberFactServiceAction.mockFactGenerated)
+                        .catchToEffect(InteractiveListAction.mockFactService)
+                }
             case .numberFactService(.success(.factGenerated(let fact))):
                 state.title = fact
-
+                
             case .numberFactService(.failure):
                 state.title = "This fact doesn't exist"
+            case .mockFactService(.success(.mockFactGenerated(let fact))):
+                state.title = fact
+            case .mockFactService(.failure(_)):
+                state.alert = AlertState(
+                    title: TextState("Ave!"),
+                    message: TextState("Honda is the best car ever!"),
+                    buttons: [
+                        .cancel(TextState("Cancel")),
+                    ]
+                )
+            case .switchToggle(let enabled):
+                state.toggle = enabled
+            case .alertDismissed:
+                state.alert = nil
             }
             return .none
         }
         .forEach(\.items, action: /InteractiveListAction.item) {
             CellReducer()
         }
-            
     }
 }
