@@ -5,7 +5,9 @@
 //  Created by Андрей Барсуков on 29.02.2024.
 //
 
+import Foundation
 import ComposableArchitecture
+import TCANetworkReducers
 
 // MARK: - InteractiveListState
 
@@ -21,17 +23,30 @@ public struct InteractiveListState: Equatable {
     ///
     /// The `items` property is of type `IdentifiedArrayOf<CellState>`, where `CellState` is a type
     /// describing the state of individual cells in the interactive list.
-    public var items: IdentifiedArrayOf<CellState> = []
+    public var items = IdentifiedArrayOf<CellState>()
     
     /// title of element in `items`
-    public var title: String
+    public var title: String = ""
     
     /// number of element in `items`
-    public var number: String
+    public var number: Int = 0
     
     /// True if controls can be touched
     public var toggle = false
     
     /// Currently displaying alert
     public var alert: AlertState<InteractiveListAction>?
+    
+    /// ReloadableState instace for network operations
+    public var reloadableCellState: IDReloadableState<[CellNumberPlainObject], Int, CellNumberFactServiceError>
+    
+    /// Currently inputed text
+    @BindingState public var selectedArrayCount = ""
+}
+
+extension InteractiveListState {
+    
+    public init(defaultCount: Int) {
+        reloadableCellState = IDReloadableState(id: defaultCount)
+    }
 }

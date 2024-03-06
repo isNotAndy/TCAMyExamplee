@@ -53,6 +53,12 @@
 		FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */; };
 		FB9503602B906D26008A23E5 /* InteractiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035F2B906D26008A23E5 /* InteractiveListView.swift */; };
 		FB9503642B9075FC008A23E5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503632B9075FC008A23E5 /* String.swift */; };
+		FBAFDE3C2B9710E00096276E /* LuckyDriver in Resources */ = {isa = PBXBuildFile; fileRef = FBAFDE3B2B9710E00096276E /* LuckyDriver */; };
+		FBAFDE3F2B97112A0096276E /* TCANetworkReducers in Frameworks */ = {isa = PBXBuildFile; productRef = FBAFDE3E2B97112A0096276E /* TCANetworkReducers */; };
+		FBAFDE412B97172A0096276E /* CellNumberPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE402B97172A0096276E /* CellNumberPlainObject.swift */; };
+		FBAFDE432B9724F50096276E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE422B9724F50096276E /* Int.swift */; };
+		FBAFDE462B97353E0096276E /* CellNumberPlainObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE452B97353E0096276E /* CellNumberPlainObjectService.swift */; };
+		FBAFDE4A2B973B980096276E /* CellNumberFactServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE492B973B980096276E /* CellNumberFactServiceImplementation.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +108,11 @@
 		FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListReducer.swift; sourceTree = "<group>"; };
 		FB95035F2B906D26008A23E5 /* InteractiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListView.swift; sourceTree = "<group>"; };
 		FB9503632B9075FC008A23E5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FBAFDE3B2B9710E00096276E /* LuckyDriver */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LuckyDriver; sourceTree = "<group>"; };
+		FBAFDE402B97172A0096276E /* CellNumberPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellNumberPlainObject.swift; sourceTree = "<group>"; };
+		FBAFDE422B9724F50096276E /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		FBAFDE452B97353E0096276E /* CellNumberPlainObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNumberPlainObjectService.swift; sourceTree = "<group>"; };
+		FBAFDE492B973B980096276E /* CellNumberFactServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNumberFactServiceImplementation.swift; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB25D36D2B91C2BE0059D827 /* HTTPTransport in Frameworks */,
+				FBAFDE3F2B97112A0096276E /* TCANetworkReducers in Frameworks */,
 				FB1A61052B91D153000930DF /* ServiceCore in Frameworks */,
 				FB4814EA2B8747400068D161 /* ComposableArchitecture in Frameworks */,
 			);
@@ -122,6 +134,7 @@
 		FB0056182B8788C900BE7E12 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBAFDE442B9735000096276E /* CellNumberPlainObjectService */,
 				FB1A61062B91D825000930DF /* Common */,
 				FB0056192B8788FE00BE7E12 /* NumberFactService */,
 			);
@@ -203,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				FB00561F2B879DF400BE7E12 /* Info.plist */,
+				FBAFDE3B2B9710E00096276E /* LuckyDriver */,
 				FB567F6E2B82317400FA3D3E /* PresentationLayer */,
 				FB0056182B8788C900BE7E12 /* BusinessLayer */,
 				FB9503612B9075DA008A23E5 /* CoreLayer */,
@@ -305,8 +319,19 @@
 			isa = PBXGroup;
 			children = (
 				FB9503632B9075FC008A23E5 /* String.swift */,
+				FBAFDE422B9724F50096276E /* Int.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBAFDE442B9735000096276E /* CellNumberPlainObjectService */ = {
+			isa = PBXGroup;
+			children = (
+				FBAFDE402B97172A0096276E /* CellNumberPlainObject.swift */,
+				FBAFDE452B97353E0096276E /* CellNumberPlainObjectService.swift */,
+				FBAFDE492B973B980096276E /* CellNumberFactServiceImplementation.swift */,
+			);
+			path = CellNumberPlainObjectService;
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
@@ -351,6 +376,7 @@
 				FB4814E92B8747400068D161 /* ComposableArchitecture */,
 				FB25D36C2B91C2BE0059D827 /* HTTPTransport */,
 				FB1A61042B91D153000930DF /* ServiceCore */,
+				FBAFDE3E2B97112A0096276E /* TCANetworkReducers */,
 			);
 			productName = TCAMyExample;
 			productReference = FB567F5D2B82312000FA3D3E /* TCAMyExample.app */;
@@ -384,6 +410,7 @@
 				FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */,
 				FB25D36B2B91C2BE0059D827 /* XCRemoteSwiftPackageReference "http-transport" */,
 				FB1A61032B91D153000930DF /* XCRemoteSwiftPackageReference "service-core" */,
+				FBAFDE3D2B97112A0096276E /* XCRemoteSwiftPackageReference "tca-network-reducers" */,
 			);
 			productRefGroup = FB567F5E2B82312000FA3D3E /* Products */;
 			projectDirPath = "";
@@ -401,6 +428,7 @@
 			files = (
 				FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */,
 				FB567F652B82312100FA3D3E /* Assets.xcassets in Resources */,
+				FBAFDE3C2B9710E00096276E /* LuckyDriver in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +446,7 @@
 				FB9503482B8F311B008A23E5 /* HolderOfCountersState.swift in Sources */,
 				FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */,
 				FB9503542B906CCA008A23E5 /* CellAction.swift in Sources */,
+				FBAFDE432B9724F50096276E /* Int.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
 				FB9503582B906CE4008A23E5 /* CellView.swift in Sources */,
@@ -432,11 +461,14 @@
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */,
 				FB5A4CCE2B88A833001F98AA /* SimpleBindingView.swift in Sources */,
+				FBAFDE412B97172A0096276E /* CellNumberPlainObject.swift in Sources */,
 				FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */,
 				FB9503522B906CBF008A23E5 /* CellState.swift in Sources */,
+				FBAFDE462B97353E0096276E /* CellNumberPlainObjectService.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
 				FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */,
 				FB95034A2B8F31B5008A23E5 /* HolderOfCountersAction.swift in Sources */,
+				FBAFDE4A2B973B980096276E /* CellNumberFactServiceImplementation.swift in Sources */,
 				FB5A4CCC2B88A824001F98AA /* SimpleBindingReducer.swift in Sources */,
 				FB9503602B906D26008A23E5 /* InteractiveListView.swift in Sources */,
 				FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */,
@@ -688,6 +720,14 @@
 				kind = branch;
 			};
 		};
+		FBAFDE3D2B97112A0096276E /* XCRemoteSwiftPackageReference "tca-network-reducers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Incetro/tca-network-reducers.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -705,6 +745,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FB4814E82B8747400068D161 /* XCRemoteSwiftPackageReference "TCA" */;
 			productName = ComposableArchitecture;
+		};
+		FBAFDE3E2B97112A0096276E /* TCANetworkReducers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBAFDE3D2B97112A0096276E /* XCRemoteSwiftPackageReference "tca-network-reducers" */;
+			productName = TCANetworkReducers;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

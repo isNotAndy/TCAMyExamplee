@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import TCANetworkReducers
+import ComposableArchitecture
 
 
 // MARK: - InteractiveListAction
@@ -19,7 +21,7 @@ import Foundation
 /// such as tapping some button, holding another button, or changing a slider value.
 /// But there are also some slightly non-obvious ones, such as the action of the user dismissing the alert,
 /// and the action that occurs when we receive a response from the fact API request.
-public enum InteractiveListAction: Equatable {
+public enum InteractiveListAction: Equatable, BindableAction {
     
     // MARK: - Cases
     
@@ -52,4 +54,15 @@ public enum InteractiveListAction: Equatable {
     
     /// An action that calls when user taps on the `dismiss` button on the alert
     case alertDismissed
+    
+    /// button was pressed
+    case buttonPressed
+    
+    // MARK: - Reloadable
+    
+    case reloadableCell(ReloadableAction<[CellNumberPlainObject], CellNumberFactServiceError>)
+    
+    // MARK: - Binding
+    
+    case binding(BindingAction<InteractiveListState>)
 }

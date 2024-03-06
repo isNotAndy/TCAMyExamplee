@@ -69,16 +69,3 @@ extension String {
         return images.randomElement().unsafelyUnwrapped
     }
 }
-
-extension String {
-    
-    /// get random element in `number`
-    public static func randomNumber() -> String {
-        
-        /// array of `number`
-        let numbers = [
-        "1","17","4","38","91","14","23","37","88","11","98","67"
-        ]
-        return numbers.randomElement().unsafelyUnwrapped
-    }
-}
