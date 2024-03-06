@@ -26,7 +26,7 @@ public final class NumberFactServiceImplementation: WebService {
 // MARK: - NumberFactService
 
 extension NumberFactServiceImplementation: NumberFactService {
-    public func generateFactt(number: String) -> ServiceCore.ServiceCall<String> {
+    public func generateFactt(number: Int) -> ServiceCore.ServiceCall<String> {
         createCall {
             let request = HTTPRequest(
                 httpMethod: .get,
@@ -65,6 +65,7 @@ extension NumberFactServiceImplementation: NumberFactService {
 // MARK: - NumberFactServiceImplementation
 
 public final class MockNumberFactServiceImplementation: WebService {
+    
     // MARK: - Initializers
 
     /// Default initializer
@@ -77,10 +78,10 @@ public final class MockNumberFactServiceImplementation: WebService {
 
 extension MockNumberFactServiceImplementation: MockNumberFactService {
     
-    public func generateFact(number: String) -> ServiceCall<String> {
+    public func generateFact(number: Int) -> ServiceCall<String> {
         createCall {
             switch number {
-            case "14":
+            case 14:
                 return .success("aaaa")
             default:
                 return .failure(NSError(domain: "incetro.error", code: 512, userInfo: nil))

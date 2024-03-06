@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 import ServiceCore
 import HTTPTransport
+import TCANetworkReducers
 
 // MARK: - InteractiveListReducer
 
@@ -31,6 +32,9 @@ public struct InteractiveListReducer: Reducer {
     /// MockNumberFactService instance
     public let mockNumberFactService = MockNumberFactServiceImplementation()
     
+    /// CellNumberFact instance
+    public let cellNumberFactService =  CellNumberFactServiceImplementation()
+    
     // MARK: - IDs
     
     private struct ItemCheckingID: Hashable {}
@@ -38,14 +42,42 @@ public struct InteractiveListReducer: Reducer {
     // MARK: - Reducer
     
     public var body: some Reducer<InteractiveListState, InteractiveListAction> {
+        BindingReducer()
+        Scope(state: \.reloadableCellState, 
+              action: /InteractiveListAction.reloadableCell) {
+            IDRelodableReducer { count in
+                cellNumberFactService
+                    .generateArrayOfCellNumberFact(count: count)
+                    .publish()
+                    .eraseToAnyPublisher()
+            }
+        }
         Reduce { state, action in
             switch action {
             case .onAppear:
-                state.items = IdentifiedArray(
-                    uniqueElements: [CellState].randomizeItems()
-                )
+                state.items = []
+                return .send(.reloadableCell(.load))
             case .addRandomTapped:
-                state.items.insert(.randomizeItem(index: state.items.count), at: 0)
+                state.items.insert(
+                    CellState(
+                        plain: .randomizeItem(
+                            index: state.items.count
+                        )
+                    ),
+                    at: 0
+                )
+            case .reloadableCell(.response(.success(let plains))):
+                state.items = IdentifiedArray(
+                    uniqueElements: plains.map(CellState.init)
+                    )
+            case .reloadableCell(.response(.failure(let error))):
+                state.alert = AlertState(
+                    title: TextState("\(error)"),
+                    message: TextState("GGWP"),
+                    buttons: [
+                        .cancel(TextState("Cancel")),
+                    ]
+                )
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
             case .deleteItemTapped(let offset):
@@ -89,10 +121,15 @@ public struct InteractiveListReducer: Reducer {
                         .cancel(TextState("Cancel")),
                     ]
                 )
+            case .buttonPressed:
+                state.reloadableCellState.id = Int(state.selectedArrayCount) ?? 0
+                return .send(.reloadableCell(.load))
             case .switchToggle(let enabled):
                 state.toggle = enabled
             case .alertDismissed:
                 state.alert = nil
+            default:
+                break
             }
             return .none
         }

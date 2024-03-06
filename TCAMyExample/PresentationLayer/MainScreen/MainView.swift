@@ -88,7 +88,7 @@ public struct MainView: View {
                     NavigationLink("Interactive List") {
                         InteractiveListView(
                             store: Store(
-                                initialState: InteractiveListState(title: "", number: ""),
+                                initialState: InteractiveListState(defaultCount: 0),
                                 reducer: InteractiveListReducer()
                                                          )
                         )

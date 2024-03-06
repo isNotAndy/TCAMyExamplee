@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import TCANetworkReducers
 
 // MARK: - CellState
 
@@ -18,7 +19,7 @@ public struct CellState: Identifiable, Equatable {
     // MARK: - Properties
     
     /// Unique identifier
-    public let id: UUID
+    public let id: String
     
     /// Title value
     public let title: String
@@ -30,34 +31,35 @@ public struct CellState: Identifiable, Equatable {
     public let color: String
     
     /// number value
-    public let number: String
+    public let number: Int
     
     /// True if current item is checked
     public var isChecked = false
 }
 
-// MARK: - Mock
+// MARK: - Initializer
 
 extension CellState {
     
-    public static func randomizeItem(index: Int) -> Self {
-        CellState(
-            id: UUID(),
-            title: .generatedName,
-            image: .randomImage(),
-            color: .randomColor(),
-            number: .randomNumber()
-        )
-    }
-}
-
-// MARK: - Array+Mock
-
-extension Array where Element == CellState {
-    
-    public static func randomizeItems() -> Self {
-        (0..<Int.random(in: 10..<11)).map { index in
-            CellState.randomizeItem(index: index)
+    public init(plain: CellNumberPlainObject) {
+        self.id = plain.id
+        self.number = plain.number
+        self.title = plain.title
+        switch number {
+        case 0...30:
+            self.color = "#F29479"
+        case 31...63:
+            self.color = "#033270"
+        default:
+            self.color = "#65010C"
+        }
+        switch number {
+        case 0...30:
+            self.image = "sun.max.fill"
+        case 31...63:
+            self.image = "allergens"
+        default:
+            self.image = "hourglass"
         }
     }
 }

@@ -26,14 +26,24 @@ public struct InteractiveListView: View {
 
     public var body: some View {
         WithViewStore(store) { viewStore in
-            Form {
+            List {
                 Toggle(isOn: viewStore.binding(
                     get: \.toggle,
                     send: InteractiveListAction.switchToggle)
                 ) {
                     Text("Switch API/MOCK")
                 }
-
+                HStack(spacing: 4) {
+                    TextField("Enter your number", 
+                              text: viewStore.$selectedArrayCount)
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.numberPad)
+                    Button {
+                        viewStore.send(.buttonPressed)
+                    } label: {
+                        Text("Refresh cell's")
+                    }
+                }
                 Text(viewStore.title)
                     .opacity(0.5)
                     .animation(.easeInOut(duration: 0.15), value: viewStore.title)

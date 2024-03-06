@@ -145,6 +145,15 @@
       }
     },
     {
+      "identity" : "tca-network-reducers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/tca-network-reducers.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f7bfed11f7b459157e73d81beb7f58db656c5c98"
+      }
+    },
+    {
       "identity" : "xctest-dynamic-overlay",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
