@@ -27,15 +27,8 @@ public struct InteractiveListView: View {
     public var body: some View {
         WithViewStore(store) { viewStore in
             List {
-                Toggle(isOn: viewStore.binding(
-                    get: \.toggle,
-                    send: InteractiveListAction.switchToggle)
-                ) {
-                    Text("Switch API/MOCK")
-                }
                 HStack(spacing: 4) {
-                    TextField("Enter your number", 
-                              text: viewStore.$selectedArrayCount)
+                    TextField("Enter your number", text: viewStore.$targetArraySizeString)
                         .textFieldStyle(.roundedBorder)
                         .keyboardType(.numberPad)
                     Button {

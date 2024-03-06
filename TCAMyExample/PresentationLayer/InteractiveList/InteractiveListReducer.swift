@@ -27,13 +27,10 @@ import TCANetworkReducers
 public struct InteractiveListReducer: Reducer {
     
     /// NumberFactService instance
-    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport())
-    
-    /// MockNumberFactService instance
-    public let mockNumberFactService = MockNumberFactServiceImplementation()
+    public let numberFactService: NumberFactService
     
     /// CellNumberFact instance
-    public let cellNumberFactService =  CellNumberFactServiceImplementation()
+    public let cellNumberFactService =  NumberFactServiceImplementation(transport: HTTPTransport())
     
     // MARK: - IDs
     
@@ -47,7 +44,7 @@ public struct InteractiveListReducer: Reducer {
               action: /InteractiveListAction.reloadableCell) {
             IDRelodableReducer { count in
                 cellNumberFactService
-                    .generateArrayOfCellNumberFact(count: count)
+                    .obtainNumbersInfo(count: count)
                     .publish()
                     .eraseToAnyPublisher()
             }
@@ -60,9 +57,7 @@ public struct InteractiveListReducer: Reducer {
             case .addRandomTapped:
                 state.items.insert(
                     CellState(
-                        plain: .randomizeItem(
-                            index: state.items.count
-                        )
+                        plain: .random()
                     ),
                     at: 0
                 )
@@ -93,27 +88,14 @@ public struct InteractiveListReducer: Reducer {
                 guard let item = state.items[id: itemID] else {
                     return .none
                 }
-                if state.toggle == true {
-                    return numberFactService
-                        .generateFactt(number: item.number)
-                        .publish()
-                        .map(NumberFactServiceAction.factGenerated)
-                        .catchToEffect(InteractiveListAction.numberFactService)
-                } else {
-                    return mockNumberFactService
-                        .generateFact(number: item.number)
-                        .publish()
-                        .map(MockNumberFactServiceAction.mockFactGenerated)
-                        .catchToEffect(InteractiveListAction.mockFactService)
-                }
+                return numberFactService
+                    .obtainFact(number: item.number)
+                    .publish()
+                    .map(NumberFactServiceAction.factGenerated)
+                    .catchToEffect(InteractiveListAction.numberFactService)
             case .numberFactService(.success(.factGenerated(let fact))):
                 state.title = fact
-                
             case .numberFactService(.failure):
-                state.title = "This fact doesn't exist"
-            case .mockFactService(.success(.mockFactGenerated(let fact))):
-                state.title = fact
-            case .mockFactService(.failure(_)):
                 state.alert = AlertState(
                     title: TextState("Ave!"),
                     message: TextState("Honda is the best car ever!"),
@@ -122,7 +104,7 @@ public struct InteractiveListReducer: Reducer {
                     ]
                 )
             case .buttonPressed:
-                state.reloadableCellState.id = Int(state.selectedArrayCount) ?? 0
+                state.reloadableCellState.id = Int(state.targetArraySizeString) ?? 0
                 return .send(.reloadableCell(.load))
             case .switchToggle(let enabled):
                 state.toggle = enabled

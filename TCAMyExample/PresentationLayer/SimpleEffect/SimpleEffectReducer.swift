@@ -31,7 +31,7 @@ public struct SimpleEffectReducer: Reducer {
                 state.isFactRequestInFlight = true
                 let count = state.counter.count
                 return numberFactService
-                        .generateFact(number: count)
+                        .obtainFact(number: count)
                         .publish()
                         .map(NumberFactServiceAction.factGenerated)
                         .catchToEffect(SimpleEffectAction.numberFactService)

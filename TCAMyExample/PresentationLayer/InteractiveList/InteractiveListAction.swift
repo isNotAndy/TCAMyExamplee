@@ -49,9 +49,6 @@ public enum InteractiveListAction: Equatable, BindableAction {
     /// Responce of the `NumberFactService` generation method
     case numberFactService(Result<NumberFactServiceAction, NSError>)
     
-    /// Responce of the `MockNumberFactService` generation method
-    case mockFactService(Result<MockNumberFactServiceAction, NSError>)
-    
     /// An action that calls when user taps on the `dismiss` button on the alert
     case alertDismissed
     
@@ -60,7 +57,7 @@ public enum InteractiveListAction: Equatable, BindableAction {
     
     // MARK: - Reloadable
     
-    case reloadableCell(ReloadableAction<[CellNumberPlainObject], CellNumberFactServiceError>)
+    case reloadableCell(ReloadableAction<[NumberInfoPlainObject], NumberFactServiceError>)
     
     // MARK: - Binding
     
