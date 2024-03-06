@@ -19,7 +19,7 @@ public enum NumberFactServiceAction: Equatable {
     // MARK: - Cases
     
     case factObtained(String)
-    case obtainNumberInfo([NumberInfoPlainObject])
+    case numberInfoObtained([NumberInfoPlainObject])
 }
 
 // MARK: - NumberFactService
