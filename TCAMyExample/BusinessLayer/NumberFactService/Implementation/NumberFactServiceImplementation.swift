@@ -31,8 +31,8 @@ extension NumberFactServiceImplementation: NumberFactService {
         createCall {
             /// Generating an error with a 30 percent chance
             Double.random(in: 0...1) > 0.3
-            ? .success(.randomizeItems())
-            : .failure(NSError(domain: "Unowned error", code: 303))
+                ? .success(.randomizeItems())
+                : .failure(NSError(domain: "Unowned error", code: 303))
         }
     }
     
