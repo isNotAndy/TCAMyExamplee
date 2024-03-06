@@ -34,5 +34,7 @@ public protocol NumberFactService {
     /// - Returns: Array of CellNumberPlainObject
     func obtainNumberInfo() -> ServiceCall<[NumberInfoPlainObject]>
     
-    func obtainNumbersInfo(count: Int) -> ServiceCall<[NumberInfoPlainObject]> 
+    /// Obtain Array of CellNumberPlainObject
+    /// - Returns: Array of CellNumberPlainObject
+    func obtainNumbersInfo(count: Int) -> ServiceCall<[NumberInfoPlainObject]>
 }

@@ -29,9 +29,6 @@ public struct InteractiveListReducer: Reducer {
     /// NumberFactService instance
     public let numberFactService: NumberFactService
     
-    /// CellNumberFact instance
-    public let cellNumberFactService =  NumberFactServiceImplementation(transport: HTTPTransport())
-    
     // MARK: - IDs
     
     private struct ItemCheckingID: Hashable {}
@@ -40,10 +37,10 @@ public struct InteractiveListReducer: Reducer {
     
     public var body: some Reducer<InteractiveListState, InteractiveListAction> {
         BindingReducer()
-        Scope(state: \.reloadableCellState, 
+        Scope(state: \.reloadableNumbersInfo, 
               action: /InteractiveListAction.reloadableCell) {
             IDRelodableReducer { count in
-                cellNumberFactService
+                numberFactService
                     .obtainNumbersInfo(count: count)
                     .publish()
                     .eraseToAnyPublisher()
@@ -55,12 +52,7 @@ public struct InteractiveListReducer: Reducer {
                 state.items = []
                 return .send(.reloadableCell(.load))
             case .addRandomTapped:
-                state.items.insert(
-                    CellState(
-                        plain: .random()
-                    ),
-                    at: 0
-                )
+                state.items.insert(CellState(plain: .random()), at: 0)
             case .reloadableCell(.response(.success(let plains))):
                 state.items = IdentifiedArray(
                     uniqueElements: plains.map(CellState.init)
@@ -91,9 +83,9 @@ public struct InteractiveListReducer: Reducer {
                 return numberFactService
                     .obtainFact(number: item.number)
                     .publish()
-                    .map(NumberFactServiceAction.factGenerated)
+                    .map(NumberFactServiceAction.factObtained)
                     .catchToEffect(InteractiveListAction.numberFactService)
-            case .numberFactService(.success(.factGenerated(let fact))):
+            case .numberFactService(.success(.factObtained(let fact))):
                 state.title = fact
             case .numberFactService(.failure):
                 state.alert = AlertState(
@@ -104,7 +96,7 @@ public struct InteractiveListReducer: Reducer {
                     ]
                 )
             case .buttonPressed:
-                state.reloadableCellState.id = Int(state.targetArraySizeString) ?? 0
+                state.reloadableNumbersInfo.id = Int(state.targetArraySizeString) ?? 0
                 return .send(.reloadableCell(.load))
             case .switchToggle(let enabled):
                 state.toggle = enabled

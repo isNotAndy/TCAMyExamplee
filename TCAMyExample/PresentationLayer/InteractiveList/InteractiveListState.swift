@@ -38,7 +38,7 @@ public struct InteractiveListState: Equatable {
     public var alert: AlertState<InteractiveListAction>?
     
     /// ReloadableState instace for network operations
-    public var reloadableCellState: IDReloadableState<[NumberInfoPlainObject], Int, NumberFactServiceError>
+    public var reloadableNumbersInfo: IDReloadableState<[NumberInfoPlainObject], Int, NumberFactServiceError>
     
     /// Currently inputed text
     @BindingState public var targetArraySizeString = ""
@@ -47,6 +47,6 @@ public struct InteractiveListState: Equatable {
 extension InteractiveListState {
     
     public init(defaultCount: Int) {
-        reloadableCellState = IDReloadableState(id: defaultCount)
+        reloadableNumbersInfo = IDReloadableState(id: defaultCount)
     }
 }

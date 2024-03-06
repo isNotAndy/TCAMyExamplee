@@ -45,21 +45,7 @@ extension CellState {
         self.id = plain.id
         self.number = plain.number
         self.title = plain.title
-        switch number {
-        case 0...30:
-            self.color = .randomColor()
-        case 31...63:
-            self.color = .randomColor()
-        default:
-            self.color = .randomColor()
-        }
-        switch number {
-        case 0...30:
-            self.image = .randomImage()
-        case 31...63:
-            self.image = .randomImage()
-        default:
-            self.image = .randomImage()
-        }
+        self.color = .randomColor()
+        self.image = .randomImage()
     }
 }

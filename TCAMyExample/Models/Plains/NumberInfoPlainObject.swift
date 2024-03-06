@@ -13,14 +13,15 @@ public struct NumberInfoPlainObject: Codable, Equatable, Identifiable {
     
     // MARK: - Properties
     
-    /// ID
-    public let id: String
-    
-    /// Number
+    /// ID of the number information.
+     public let id: String
+
+    /// The numerical representation of the number.
     public let number: Int
-    
-    /// Something info about number
+
+    /// A descriptive title providing information about the number.
     public let title: String
+
 }
 
 // MARK: - Mock
@@ -40,7 +41,7 @@ extension NumberInfoPlainObject {
 
 extension Array where Element == NumberInfoPlainObject {
     
-    public static func randomizeItems() -> Self {
+    public static func random() -> Self {
         (0..<Int.random(in: 10..<11)).map { index in
             NumberInfoPlainObject.random()
         }
