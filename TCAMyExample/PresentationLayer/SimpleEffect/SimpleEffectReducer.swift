@@ -31,14 +31,14 @@ public struct SimpleEffectReducer: Reducer {
                 state.isFactRequestInFlight = true
                 let count = state.counter.count
                 return numberFactService
-                        .generateFact(number: count)
+                        .obtainFact(number: count)
                         .publish()
-                        .map(NumberFactServiceAction.factGenerated)
+                        .map(NumberFactServiceAction.factObtained)
                         .catchToEffect(SimpleEffectAction.numberFactService)
             case .randomFactButtonTapped:
                 state.counter.count = Int(arc4random() % 100)
                 return .send(.factButtonTapped)
-            case let .numberFactService(.success(.factGenerated(fact))):
+            case let .numberFactService(.success(.factObtained(fact))):
                 state.isFactRequestInFlight = false
                 state.numberFact = fact
             case .numberFactService(.failure(let error)):

@@ -27,13 +27,7 @@ import TCANetworkReducers
 public struct InteractiveListReducer: Reducer {
     
     /// NumberFactService instance
-    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport())
-    
-    /// MockNumberFactService instance
-    public let mockNumberFactService = MockNumberFactServiceImplementation()
-    
-    /// CellNumberFact instance
-    public let cellNumberFactService =  CellNumberFactServiceImplementation()
+    public let numberFactService: NumberFactService
     
     // MARK: - IDs
     
@@ -43,11 +37,11 @@ public struct InteractiveListReducer: Reducer {
     
     public var body: some Reducer<InteractiveListState, InteractiveListAction> {
         BindingReducer()
-        Scope(state: \.reloadableCellState, 
+        Scope(state: \.reloadableNumbersInfo, 
               action: /InteractiveListAction.reloadableCell) {
             IDRelodableReducer { count in
-                cellNumberFactService
-                    .generateArrayOfCellNumberFact(count: count)
+                numberFactService
+                    .obtainNumbersInfo(count: count)
                     .publish()
                     .eraseToAnyPublisher()
             }
@@ -58,14 +52,7 @@ public struct InteractiveListReducer: Reducer {
                 state.items = []
                 return .send(.reloadableCell(.load))
             case .addRandomTapped:
-                state.items.insert(
-                    CellState(
-                        plain: .randomizeItem(
-                            index: state.items.count
-                        )
-                    ),
-                    at: 0
-                )
+                state.items.insert(CellState(plain: .random()), at: 0)
             case .reloadableCell(.response(.success(let plains))):
                 state.items = IdentifiedArray(
                     uniqueElements: plains.map(CellState.init)
@@ -93,27 +80,14 @@ public struct InteractiveListReducer: Reducer {
                 guard let item = state.items[id: itemID] else {
                     return .none
                 }
-                if state.toggle == true {
-                    return numberFactService
-                        .generateFactt(number: item.number)
-                        .publish()
-                        .map(NumberFactServiceAction.factGenerated)
-                        .catchToEffect(InteractiveListAction.numberFactService)
-                } else {
-                    return mockNumberFactService
-                        .generateFact(number: item.number)
-                        .publish()
-                        .map(MockNumberFactServiceAction.mockFactGenerated)
-                        .catchToEffect(InteractiveListAction.mockFactService)
-                }
-            case .numberFactService(.success(.factGenerated(let fact))):
+                return numberFactService
+                    .obtainFact(number: item.number)
+                    .publish()
+                    .map(NumberFactServiceAction.factObtained)
+                    .catchToEffect(InteractiveListAction.numberFactService)
+            case .numberFactService(.success(.factObtained(let fact))):
                 state.title = fact
-                
             case .numberFactService(.failure):
-                state.title = "This fact doesn't exist"
-            case .mockFactService(.success(.mockFactGenerated(let fact))):
-                state.title = fact
-            case .mockFactService(.failure(_)):
                 state.alert = AlertState(
                     title: TextState("Ave!"),
                     message: TextState("Honda is the best car ever!"),
@@ -122,7 +96,7 @@ public struct InteractiveListReducer: Reducer {
                     ]
                 )
             case .buttonPressed:
-                state.reloadableCellState.id = Int(state.selectedArrayCount) ?? 0
+                state.reloadableNumbersInfo.id = Int(state.targetArraySizeString) ?? 0
                 return .send(.reloadableCell(.load))
             case .switchToggle(let enabled):
                 state.toggle = enabled

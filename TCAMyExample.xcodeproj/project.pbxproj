@@ -53,12 +53,10 @@
 		FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */; };
 		FB9503602B906D26008A23E5 /* InteractiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035F2B906D26008A23E5 /* InteractiveListView.swift */; };
 		FB9503642B9075FC008A23E5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503632B9075FC008A23E5 /* String.swift */; };
-		FBAFDE3C2B9710E00096276E /* LuckyDriver in Resources */ = {isa = PBXBuildFile; fileRef = FBAFDE3B2B9710E00096276E /* LuckyDriver */; };
+		FBA26FE42B98834F00C1555E /* NumberFactServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */; };
 		FBAFDE3F2B97112A0096276E /* TCANetworkReducers in Frameworks */ = {isa = PBXBuildFile; productRef = FBAFDE3E2B97112A0096276E /* TCANetworkReducers */; };
-		FBAFDE412B97172A0096276E /* CellNumberPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE402B97172A0096276E /* CellNumberPlainObject.swift */; };
+		FBAFDE412B97172A0096276E /* NumberInfoPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */; };
 		FBAFDE432B9724F50096276E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE422B9724F50096276E /* Int.swift */; };
-		FBAFDE462B97353E0096276E /* CellNumberPlainObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE452B97353E0096276E /* CellNumberPlainObjectService.swift */; };
-		FBAFDE4A2B973B980096276E /* CellNumberFactServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE492B973B980096276E /* CellNumberFactServiceImplementation.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,11 +106,9 @@
 		FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListReducer.swift; sourceTree = "<group>"; };
 		FB95035F2B906D26008A23E5 /* InteractiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListView.swift; sourceTree = "<group>"; };
 		FB9503632B9075FC008A23E5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		FBAFDE3B2B9710E00096276E /* LuckyDriver */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LuckyDriver; sourceTree = "<group>"; };
-		FBAFDE402B97172A0096276E /* CellNumberPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellNumberPlainObject.swift; sourceTree = "<group>"; };
+		FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactServiceMock.swift; sourceTree = "<group>"; };
+		FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInfoPlainObject.swift; sourceTree = "<group>"; };
 		FBAFDE422B9724F50096276E /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		FBAFDE452B97353E0096276E /* CellNumberPlainObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNumberPlainObjectService.swift; sourceTree = "<group>"; };
-		FBAFDE492B973B980096276E /* CellNumberFactServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNumberFactServiceImplementation.swift; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +130,6 @@
 		FB0056182B8788C900BE7E12 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FBAFDE442B9735000096276E /* CellNumberPlainObjectService */,
 				FB1A61062B91D825000930DF /* Common */,
 				FB0056192B8788FE00BE7E12 /* NumberFactService */,
 			);
@@ -144,8 +139,8 @@
 		FB0056192B8788FE00BE7E12 /* NumberFactService */ = {
 			isa = PBXGroup;
 			children = (
-				FB00561D2B87892B00BE7E12 /* NumberFactService.swift */,
-				FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */,
+				FBA26FE92B98844600C1555E /* Implementation */,
+				FBA26FE82B98843B00C1555E /* Protocol */,
 			);
 			path = NumberFactService;
 			sourceTree = "<group>";
@@ -216,9 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				FB00561F2B879DF400BE7E12 /* Info.plist */,
-				FBAFDE3B2B9710E00096276E /* LuckyDriver */,
 				FB567F6E2B82317400FA3D3E /* PresentationLayer */,
 				FB0056182B8788C900BE7E12 /* BusinessLayer */,
+				FBA26FE52B98840D00C1555E /* Models */,
 				FB9503612B9075DA008A23E5 /* CoreLayer */,
 				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
 				FB567F642B82312100FA3D3E /* Assets.xcassets */,
@@ -324,14 +319,45 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FBAFDE442B9735000096276E /* CellNumberPlainObjectService */ = {
+		FBA26FE52B98840D00C1555E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FBAFDE402B97172A0096276E /* CellNumberPlainObject.swift */,
-				FBAFDE452B97353E0096276E /* CellNumberPlainObjectService.swift */,
-				FBAFDE492B973B980096276E /* CellNumberFactServiceImplementation.swift */,
+				FBA26FE72B98841800C1555E /* Database */,
+				FBA26FE62B98841200C1555E /* Plains */,
 			);
-			path = CellNumberPlainObjectService;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FBA26FE62B98841200C1555E /* Plains */ = {
+			isa = PBXGroup;
+			children = (
+				FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */,
+			);
+			path = Plains;
+			sourceTree = "<group>";
+		};
+		FBA26FE72B98841800C1555E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		FBA26FE82B98843B00C1555E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FB00561D2B87892B00BE7E12 /* NumberFactService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FBA26FE92B98844600C1555E /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */,
+				FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
@@ -428,7 +454,6 @@
 			files = (
 				FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */,
 				FB567F652B82312100FA3D3E /* Assets.xcassets in Resources */,
-				FBAFDE3C2B9710E00096276E /* LuckyDriver in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,15 +485,14 @@
 				FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */,
 				FB0DC82F2B83D549000B2EC4 /* MainView.swift in Sources */,
 				FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */,
+				FBA26FE42B98834F00C1555E /* NumberFactServiceMock.swift in Sources */,
 				FB5A4CCE2B88A833001F98AA /* SimpleBindingView.swift in Sources */,
-				FBAFDE412B97172A0096276E /* CellNumberPlainObject.swift in Sources */,
+				FBAFDE412B97172A0096276E /* NumberInfoPlainObject.swift in Sources */,
 				FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */,
 				FB9503522B906CBF008A23E5 /* CellState.swift in Sources */,
-				FBAFDE462B97353E0096276E /* CellNumberPlainObjectService.swift in Sources */,
 				FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */,
 				FB5A4CC52B889324001F98AA /* SimpleOptionalView.swift in Sources */,
 				FB95034A2B8F31B5008A23E5 /* HolderOfCountersAction.swift in Sources */,
-				FBAFDE4A2B973B980096276E /* CellNumberFactServiceImplementation.swift in Sources */,
 				FB5A4CCC2B88A824001F98AA /* SimpleBindingReducer.swift in Sources */,
 				FB9503602B906D26008A23E5 /* InteractiveListView.swift in Sources */,
 				FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */,

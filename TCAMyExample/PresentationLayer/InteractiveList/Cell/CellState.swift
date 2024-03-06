@@ -41,25 +41,11 @@ public struct CellState: Identifiable, Equatable {
 
 extension CellState {
     
-    public init(plain: CellNumberPlainObject) {
+    public init(plain: NumberInfoPlainObject) {
         self.id = plain.id
         self.number = plain.number
         self.title = plain.title
-        switch number {
-        case 0...30:
-            self.color = "#F29479"
-        case 31...63:
-            self.color = "#033270"
-        default:
-            self.color = "#65010C"
-        }
-        switch number {
-        case 0...30:
-            self.image = "sun.max.fill"
-        case 31...63:
-            self.image = "allergens"
-        default:
-            self.image = "hourglass"
-        }
+        self.color = .randomColor()
+        self.image = .randomImage()
     }
 }

@@ -11,13 +11,12 @@ import Foundation
 
 extension Int {
     
-    /// get random element in `number`
+    /// Get random element in array
     public static func randomNumber() -> Int {
         
-        /// array of `number`
-        let numbers = [
-        222, 111, 4, 38, 91, 14, 23, 37, 88, 11, 11, 671
-        ]
-        return numbers.randomElement().unsafelyUnwrapped
+        /// Array
+        [222, 111, 4, 38, 91, 14, 23, 37, 88, 11, 11, 671]
+            .randomElement()
+            .unsafelyUnwrapped
     }
 }
