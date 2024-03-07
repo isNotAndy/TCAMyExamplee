@@ -13,12 +13,19 @@ import ServiceCore
 // MARK: - NumberFactServiceImplementation
 
 public final class NumberFactServiceImplementation: WebService {
+    
+    // MARK: - Property
+    
+    /// NumberInfoDAO instnce
+    private let dao: NumberInfoDAO
+    
 
     // MARK: - Initializers
 
     /// Default initializer
     /// - Parameter session: URLSession instance
-    public init(transport: HTTPTransport) {
+    init(transport: HTTPTransport, dao: NumberInfoDAO) {
+        self.dao = dao
         super.init(baseURL: Constants.Network.apiURL, transport: transport)
     }
 }
@@ -40,7 +47,7 @@ extension NumberFactServiceImplementation: NumberFactService {
         createCall {
             /// Generating an error with a 30 percent chance
             Double.random(in: 0...1) > 0.3
-                ? .success(.generateCount(count: count))
+                ? .success(.random(count: count))
                 : .failure(NSError(domain: "Unowned error", code: 303))
         }
     }
