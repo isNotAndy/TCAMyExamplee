@@ -20,6 +20,7 @@ public enum NumberFactServiceAction: Equatable {
     
     case factObtained(String)
     case numberInfoObtained([NumberInfoPlainObject])
+    case numberInfoCacheObtained([NumberInfoPlainObject]?)
 }
 
 // MARK: - NumberFactService
@@ -31,10 +32,18 @@ public protocol NumberFactService {
     func obtainFact(number: Int) -> ServiceCall<String>
     
     /// Obtain Array of CellNumberPlainObject
-    /// - Returns: Array of CellNumberPlainObject
+    /// - Returns: Array of NumberInfoPlainObject
     func obtainNumberInfo() -> ServiceCall<[NumberInfoPlainObject]>
     
     /// Obtain Array of CellNumberPlainObject
-    /// - Returns: Array of CellNumberPlainObject
+    /// - Returns: Array of NumberInfoPlainObject
     func obtainNumbersInfo(count: Int) -> ServiceCall<[NumberInfoPlainObject]>
+    
+    /// Obtains a list of cached number information entries
+    /// - Returns: Array of NumberInfoPlainObject
+    func readNumberInfo() -> ServiceCall<[NumberInfoPlainObject]?>
+    
+    /// Removes a number information entry with the specified ID from the data store
+    func removeNumber(with id: NumberInfoPlainObject.ID)
 }
+

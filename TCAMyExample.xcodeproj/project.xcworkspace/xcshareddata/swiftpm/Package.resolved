@@ -37,12 +37,48 @@
       }
     },
     {
+      "identity" : "dao",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/DAO.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "635dcd414858a32fb8a27ff9ae2ec85dc75277ea"
+      }
+    },
+    {
       "identity" : "http-transport",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Incetro/http-transport.git",
       "state" : {
         "branch" : "main",
         "revision" : "5b40dc06de3db534b2df7e936f0061bf76da27d1"
+      }
+    },
+    {
+      "identity" : "monreau",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/Monreau.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "4bfd942f1c7e1d1eb703c896383acb662a42d425"
+      }
+    },
+    {
+      "identity" : "realm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-core.git",
+      "state" : {
+        "revision" : "a5e87a39cffdcc591f3203c11cfca68100d0b9a6",
+        "version" : "13.26.0"
+      }
+    },
+    {
+      "identity" : "realm-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-swift.git",
+      "state" : {
+        "revision" : "55466ae0fb29c5f21866792f05c1fc0c590d7c29",
+        "version" : "10.47.0"
       }
     },
     {
