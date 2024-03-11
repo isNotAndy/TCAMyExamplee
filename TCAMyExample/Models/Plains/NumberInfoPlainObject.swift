@@ -5,22 +5,16 @@
 //  Created by Andrey Barsukov on 03.04.2023.
 //
 
-import SDAO
 import Foundation
 
 // MARK: - NumberInfoPlainObject
 
-/// @realm
-public struct NumberInfoPlainObject: Codable, Equatable, Identifiable, Plain {
+public struct NumberInfoPlainObject: Codable, Equatable, Identifiable {
     
     // MARK: - Properties
     
-    public var uniqueId: UniqueID {
-        UniqueID(rawValue: id)
-    }
-    
     /// ID of the number information.
-    public let id: String
+     public let id: String
 
     /// The numerical representation of the number.
     public let number: Int
@@ -53,7 +47,7 @@ extension Array where Element == NumberInfoPlainObject {
         }
     }
     
-    public static func random(count: Int) -> Self {
+    public static func generateCount(count: Int) -> Self {
         (0..<count).map { _ in NumberInfoPlainObject.random() }
     }
 }

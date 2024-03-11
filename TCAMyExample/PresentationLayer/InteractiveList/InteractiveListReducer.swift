@@ -39,29 +39,24 @@ public struct InteractiveListReducer: Reducer {
         BindingReducer()
         Scope(state: \.reloadableNumbersInfo, 
               action: /InteractiveListAction.reloadableCell) {
-            IDRelodableReducer { _ in
+            IDRelodableReducer { count in
                 numberFactService
-                    .obtainNumberInfo()
+                    .obtainNumbersInfo(count: count)
                     .publish()
-                    .delay(for: 3, scheduler: DispatchQueue.main.eraseToAnyScheduler())
                     .eraseToAnyPublisher()
-            } cache: { _ in
-                numberFactService
-                    .readNumberInfo()
-                    .publish()
             }
         }
         Reduce { state, action in
             switch action {
             case .onAppear:
+                state.items = []
                 return .send(.reloadableCell(.load))
             case .addRandomTapped:
                 state.items.insert(CellState(plain: .random()), at: 0)
-            case .reloadableCell(.response(.success(let plains))),
-                 .reloadableCell(.cacheResponse(.success(.some(let plains)))):
+            case .reloadableCell(.response(.success(let plains))):
                 state.items = IdentifiedArray(
                     uniqueElements: plains.map(CellState.init)
-                )
+                    )
             case .reloadableCell(.response(.failure(let error))):
                 state.alert = AlertState(
                     title: TextState("\(error)"),
@@ -72,11 +67,8 @@ public struct InteractiveListReducer: Reducer {
                 )
             case .removeCheckedItems:
                 state.items.removeAll(where: \.isChecked)
-            case .deleteItemTapped(let offsets):
-                for offset in offsets {
-                    let removedElement = state.items.remove(at: offset)
-                    numberFactService.removeNumber(with: removedElement.id)
-                }
+            case .deleteItemTapped(let offset):
+                state.items.remove(atOffsets: offset)
             case .item(id: _, action: .checkBoxToggle):
                 return .send(.removeCheckedItems)
                     .debounce(
