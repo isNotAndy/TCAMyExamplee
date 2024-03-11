@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import ComposableArchitecture
 // MARK: - SimpleOptionalAction
 
 /// All available `SimpleOptional` module actions.
@@ -27,10 +27,10 @@ public enum SimpleOptionalAction: Equatable {
     
     // MARK: - Children
     
-    /// Child action for `Binding` module.
+    /// Child action for `Counter` module.
     ///
     /// It's necessary as we use `Scope` builder in current module's reducer.
-    /// In short, the `Binding` case means that every action in `Binding` module
+    /// In short, the `counter` case means that every action in `Counter` module
     /// will be sent to current module through it
-    case binding(SimpleBindingAction)
+    case counter(CounterAction)
 }
