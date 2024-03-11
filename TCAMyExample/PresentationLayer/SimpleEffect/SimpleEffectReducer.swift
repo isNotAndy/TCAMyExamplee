@@ -8,6 +8,8 @@
 import Foundation
 import ComposableArchitecture
 import HTTPTransport
+import Monreau
+import SDAO
 
 // MARK: - SimpleEffectFeature
 
@@ -16,7 +18,8 @@ public struct SimpleEffectReducer: Reducer {
     // MARK: - Properties
     
     /// NumberFactService instance
-    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport())
+    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport(), 
+                                                                   dao: DaoProvider.shared.numberInfoDAO)
     
     // MARK: - Reducer
     

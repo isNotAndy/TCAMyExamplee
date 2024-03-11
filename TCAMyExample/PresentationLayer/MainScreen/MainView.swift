@@ -92,9 +92,13 @@ public struct MainView: View {
                         InteractiveListView(
                             store: Store(
                                 initialState: InteractiveListState(defaultCount: 0),
-                                reducer: InteractiveListReducer(numberFactService: isOn ? 
-                                        NumberFactServiceMock() :
-                                        NumberFactServiceImplementation(transport: HTTPTransport())
+                                reducer: InteractiveListReducer(
+                                    numberFactService: isOn
+                                    ? NumberFactServiceMock(dao: DaoProvider.shared.numberInfoDAO)
+                                    : NumberFactServiceImplementation(
+                                        transport: HTTPTransport(),
+                                        dao: DaoProvider.shared.numberInfoDAO
+                                    )
                                 )
                             )
                         )
