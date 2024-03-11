@@ -221,7 +221,6 @@
 		FB567F5F2B82312000FA3D3E /* TCAMyExample */ = {
 			isa = PBXGroup;
 			children = (
-				FBA26FF62B99C68A00C1555E /* Tipo bd */,
 				FB00561F2B879DF400BE7E12 /* Info.plist */,
 				FB567F6E2B82317400FA3D3E /* PresentationLayer */,
 				FB0056182B8788C900BE7E12 /* BusinessLayer */,
@@ -397,13 +396,6 @@
 				FBA26FF22B99B32300C1555E /* NumberInfoTranslator.swift */,
 			);
 			path = Translators;
-			sourceTree = "<group>";
-		};
-		FBA26FF62B99C68A00C1555E /* Tipo bd */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Tipo bd";
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
