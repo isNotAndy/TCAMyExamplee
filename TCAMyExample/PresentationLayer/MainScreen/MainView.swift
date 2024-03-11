@@ -7,10 +7,13 @@
 
 import SwiftUI
 import ComposableArchitecture
+import HTTPTransport
 
 // MARK: - MainView
 
 public struct MainView: View {
+    
+    @State private var isOn = false
     
     // MARK: - View
     
@@ -25,7 +28,9 @@ public struct MainView: View {
                                 reducer: CounterReducer()
                             )
                         )
+                        .navigationTitle("Easy Counter")
                     }
+                    
                     NavigationLink("Two Counters") {
                         DoubleCounterView(
                             store: Store(
@@ -34,20 +39,78 @@ public struct MainView: View {
                             )
                         )
                     }
+                    
                     NavigationLink("Simple Effect") {
-                        SimpleEffectView(store: Store(initialState: SimpleEffectState(),
-                                                      reducer: SimpleEffectReducer()
-                            )
+                        SimpleEffectView(
+                            store: Store(
+                                initialState: SimpleEffectState(),
+                                reducer: SimpleEffectReducer()
+                                                     )
                         )
                     }
-                    NavigationLink("Simple Effect") {
-                        SimpleOptionalView(store: Store(initialState: SimpleOptionalState(),
-                                                      reducer: SimpleOptionalReducer()
+                    
+                    NavigationLink("Simple Binding") {
+                        SimpleBindingView(
+                            store: Store(
+                                initialState: SimpleBindingState(),
+                                reducer: SimpleBindingReducer()
+                                                      )
+                        )
+                        .navigationTitle("Simple Binding")
+                    }
+                    
+                    NavigationLink("Simple Optional") {
+                        SimpleOptionalView(
+                            store: Store(
+                                initialState: SimpleOptionalState(),
+                                reducer: SimpleOptionalReducer()
+                                                       )
+                        )
+                        .navigationTitle("Simple optional")
+                    }
+                    
+                    NavigationLink("Alert And Sheet") {
+                        AlertAndSheetView(
+                            store: Store(
+                                initialState: AlertAndSheetState(),
+                                reducer: AlertAndSheetReducer()
+                                                      )
+                        )
+                        .navigationTitle("Simple optional")
+                    }
+                    
+                    NavigationLink("Holder of Counters") {
+                        HolderOfCountersView(
+                            store: Store(
+                                initialState: HolderOfCountersState(),
+                                reducer: HolderOfCountersReducer()
+                                                         )
+                        )
+                        .navigationTitle("Holder of Counters")
+                    }
+                    NavigationLink {
+                        InteractiveListView(
+                            store: Store(
+                                initialState: InteractiveListState(defaultCount: 0),
+                                reducer: InteractiveListReducer(
+                                    numberFactService: isOn
+                                    ? NumberFactServiceMock(dao: DaoProvider.shared.numberInfoDAO)
+                                    : NumberFactServiceImplementation(
+                                        transport: HTTPTransport(),
+                                        dao: DaoProvider.shared.numberInfoDAO
+                                    )
+                                )
                             )
                         )
+                        .navigationTitle("Interactive List")
+                    } label: {
+                        HStack {
+                            Text("Interactive List" + (isOn ? " (Mock)" : " (API)"))
+                            Toggle(isOn: $isOn) {
+                            }
+                        }
                     }
                 }
-                .navigationTitle("Two counters")
             }
         }
     }
