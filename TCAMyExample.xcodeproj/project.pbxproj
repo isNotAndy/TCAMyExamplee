@@ -377,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA26FF42B99BF6B00C1555E /* DaoAutographAliases.swift */,
+				FBA26FF72B99C6C000C1555E /* realm.swift */,
 				FBA26FF12B99B30400C1555E /* Translators */,
 			);
 			path = DAO;
@@ -401,7 +402,6 @@
 		FBA26FF62B99C68A00C1555E /* Tipo bd */ = {
 			isa = PBXGroup;
 			children = (
-				FBA26FF72B99C6C000C1555E /* realm.swift */,
 			);
 			path = "Tipo bd";
 			sourceTree = "<group>";
