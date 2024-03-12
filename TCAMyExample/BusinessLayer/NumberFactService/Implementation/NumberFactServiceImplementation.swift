@@ -47,6 +47,9 @@ extension NumberFactServiceImplementation: NumberFactService {
             let isSuccess = Double.random(in: 0...1) > 0.3
             if isSuccess {
                 try self.dao.persist(result)
+                /// К-во элементов с числом больше 3 и буквой m названии
+                /// print(try? self.dao.read(predicatedBy: NSPredicate(format: "number > 3 AND title CONTAINS[c] 'm'")))
+                /// print(try? self.dao.count())
             }
             /// Generating an error with a 30 percent chance
             return isSuccess
@@ -93,6 +96,12 @@ extension NumberFactServiceImplementation: NumberFactService {
         createCall {
             do {
                 let result = try self.dao.read()
+                /// Вернуть только с четными к-ва символов(опционально) и цифрами
+                /// print(try? result.filter { $0.title.count % 2 == 0 && $0.number % 2 == 0 })
+                /// Вернуть отфильтрованное по алфиту
+                /// print(try? self.dao.read(predicatedBy: "title != ''", orderedBy: "title", ascending: true))
+                /// Вернуть отфильтрованное по числу
+                /// print(try? self.dao.read(predicatedBy: "number != 0, orderedBy: "number", ascending: true))
                 return .success(result)
             } catch {
                 return .failure(error)
