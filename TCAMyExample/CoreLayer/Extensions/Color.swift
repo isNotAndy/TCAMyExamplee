@@ -12,7 +12,12 @@ import SwiftUI
 
 extension Color {
     
-    init(hex: String) {
+    /// Creates an instance of `Color` from a string representation of a hex value.
+    ///
+    /// - Parameter hex: String representation of the hex value of a color (e.g., "FF0000" for red).
+    ///   May contain the "#" symbol at the beginning, which will be removed before processing.
+    /// - Returns: A new instance of `Color` representing the color corresponding to the provided hex value.
+    public init(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
 
