@@ -39,6 +39,7 @@
 		FB5A4CCA2B88A7E0001F98AA /* SimpleBindingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CC92B88A7E0001F98AA /* SimpleBindingAction.swift */; };
 		FB5A4CCC2B88A824001F98AA /* SimpleBindingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CCB2B88A824001F98AA /* SimpleBindingReducer.swift */; };
 		FB5A4CCE2B88A833001F98AA /* SimpleBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CCD2B88A833001F98AA /* SimpleBindingView.swift */; };
+		FB6C8F582BA04F7C002F03B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6C8F572BA04F7C002F03B0 /* Color.swift */; };
 		FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */; };
 		FB9503482B8F311B008A23E5 /* HolderOfCountersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503472B8F311B008A23E5 /* HolderOfCountersState.swift */; };
 		FB95034A2B8F31B5008A23E5 /* HolderOfCountersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503492B8F31B5008A23E5 /* HolderOfCountersAction.swift */; };
@@ -97,6 +98,7 @@
 		FB5A4CC92B88A7E0001F98AA /* SimpleBindingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingAction.swift; sourceTree = "<group>"; };
 		FB5A4CCB2B88A824001F98AA /* SimpleBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingReducer.swift; sourceTree = "<group>"; };
 		FB5A4CCD2B88A833001F98AA /* SimpleBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingView.swift; sourceTree = "<group>"; };
+		FB6C8F572BA04F7C002F03B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterView.swift"; sourceTree = "<group>"; };
 		FB9503472B8F311B008A23E5 /* HolderOfCountersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderOfCountersState.swift; sourceTree = "<group>"; };
 		FB9503492B8F31B5008A23E5 /* HolderOfCountersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderOfCountersAction.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				FB9503632B9075FC008A23E5 /* String.swift */,
 				FBAFDE422B9724F50096276E /* Int.swift */,
+				FB6C8F572BA04F7C002F03B0 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */,
 				FB95034C2B8F3226008A23E5 /* HolderOfCountersReducer.swift in Sources */,
 				FB5A4CC82B88A7A8001F98AA /* SimpleBindingState.swift in Sources */,
+				FB6C8F582BA04F7C002F03B0 /* Color.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
 				FB95035A2B906CFB008A23E5 /* InteractiveListState.swift in Sources */,
 				FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */,
