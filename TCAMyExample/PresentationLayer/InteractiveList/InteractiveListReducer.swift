@@ -43,7 +43,7 @@ public struct InteractiveListReducer: Reducer {
                 numberFactService
                     .obtainNumberInfo()
                     .publish()
-                    .delay(for: 3, scheduler: DispatchQueue.main.eraseToAnyScheduler())
+                    .delay(for: 15, scheduler: DispatchQueue.main.eraseToAnyScheduler())
                     .eraseToAnyPublisher()
             } cache: { _ in
                 numberFactService

@@ -28,7 +28,7 @@ public struct CellView: View {
         WithViewStore(store) { viewStore in
             HStack {
                 Circle()
-                    .fill(Color(viewStore.color))
+                    .fill(Color(hex: viewStore.color))
                     .frame(width: 20, height: 20)
                 Text("\(viewStore.number)")
                 Text(viewStore.title)
