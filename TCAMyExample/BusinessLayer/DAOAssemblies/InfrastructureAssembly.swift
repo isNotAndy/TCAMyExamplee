@@ -44,6 +44,5 @@ public final class InfrastructureAssembly: CollectableAssembly {
                 databaseVersion: 1
             )
         }
-        
     }
 }

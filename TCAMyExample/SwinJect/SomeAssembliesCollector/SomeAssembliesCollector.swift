@@ -29,7 +29,6 @@ final class SomeAssembliesCollector: AssembliesCollector {
                 object.assemble(inContainer: container)
             }
         }
-
         types.deallocate()
     }
 }

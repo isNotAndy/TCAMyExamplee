@@ -8,7 +8,6 @@
 import SwiftUI
 import ComposableArchitecture
 import HTTPTransport
-import Swinject
 
 // MARK: - MainView
 
