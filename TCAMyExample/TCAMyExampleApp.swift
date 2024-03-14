@@ -10,6 +10,11 @@ import ComposableArchitecture
 
 @main
 struct TCAMyExampleApp: App {
+    
+    init() {
+        SomeAssembliesCollector.collect()
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView()
