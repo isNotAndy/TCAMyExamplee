@@ -13,10 +13,12 @@ import Swinject
 @propertyWrapper
 public struct Swinjectable<T> {
     
-    // MARK: - Property
+    // MARK: - Properties
     
+    /// Swinject container for resolving dependencies.
     private let container = AssembliesHolder.container
     
+    /// The wrapped value representing the resolved dependency.
     public let wrappedValue: T
     
     // MARK: - Initializers

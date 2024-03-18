@@ -16,6 +16,8 @@ final class TCAMyExampleAssembliesCollector: AssembliesCollector {
     
     required init() {}
 
+    // MARK: - AssembliesCollector
+    
     func collect(inContainer container: Container) {
 
         let typeCount = Int(objc_getClassList(nil, 0))

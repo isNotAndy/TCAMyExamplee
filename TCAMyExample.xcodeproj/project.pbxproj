@@ -364,8 +364,7 @@
 		FBA26FE52B98840D00C1555E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FBA26FF02B99B1DB00C1555E /* Models */,
-				FBA26FE72B98841800C1555E /* Database */,
+				FBC1D22D2BA8464C00A1C8DC /* Database */,
 				FBA26FE62B98841200C1555E /* Plains */,
 			);
 			path = Models;
@@ -377,13 +376,6 @@
 				FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */,
 			);
 			path = Plains;
-			sourceTree = "<group>";
-		};
-		FBA26FE72B98841800C1555E /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		FBA26FE82B98843B00C1555E /* Protocol */ = {
@@ -411,14 +403,6 @@
 				FBA26FF12B99B30400C1555E /* Translators */,
 			);
 			path = DAO;
-			sourceTree = "<group>";
-		};
-		FBA26FF02B99B1DB00C1555E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FBA26FEE2B99B1B200C1555E /* NumberInfoModelObject.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		FBA26FF12B99B30400C1555E /* Translators */ = {
@@ -489,6 +473,14 @@
 				FBC1D2092BA1BC2B00A1C8DC /* Swinject */,
 			);
 			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		FBC1D22D2BA8464C00A1C8DC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FBA26FEE2B99B1B200C1555E /* NumberInfoModelObject.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {

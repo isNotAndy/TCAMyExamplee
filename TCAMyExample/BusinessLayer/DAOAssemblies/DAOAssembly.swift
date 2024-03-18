@@ -10,7 +10,7 @@ import SDAO
 import RealmSwift
 import Monreau
 
-// MARK: - DAOAssemblies
+// MARK: - DAOAssembly
 
 public final class DAOAssembly: CollectableAssembly {
     
