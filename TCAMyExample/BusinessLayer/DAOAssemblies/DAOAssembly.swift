@@ -10,14 +10,14 @@ import SDAO
 import RealmSwift
 import Monreau
 
-
 // MARK: - DAOAssemblies
 
 public final class DAOAssembly: CollectableAssembly {
     
-    required init() {}
+    // MARK: - Assemble
     
     func assemble(inContainer container: Container) {
+        
         container.register(NumberInfoDAO.self) { resolver in
             let configuration = container.resolve(RealmConfiguration.self).unsafelyUnwrapped
             let storage = RealmStorage<NumberInfoModelObject>(configuration: configuration)

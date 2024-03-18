@@ -11,9 +11,11 @@ import RealmSwift
 import ServiceCore
 import Monreau
 
+// MARK: - InfrastructureAssembly
+
 public final class InfrastructureAssembly: CollectableAssembly {
     
-    init() { }
+    // MARK: - Assemble
     
     func assemble(inContainer container: Container) {
         
@@ -35,8 +37,7 @@ public final class InfrastructureAssembly: CollectableAssembly {
             } catch {
                 fatalError(":(")
             }
-        }
-        .inObjectScope(.container)
+        }.inObjectScope(.container)
         
         container.register(RealmConfiguration.self) { resolver in
             RealmConfiguration(

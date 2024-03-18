@@ -1,5 +1,5 @@
 //
-//  AssembliesCollector.swift
+//  TCAMyExampleAssembliesCollector.swift
 //  TCAMyExample
 //
 //  Created by Андрей Барсуков on 13.03.2024.
@@ -10,10 +10,11 @@ import Foundation
 
 // MARK: - AssembliesCollector
 
-final class SomeAssembliesCollector: AssembliesCollector {
+final class TCAMyExampleAssembliesCollector: AssembliesCollector {
 
-    required init() {
-    }
+    // MARK: - Initializers
+    
+    required init() {}
 
     func collect(inContainer container: Container) {
 

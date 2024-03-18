@@ -8,12 +8,18 @@
 import SwiftUI
 import ComposableArchitecture
 
+// MARK: - TCAMyExampleApp
+
 @main
 struct TCAMyExampleApp: App {
     
+    // MARK: - Initializers
+    
     init() {
-        SomeAssembliesCollector.collect()
+        TCAMyExampleAssembliesCollector.collect()
     }
+    
+    // MARK: - Scene
     
     var body: some Scene {
         WindowGroup {

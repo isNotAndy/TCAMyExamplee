@@ -7,9 +7,9 @@
 
 import Foundation
 
+// MARK: - Constants
 
 public enum Constants {
-    
     
     public enum Network {
         

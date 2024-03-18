@@ -19,7 +19,6 @@ public final class NumberFactServiceImplementation: WebService {
     
     /// NumberInfoDAO instnce
     private let dao: NumberInfoDAO
-    
 
     // MARK: - Initializers
 

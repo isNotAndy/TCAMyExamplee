@@ -34,17 +34,4 @@ public enum HolderOfCountersAction: Equatable {
     /// In short, the `doubleCounter` case means that every action in `doubleCounter` module
     /// will be sent to current module through it
     case doubleCounter(PresentationAction<DoubleCounterAction>)
-    
-    // MARK: - Binding
-    
-    /// Binding interlayer action
-    ///
-    /// Embeds a binding action in this action type.
-    /// An action type that exposes a `binding` case that holds a `BindingAction`
-    ///
-    /// Used in conjunction with `BindableState` to safely eliminate the boilerplate typically
-    /// associated with mutating multiple fields in state.
-    ///
-    /// See the documentation for `BindableState` for more details.
-//    case binding(BindingAction<HolderOfCountersState>)
 }

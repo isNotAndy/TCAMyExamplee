@@ -11,7 +11,11 @@ import RealmSwift
 import Monreau
 import HTTPTransport
 
+// MARK: - ServiceLayerAssembly
+
 public final class ServiceLayerAssembly: CollectableAssembly {
+    
+    // MARK: - Assemble
     
     func assemble(inContainer container: Container) {
         
@@ -24,7 +28,6 @@ public final class ServiceLayerAssembly: CollectableAssembly {
             )
             return numberFactServiceImplementation
         }
-        
         container.register(HTTPTransport.self) { resolver in
             HTTPTransport()
         }

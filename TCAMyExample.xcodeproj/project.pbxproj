@@ -65,7 +65,6 @@
 		FBAFDE3F2B97112A0096276E /* TCANetworkReducers in Frameworks */ = {isa = PBXBuildFile; productRef = FBAFDE3E2B97112A0096276E /* TCANetworkReducers */; };
 		FBAFDE412B97172A0096276E /* NumberInfoPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */; };
 		FBAFDE432B9724F50096276E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE422B9724F50096276E /* Int.swift */; };
-		FBC1D20C2BA1BCE200A1C8DC /* SomeAssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D20B2BA1BCE200A1C8DC /* SomeAssembliesCollector.swift */; };
 		FBC1D20F2BA1BD2600A1C8DC /* AssembliesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D20E2BA1BD2600A1C8DC /* AssembliesHolder.swift */; };
 		FBC1D2112BA1BD4E00A1C8DC /* CollectableAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2102BA1BD4E00A1C8DC /* CollectableAssembly.swift */; };
 		FBC1D2142BA1BE0700A1C8DC /* AssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2132BA1BE0700A1C8DC /* AssembliesCollector.swift */; };
@@ -75,6 +74,7 @@
 		FBC1D21F2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */; };
 		FBC1D2222BA1DBF700A1C8DC /* TranslatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */; };
 		FBC1D2292BA82DF400A1C8DC /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */; };
+		FBC1D22B2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D22A2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,7 +132,6 @@
 		FBA26FF72B99C6C000C1555E /* realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realm.swift; sourceTree = "<group>"; };
 		FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInfoPlainObject.swift; sourceTree = "<group>"; };
 		FBAFDE422B9724F50096276E /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		FBC1D20B2BA1BCE200A1C8DC /* SomeAssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeAssembliesCollector.swift; sourceTree = "<group>"; };
 		FBC1D20E2BA1BD2600A1C8DC /* AssembliesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesHolder.swift; sourceTree = "<group>"; };
 		FBC1D2102BA1BD4E00A1C8DC /* CollectableAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectableAssembly.swift; sourceTree = "<group>"; };
 		FBC1D2132BA1BE0700A1C8DC /* AssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesCollector.swift; sourceTree = "<group>"; };
@@ -142,6 +141,7 @@
 		FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerAssembly.swift; sourceTree = "<group>"; };
 		FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorsAssembly.swift; sourceTree = "<group>"; };
 		FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
+		FBC1D22A2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMyExampleAssembliesCollector.swift; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,7 +253,7 @@
 				FB0056182B8788C900BE7E12 /* BusinessLayer */,
 				FBA26FE52B98840D00C1555E /* Models */,
 				FB9503612B9075DA008A23E5 /* CoreLayer */,
-				FBC1D2092BA1BC2B00A1C8DC /* SwinJect */,
+				FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */,
 				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
 				FB567F642B82312100FA3D3E /* Assets.xcassets */,
 				FB567F662B82312100FA3D3E /* Preview Content */,
@@ -344,7 +344,7 @@
 		FB9503612B9075DA008A23E5 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D2272BA82DDE00A1C8DC /* New Group */,
+				FBC1D2272BA82DDE00A1C8DC /* Swinjectable */,
 				FB9503622B9075E5008A23E5 /* Extensions */,
 			);
 			path = CoreLayer;
@@ -429,22 +429,22 @@
 			path = Translators;
 			sourceTree = "<group>";
 		};
-		FBC1D2092BA1BC2B00A1C8DC /* SwinJect */ = {
+		FBC1D2092BA1BC2B00A1C8DC /* Swinject */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D20A2BA1BC9F00A1C8DC /* SomeAssembliesCollector */,
+				FBC1D20A2BA1BC9F00A1C8DC /* TCAMyExampleAssembliesCollector */,
 				FBC1D2122BA1BD6B00A1C8DC /* Protocols */,
 			);
-			path = SwinJect;
+			path = Swinject;
 			sourceTree = "<group>";
 		};
-		FBC1D20A2BA1BC9F00A1C8DC /* SomeAssembliesCollector */ = {
+		FBC1D20A2BA1BC9F00A1C8DC /* TCAMyExampleAssembliesCollector */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D20B2BA1BCE200A1C8DC /* SomeAssembliesCollector.swift */,
+				FBC1D22A2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift */,
 				FBC1D20D2BA1BD0C00A1C8DC /* Helpers */,
 			);
-			path = SomeAssembliesCollector;
+			path = TCAMyExampleAssembliesCollector;
 			sourceTree = "<group>";
 		};
 		FBC1D20D2BA1BD0C00A1C8DC /* Helpers */ = {
@@ -475,12 +475,20 @@
 			path = DAOAssemblies;
 			sourceTree = "<group>";
 		};
-		FBC1D2272BA82DDE00A1C8DC /* New Group */ = {
+		FBC1D2272BA82DDE00A1C8DC /* Swinjectable */ = {
 			isa = PBXGroup;
 			children = (
 				FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */,
 			);
-			path = "New Group";
+			path = Swinjectable;
+			sourceTree = "<group>";
+		};
+		FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FBC1D2092BA1BC2B00A1C8DC /* Swinject */,
+			);
+			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
@@ -612,7 +620,6 @@
 				FB95035C2B906D10008A23E5 /* InteractiveListAction.swift in Sources */,
 				FB95034E2B8F35B1008A23E5 /* HolderOfCountersView.swift in Sources */,
 				FB9503562B906CD6008A23E5 /* CellReducer.swift in Sources */,
-				FBC1D20C2BA1BCE200A1C8DC /* SomeAssembliesCollector.swift in Sources */,
 				FB5A4CCA2B88A7E0001F98AA /* SimpleBindingAction.swift in Sources */,
 				FB15E9E92B8780AB00F01DE2 /* SimpleEffectAction.swift in Sources */,
 				FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */,
@@ -644,6 +651,7 @@
 				FB5A4CC82B88A7A8001F98AA /* SimpleBindingState.swift in Sources */,
 				FB6C8F582BA04F7C002F03B0 /* Color.swift in Sources */,
 				FB4814E12B8738320068D161 /* CounterState.swift in Sources */,
+				FBC1D22B2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift in Sources */,
 				FB95035A2B906CFB008A23E5 /* InteractiveListState.swift in Sources */,
 				FBC1D2112BA1BD4E00A1C8DC /* CollectableAssembly.swift in Sources */,
 				FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */,

@@ -14,7 +14,6 @@ public struct HolderOfCountersReducer: Reducer {
     // MARK: - Reducer
     
     public var body: some Reducer<HolderOfCountersState, HolderOfCountersAction> {
-//        BindingReducer()
         Reduce { state, action in
             switch action {
             case .counter(.presented(.decrementButtonTapped)),
@@ -27,18 +26,8 @@ public struct HolderOfCountersReducer: Reducer {
                 state.totalPositiveClicks += 1
             case .counterButtonTapped:
                 state.counter = CounterState()
-//                state.isCounterActive = true
-//            case .binding(\.$isCounterActive):
-//                if !state.isCounterActive {
-//                    state.counter = nil
-//                }
             case .doubleCounterButtonTapped:
                 state.doubleCounter = DoubleCounterState()
-//                state.isDoubleCounterActive = true
-//            case .binding(\.$isDoubleCounterActive):
-//                if !state.isDoubleCounterActive {
-//                    state.doubleCounter = nil
-//                }
             default:
                 break
             }

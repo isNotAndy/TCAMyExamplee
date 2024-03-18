@@ -8,7 +8,9 @@
 import Swinject
 import Foundation
 
-private let collectToken = "com.incetro.CityGuide.Collector"
+// MARK: - CollectToken
+
+private let collectToken = "com.incetro.TCAMyExample.Collector"
 
 // MARK: - AssembliesCollector
 

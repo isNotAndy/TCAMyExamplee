@@ -96,7 +96,7 @@ public struct MainView: View {
                         .navigationTitle("Interactive List")
                     } label: {
                         HStack {
-                            Text("Interactive List" + ( "(API)"))
+                            Text("Interactive List (API)")
                         }
                     }
                 }

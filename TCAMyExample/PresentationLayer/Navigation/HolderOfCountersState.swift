@@ -42,10 +42,4 @@ public struct HolderOfCountersState: Equatable {
     /// All necessary processing is placed inside current reducer. Also, if you change the state
     /// inside the `doubleCounter` module all changes will be saved here.
     @PresentationState public var doubleCounter: DoubleCounterState?
-    
-//    // MARK: - Navigation
-//    
-//    /// Indicates is user transport module active
-//    @BindingState public var isCounterActive = false
-//    @BindingState public var isDoubleCounterActive = false
 }
