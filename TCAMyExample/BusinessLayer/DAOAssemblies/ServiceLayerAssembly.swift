@@ -15,13 +15,7 @@ public final class ServiceLayerAssembly: CollectableAssembly {
     
     func assemble(inContainer container: Container) {
         
-        container.register(NumberFactService.self, name: "MOCK") { resolver in
-            let numberInfoDAO = container.resolve(NumberInfoDAO.self).unsafelyUnwrapped
-            let transport = container.resolve(HTTPTransport.self).unsafelyUnwrapped
-            return NumberFactServiceMock(dao: numberInfoDAO)
-        }
-        
-        container.register(NumberFactService.self, name: "DATA") { resolver in
+        container.register(NumberFactService.self) { resolver in
             let numberInfoDAO = container.resolve(NumberInfoDAO.self).unsafelyUnwrapped
             let transport = container.resolve(HTTPTransport.self).unsafelyUnwrapped
             let numberFactServiceImplementation = NumberFactServiceImplementation(

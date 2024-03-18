@@ -74,6 +74,7 @@
 		FBC1D21C2BA1CECF00A1C8DC /* InfrastructureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */; };
 		FBC1D21F2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */; };
 		FBC1D2222BA1DBF700A1C8DC /* TranslatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */; };
+		FBC1D2292BA82DF400A1C8DC /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */; };
 		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureAssembly.swift; sourceTree = "<group>"; };
 		FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerAssembly.swift; sourceTree = "<group>"; };
 		FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorsAssembly.swift; sourceTree = "<group>"; };
+		FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
 		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 		FB9503612B9075DA008A23E5 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FBC1D2272BA82DDE00A1C8DC /* New Group */,
 				FB9503622B9075E5008A23E5 /* Extensions */,
 			);
 			path = CoreLayer;
@@ -470,6 +473,14 @@
 				FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */,
 			);
 			path = DAOAssemblies;
+			sourceTree = "<group>";
+		};
+		FBC1D2272BA82DDE00A1C8DC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FBFDECA62B851D8A004C5101 /* Counter */ = {
@@ -636,6 +647,7 @@
 				FB95035A2B906CFB008A23E5 /* InteractiveListState.swift in Sources */,
 				FBC1D2112BA1BD4E00A1C8DC /* CollectableAssembly.swift in Sources */,
 				FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */,
+				FBC1D2292BA82DF400A1C8DC /* PropertyWrappers.swift in Sources */,
 				FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */,
 				FBC1D2142BA1BE0700A1C8DC /* AssembliesCollector.swift in Sources */,
 				FB3EEB6B2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift in Sources */,

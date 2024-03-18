@@ -27,7 +27,9 @@ import TCANetworkReducers
 public struct InteractiveListReducer: Reducer {
     
     /// NumberFactService instance
-    public let numberFactService: NumberFactService
+    /// public let numberFactService: NumberFactService
+    
+    @Injected var numberFactService: NumberFactService
     
     // MARK: - IDs
     
