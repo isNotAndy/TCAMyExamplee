@@ -8,7 +8,7 @@
 import Swinject
 import Foundation
 
-// MARK: - AssembliesCollector
+// MARK: - TCAMyExampleAssembliesCollector
 
 final class TCAMyExampleAssembliesCollector: AssembliesCollector {
 

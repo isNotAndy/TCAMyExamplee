@@ -42,7 +42,7 @@
 		FB6C8F582BA04F7C002F03B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6C8F572BA04F7C002F03B0 /* Color.swift */; };
 		FB6C8F5B2BA0556B002F03B0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FB6C8F5A2BA0556B002F03B0 /* Swinject */; };
 		FB6C8F5D2BA0556B002F03B0 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = FB6C8F5C2BA0556B002F03B0 /* Swinject-Dynamic */; };
-		FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */; };
+		FB88AE862B85263D0081FCCF /* DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88AE852B85263D0081FCCF /* DoubleCounterView.swift */; };
 		FB9503482B8F311B008A23E5 /* HolderOfCountersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503472B8F311B008A23E5 /* HolderOfCountersState.swift */; };
 		FB95034A2B8F31B5008A23E5 /* HolderOfCountersAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503492B8F31B5008A23E5 /* HolderOfCountersAction.swift */; };
 		FB95034C2B8F3226008A23E5 /* HolderOfCountersReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95034B2B8F3226008A23E5 /* HolderOfCountersReducer.swift */; };
@@ -73,9 +73,9 @@
 		FBC1D21C2BA1CECF00A1C8DC /* InfrastructureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */; };
 		FBC1D21F2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */; };
 		FBC1D2222BA1DBF700A1C8DC /* TranslatorsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */; };
-		FBC1D2292BA82DF400A1C8DC /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */; };
+		FBC1D2292BA82DF400A1C8DC /* Swinjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D2282BA82DF400A1C8DC /* Swinjectable.swift */; };
 		FBC1D22B2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D22A2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift */; };
-		FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */; };
+		FBFDECAB2B851EB2004C5101 /* DoubleCounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDECAA2B851EB2004C5101 /* DoubleCounterReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,7 +111,7 @@
 		FB5A4CCB2B88A824001F98AA /* SimpleBindingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingReducer.swift; sourceTree = "<group>"; };
 		FB5A4CCD2B88A833001F98AA /* SimpleBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBindingView.swift; sourceTree = "<group>"; };
 		FB6C8F572BA04F7C002F03B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterView.swift"; sourceTree = "<group>"; };
+		FB88AE852B85263D0081FCCF /* DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterView.swift; sourceTree = "<group>"; };
 		FB9503472B8F311B008A23E5 /* HolderOfCountersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderOfCountersState.swift; sourceTree = "<group>"; };
 		FB9503492B8F31B5008A23E5 /* HolderOfCountersAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderOfCountersAction.swift; sourceTree = "<group>"; };
 		FB95034B2B8F3226008A23E5 /* HolderOfCountersReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderOfCountersReducer.swift; sourceTree = "<group>"; };
@@ -140,9 +140,9 @@
 		FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureAssembly.swift; sourceTree = "<group>"; };
 		FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerAssembly.swift; sourceTree = "<group>"; };
 		FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorsAssembly.swift; sourceTree = "<group>"; };
-		FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
+		FBC1D2282BA82DF400A1C8DC /* Swinjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinjectable.swift; sourceTree = "<group>"; };
 		FBC1D22A2BA83ABA00A1C8DC /* TCAMyExampleAssembliesCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMyExampleAssembliesCollector.swift; sourceTree = "<group>"; };
-		FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DoubleCounterReducer.swift"; sourceTree = "<group>"; };
+		FBFDECAA2B851EB2004C5101 /* DoubleCounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,7 +344,7 @@
 		FB9503612B9075DA008A23E5 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D2272BA82DDE00A1C8DC /* Swinjectable */,
+				FBC1D2272BA82DDE00A1C8DC /* PropertyWrappers */,
 				FB9503622B9075E5008A23E5 /* Extensions */,
 			);
 			path = CoreLayer;
@@ -475,12 +475,12 @@
 			path = DAOAssemblies;
 			sourceTree = "<group>";
 		};
-		FBC1D2272BA82DDE00A1C8DC /* Swinjectable */ = {
+		FBC1D2272BA82DDE00A1C8DC /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D2282BA82DF400A1C8DC /* PropertyWrappers.swift */,
+				FBC1D2282BA82DF400A1C8DC /* Swinjectable.swift */,
 			);
-			path = Swinjectable;
+			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
 		FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */ = {
@@ -507,8 +507,8 @@
 			children = (
 				FB4814E42B873DF00068D161 /* DoubleCounterState.swift */,
 				FB4814E62B873EE30068D161 /* DoubleCounterActon.swift */,
-				FBFDECAA2B851EB2004C5101 /*  DoubleCounterReducer.swift */,
-				FB88AE852B85263D0081FCCF /*  DoubleCounterView.swift */,
+				FBFDECAA2B851EB2004C5101 /* DoubleCounterReducer.swift */,
+				FB88AE852B85263D0081FCCF /* DoubleCounterView.swift */,
 			);
 			path = TwoCounters;
 			sourceTree = "<group>";
@@ -612,7 +612,7 @@
 				FBA26FF82B99C6C000C1555E /* realm.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBC1D2222BA1DBF700A1C8DC /* TranslatorsAssembly.swift in Sources */,
-				FBFDECAB2B851EB2004C5101 /*  DoubleCounterReducer.swift in Sources */,
+				FBFDECAB2B851EB2004C5101 /* DoubleCounterReducer.swift in Sources */,
 				FB9503582B906CE4008A23E5 /* CellView.swift in Sources */,
 				FBA26FEF2B99B1B200C1555E /* NumberInfoModelObject.swift in Sources */,
 				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
@@ -655,11 +655,11 @@
 				FB95035A2B906CFB008A23E5 /* InteractiveListState.swift in Sources */,
 				FBC1D2112BA1BD4E00A1C8DC /* CollectableAssembly.swift in Sources */,
 				FB95035E2B906D1B008A23E5 /* InteractiveListReducer.swift in Sources */,
-				FBC1D2292BA82DF400A1C8DC /* PropertyWrappers.swift in Sources */,
+				FBC1D2292BA82DF400A1C8DC /* Swinjectable.swift in Sources */,
 				FB5A4CC32B889309001F98AA /* SimpleOptionalReducer.swift in Sources */,
 				FBC1D2142BA1BE0700A1C8DC /* AssembliesCollector.swift in Sources */,
 				FB3EEB6B2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift in Sources */,
-				FB88AE862B85263D0081FCCF /*  DoubleCounterView.swift in Sources */,
+				FB88AE862B85263D0081FCCF /* DoubleCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

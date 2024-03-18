@@ -14,8 +14,6 @@ import Monreau
 
 public final class DAOAssembly: CollectableAssembly {
     
-    // MARK: - Assemble
-    
     func assemble(inContainer container: Container) {
         
         container.register(NumberInfoDAO.self) { resolver in

@@ -15,8 +15,6 @@ import Monreau
 
 public final class InfrastructureAssembly: CollectableAssembly {
     
-    // MARK: - Assemble
-    
     func assemble(inContainer container: Container) {
         
         container.register(Realm.self) { resolver in
@@ -41,7 +39,7 @@ public final class InfrastructureAssembly: CollectableAssembly {
         
         container.register(RealmConfiguration.self) { resolver in
             RealmConfiguration(
-                databaseFileName: "DAOHuiao.realm",
+                databaseFileName: "TCAMyExample.realm",
                 databaseVersion: 1
             )
         }

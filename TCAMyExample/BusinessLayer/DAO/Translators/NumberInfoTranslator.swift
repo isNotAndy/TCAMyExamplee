@@ -37,8 +37,6 @@ public final class NumberInfoTranslator {
 
 extension NumberInfoTranslator: Translator {
     
-    // MARK: - Feature
-    
     public func translate(model: DatabaseModel) throws -> PlainModel {
         NumberInfoPlainObject (
             id: model.id,

@@ -13,8 +13,6 @@ import Monreau
 
 public final class TranslatorsAssembly: CollectableAssembly {
     
-    // MARK: - Assemble
-    
     func assemble(inContainer container: Container) {
         
         container.register(NumberInfoTranslator.self) { resolver in

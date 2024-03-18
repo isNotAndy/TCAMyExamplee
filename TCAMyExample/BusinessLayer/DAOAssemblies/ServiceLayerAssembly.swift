@@ -15,8 +15,6 @@ import HTTPTransport
 
 public final class ServiceLayerAssembly: CollectableAssembly {
     
-    // MARK: - Assemble
-    
     func assemble(inContainer container: Container) {
         
         container.register(NumberFactService.self) { resolver in

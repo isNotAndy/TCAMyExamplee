@@ -19,7 +19,7 @@ struct TCAMyExampleApp: App {
         TCAMyExampleAssembliesCollector.collect()
     }
     
-    // MARK: - Scene
+    // MARK: - App
     
     var body: some Scene {
         WindowGroup {
