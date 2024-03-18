@@ -13,8 +13,6 @@ import HTTPTransport
 
 public struct MainView: View {
     
-    @State private var isOn = false
-    
     // MARK: - View
     
     public var body: some View {
@@ -92,22 +90,13 @@ public struct MainView: View {
                         InteractiveListView(
                             store: Store(
                                 initialState: InteractiveListState(defaultCount: 0),
-                                reducer: InteractiveListReducer(
-                                    numberFactService: isOn
-                                    ? NumberFactServiceMock(dao: DaoProvider.shared.numberInfoDAO)
-                                    : NumberFactServiceImplementation(
-                                        transport: HTTPTransport(),
-                                        dao: DaoProvider.shared.numberInfoDAO
-                                    )
-                                )
+                                reducer: InteractiveListReducer()
                             )
                         )
                         .navigationTitle("Interactive List")
                     } label: {
                         HStack {
-                            Text("Interactive List" + (isOn ? " (Mock)" : " (API)"))
-                            Toggle(isOn: $isOn) {
-                            }
+                            Text("Interactive List (API)")
                         }
                     }
                 }

@@ -18,6 +18,8 @@ public final class NumberInfoTranslator {
     public typealias PlainModel = NumberInfoPlainObject
     public typealias DatabaseModel = NumberInfoModelObject
     
+    // MARK: - Property
+    
     /// NumberInfo storage
     private lazy var numberInfoStorage = RealmStorage<NumberInfoModelObject>(configuration: self.configuration)
     
@@ -34,6 +36,7 @@ public final class NumberInfoTranslator {
 // MARK: - Translator
 
 extension NumberInfoTranslator: Translator {
+    
     public func translate(model: DatabaseModel) throws -> PlainModel {
         NumberInfoPlainObject (
             id: model.id,

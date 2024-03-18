@@ -10,5 +10,5 @@ import Monreau
 
 // MARK: - Aliases
 
-/// DAO alias for  ProjectPlainObject entty
+/// DAO alias for  ProjectPlainObject entity
 typealias NumberInfoDAO = DAO<RealmStorage<NumberInfoModelObject>, NumberInfoTranslator>

@@ -172,6 +172,15 @@
       }
     },
     {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "36c30fa98d91408cfab1458557843cc879d74412"
+      }
+    },
+    {
       "identity" : "tca",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Incetro/TCA.git",

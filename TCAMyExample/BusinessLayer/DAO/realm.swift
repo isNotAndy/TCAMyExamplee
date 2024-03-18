@@ -17,7 +17,7 @@ final class DaoProvider {
     static let shared = DaoProvider()
     
     private let configuration = RealmConfiguration(
-        databaseFileName: "DAOHuiao.realm",
+        databaseFileName: "TCAMyExample.realm",
         databaseVersion: 1)
     
     private(set) lazy var numberInfoDAO = DAO(
