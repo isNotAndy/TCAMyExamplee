@@ -38,31 +38,26 @@ public struct InteractiveListReducer: Reducer {
     
     public var body: some Reducer<InteractiveListState, InteractiveListAction> {
         BindingReducer()
-        Scope(state: \.reloadableNumbersInfo, 
-              action: /InteractiveListAction.reloadableCell) {
-            IDRelodableReducer { _ in
+        Scope(
+            state: \.pagination,
+            action: /InteractiveListAction.pagination
+        ) {
+            PaginationReducer { pageNumber, pageSize  in
                 numberFactService
-                    .obtainNumberInfo()
+                    .pagination(pageNumber: pageNumber, pageSize: pageSize)
                     .publish()
-                    .delay(for: 15, scheduler: DispatchQueue.main.eraseToAnyScheduler())
+                    .delay(for: 1.5, scheduler: DispatchQueue.main.eraseToAnyScheduler())
                     .eraseToAnyPublisher()
-            } cache: { _ in
-                numberFactService
-                    .readNumberInfo()
-                    .publish()
             }
         }
         Reduce { state, action in
             switch action {
-            case .onAppear:
-                return .send(.reloadableCell(.load))
+            case .pagination(.response(.success(let data))):
+                state.items += IdentifiedArray(
+                    uniqueElements: data.array.map(CellState.init)
+                )
             case .addRandomTapped:
                 state.items.insert(CellState(plain: .random()), at: 0)
-            case .reloadableCell(.response(.success(let plains))),
-                 .reloadableCell(.cacheResponse(.success(.some(let plains)))):
-                state.items = IdentifiedArray(
-                    uniqueElements: plains.map(CellState.init)
-                )
             case .reloadableCell(.response(.failure(let error))):
                 state.alert = AlertState(
                     title: TextState("\(error)"),

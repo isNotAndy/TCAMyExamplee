@@ -10,6 +10,7 @@ import HTTPTransport
 import Alamofire
 import ServiceCore
 import SDAO
+import TCANetworkReducers
 
 // MARK: - NumberFactServiceImplementation
 
@@ -33,6 +34,23 @@ public final class NumberFactServiceImplementation: WebService {
 // MARK: - NumberFactService
 
 extension NumberFactServiceImplementation: NumberFactService {
+    
+    /// Function to perform pagination
+    public func pagination(pageNumber: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>> {
+        createCall {
+            let pageData: [NumberInfoPlainObject] = .random(count: pageSize)
+            let paginationMetadata = PaginationMetadataPlainObject(
+                totalObjectCount: 999_999,
+                pageCount: 999_999,
+                currentPage: pageNumber,
+                perPage: pageSize
+            )
+            return .success(PaginatedResponsePlainObject(
+                pagination: paginationMetadata,
+                array: pageData
+            ))
+        }
+    }
     
     /// Removes a number information entry with the specified ID from the data store
     public func removeNumber(with id: NumberInfoPlainObject.ID) {

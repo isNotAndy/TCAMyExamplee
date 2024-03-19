@@ -26,13 +26,14 @@ public struct CellView: View {
     
     public var body: some View {
         WithViewStore(store) { viewStore in
-            HStack {
+            HStack(spacing: 8) {
                 Circle()
                     .fill(Color(hex: viewStore.color))
                     .frame(width: 20, height: 20)
+                    .padding()
                 Text("\(viewStore.number)")
                 Text(viewStore.title)
-                Spacer(minLength: 4)
+                Spacer(minLength: 8)
                 Image(systemName: viewStore.image)
                     .renderingMode(.original)
                 Button(action: {
@@ -48,6 +49,7 @@ public struct CellView: View {
                     )
                 }
                 .buttonStyle(PlainButtonStyle())
+                .padding()
             }
             .foregroundColor(viewStore.isChecked ? .gray : nil)
             .frame(height: 40)

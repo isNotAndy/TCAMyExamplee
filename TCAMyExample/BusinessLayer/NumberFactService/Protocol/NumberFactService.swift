@@ -7,6 +7,7 @@
 
 import Foundation
 import ServiceCore
+import TCANetworkReducers
 
 // MARK: - Aliases
 
@@ -45,5 +46,12 @@ public protocol NumberFactService {
     
     /// Removes a number information entry with the specified ID from the data store
     func removeNumber(with id: NumberInfoPlainObject.ID)
+    
+    /// Function to perform pagination.
+    /// - Parameters:
+    ///   - pageNumber: The page number.
+    ///   - pageSize: The size of each page.
+    /// - Returns: A service call for paginated response.
+    func pagination(pageNumber: Int,pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>>
 }
 

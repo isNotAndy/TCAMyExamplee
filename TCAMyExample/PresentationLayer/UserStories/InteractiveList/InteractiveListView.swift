@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import SwiftUI
+import TCANetworkReducers
 
 // MARK: - InteractiveListView
 
@@ -16,33 +17,34 @@ import SwiftUI
 /// all changes to the state and re-render, and we can send all user actions
 /// to the store so that state changes.
 public struct InteractiveListView: View {
-
+    
     // MARK: - Properties
-
+    
     /// The store powering the `InteractiveList` feature
     public let store: StoreOf<InteractiveListReducer>
-
+    
     // MARK: - View
-
+    
     public var body: some View {
         WithViewStore(store) { viewStore in
-            List {
-                HStack(spacing: 4) {
-                    TextField("Enter your number", text: viewStore.$targetArraySizeString)
-                        .textFieldStyle(.roundedBorder)
-                        .keyboardType(.numberPad)
-                    Button {
-                        viewStore.send(.buttonPressed)
-                    } label: {
-                        Text("Refresh cell's")
+            ScrollView {
+                LazyVStack {
+                    HStack(spacing: 4) {
+                        TextField("Enter your number", text: viewStore.$targetArraySizeString)
+                            .textFieldStyle(.roundedBorder)
+                            .keyboardType(.numberPad)
+                        Button {
+                            viewStore.send(.buttonPressed)
+                        } label: {
+                            Text("Refresh cell's")
+                        }
                     }
-                }
-                Text(viewStore.title)
-                    .opacity(0.5)
-                    .animation(.easeInOut(duration: 0.15), value: viewStore.title)
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                Section {
+                    .padding()
+                    Text(viewStore.title)
+                        .opacity(0.5)
+                        .animation(.easeInOut(duration: 0.15), value: viewStore.title)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     ForEachStore(
                         store.scope(
                             state: \.items,
@@ -50,17 +52,21 @@ public struct InteractiveListView: View {
                         ),
                         content: CellView.init
                     )
-                    .onDelete { viewStore.send(.deleteItemTapped($0)) }
-                }.textCase(nil)
+                    MEProgressView(
+                        store: store.scope(
+                            state: \.pagination,
+                            action: InteractiveListAction.pagination)
+                    )
+                }
             }
             .alert(store.scope(state: \.alert),
                    dismiss: .alertDismissed)
             .navigationBarItems(trailing:
-                Button {
-                    viewStore.send(.addRandomTapped, animation: .default)
-                } label: {
-                    Text("Add")
-                }
+                                    Button {
+                viewStore.send(.addRandomTapped, animation: .default)
+            } label: {
+                Text("Add")
+            }
             )
             .onAppear {
                 viewStore.send(.onAppear)

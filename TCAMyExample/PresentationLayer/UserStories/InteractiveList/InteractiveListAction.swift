@@ -62,4 +62,8 @@ public enum InteractiveListAction: Equatable, BindableAction {
     // MARK: - Binding
     
     case binding(BindingAction<InteractiveListState>)
+    
+    // MARK: - Pagination
+    
+    case pagination(PaginationAction<NumberInfoPlainObject, NumberFactServiceError>)
 }

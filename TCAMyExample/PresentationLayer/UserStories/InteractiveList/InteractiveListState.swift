@@ -42,11 +42,15 @@ public struct InteractiveListState: Equatable {
     
     /// Currently inputed text
     @BindingState public var targetArraySizeString = ""
+    
+    /// Pagination
+    public var pagination: PaginationState<NumberInfoPlainObject>
 }
 
 extension InteractiveListState {
     
     public init(defaultCount: Int) {
         reloadableNumbersInfo = IDReloadableState(id: defaultCount)
+        pagination = PaginationState(pageSize: 30)
     }
 }
