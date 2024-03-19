@@ -1,5 +1,5 @@
 //
-//  CellState.swift
+//  InteractiveListItemState.swift
 //  TCAMyExample
 //
 //  Created by Андрей Барсуков on 29.02.2024.
@@ -8,13 +8,13 @@
 import Foundation
 import TCANetworkReducers
 
-// MARK: - CellState
+// MARK: - InteractiveListItemState
 
-/// `Cell` module state
+/// `InteractiveListItem` module state
 ///
-/// Basically, `CellState` is a type that describes the data
-/// `Cell` reducer needs to perform its logic and render its UI.
-public struct CellState: Identifiable, Equatable {
+/// Basically, `InteractiveListItemState` is a type that describes the data
+/// `InteractiveListItem` reducer needs to perform its logic and render its UI.
+public struct InteractiveListItemState: Identifiable, Equatable {
     
     // MARK: - Properties
     
@@ -39,7 +39,7 @@ public struct CellState: Identifiable, Equatable {
 
 // MARK: - Initializer
 
-extension CellState {
+extension InteractiveListItemState {
     
     public init(plain: NumberInfoPlainObject) {
         self.id = plain.id

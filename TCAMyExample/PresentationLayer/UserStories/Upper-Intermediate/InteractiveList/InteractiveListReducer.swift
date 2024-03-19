@@ -44,7 +44,7 @@ public struct InteractiveListReducer: Reducer {
         ) {
             PaginationReducer { pageNumber, pageSize  in
                 numberFactService
-                    .pagination(pageNumber: pageNumber, pageSize: pageSize)
+                    .obtainInfo(page: pageNumber, pageSize: pageSize)
                     .publish()
                     .delay(for: 1.5, scheduler: DispatchQueue.main.eraseToAnyScheduler())
                     .eraseToAnyPublisher()
@@ -54,10 +54,10 @@ public struct InteractiveListReducer: Reducer {
             switch action {
             case .pagination(.response(.success(let data))):
                 state.items += IdentifiedArray(
-                    uniqueElements: data.array.map(CellState.init)
+                    uniqueElements: data.array.map(InteractiveListItemState.init)
                 )
             case .addRandomTapped:
-                state.items.insert(CellState(plain: .random()), at: 0)
+                state.items.insert(InteractiveListItemState(plain: .random()), at: 0)
             case .reloadableCell(.response(.failure(let error))):
                 state.alert = AlertState(
                     title: TextState("\(error)"),
@@ -112,7 +112,7 @@ public struct InteractiveListReducer: Reducer {
             return .none
         }
         .forEach(\.items, action: /InteractiveListAction.item) {
-            CellReducer()
+            InteractiveListItemReducer()
         }
     }
 }

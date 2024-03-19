@@ -34,15 +34,13 @@ public final class NumberFactServiceMock: WebService {
 
 extension NumberFactServiceMock: NumberFactService {
     
-    /// Function to perform pagination
-    public func pagination(pageNumber: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>> {
+    public func obtainInfo(page: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>> {
         createCall {
-            
             let pageData: [NumberInfoPlainObject] = .random(count: pageSize)
             let paginationMetadata = PaginationMetadataPlainObject(
                 totalObjectCount: 999_999,
                 pageCount: 999_999,
-                currentPage: pageNumber,
+                currentPage: page,
                 perPage: pageSize
             )
             return .success(PaginatedResponsePlainObject(
@@ -52,13 +50,10 @@ extension NumberFactServiceMock: NumberFactService {
         }
     }
     
-    
-    /// Removes a number information entry with the specified ID from the data store
     public func removeNumber(with id:  NumberInfoPlainObject.ID) {
         try! dao.erase(byPrimaryKey: UniqueID(rawValue: id))
     }
     
-    /// Obtains a list of cached number information entries
     public func readNumberInfo() -> ServiceCall<[NumberInfoPlainObject]?> {
         createCall {
             do {
@@ -70,21 +65,18 @@ extension NumberFactServiceMock: NumberFactService {
         }
     }
     
-    /// Obtains a list of number information entries for the specified count
     public func obtainNumbersInfo(count: Int) -> ServiceCall<[NumberInfoPlainObject]> {
         createCall {
             return .failure(NSError(domain: "incetro.error", code: 404, userInfo: nil))
         }
     }
     
-    /// Obtains a list of number information entries
     public func obtainNumberInfo() -> ServiceCall<[NumberInfoPlainObject]> {
         createCall {
             return .failure(NSError(domain: "incetro.error", code: 404, userInfo: nil))
         }
     }
     
-    /// Obtains a fact related to the specified number
     public func obtainFact(number: Int) -> ServiceCall<String> {
         createCall {
             switch number {

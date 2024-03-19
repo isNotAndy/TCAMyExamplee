@@ -17,14 +17,14 @@ import TCANetworkReducers
 /// all changes to the state and re-render, and we can send all user actions
 /// to the store so that state changes.
 public struct InteractiveListView: View {
-    
+
     // MARK: - Properties
-    
+
     /// The store powering the `InteractiveList` feature
     public let store: StoreOf<InteractiveListReducer>
-    
+
     // MARK: - View
-    
+
     public var body: some View {
         WithViewStore(store) { viewStore in
             ScrollView {
@@ -50,9 +50,9 @@ public struct InteractiveListView: View {
                             state: \.items,
                             action: InteractiveListAction.item
                         ),
-                        content: CellView.init
+                        content: InteractiveListItemView.init
                     )
-                    MEProgressView(
+                    MEPaginationView(
                         store: store.scope(
                             state: \.pagination,
                             action: InteractiveListAction.pagination)

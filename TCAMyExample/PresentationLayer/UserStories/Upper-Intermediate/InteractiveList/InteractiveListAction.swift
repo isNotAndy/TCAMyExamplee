@@ -44,7 +44,7 @@ public enum InteractiveListAction: Equatable, BindableAction {
     /// An action that triggers a specific action on a single item in the list.
     /// The `id` parameter specifies the unique identifier of the item,
     /// and the `action` parameter represents the specific action to be performed on the item.
-    case item(id: CellState.ID, action: CellAction)
+    case item(id: InteractiveListItemState.ID, action: InteractiveListItemAction)
     
     /// Responce of the `NumberFactService` generation method
     case numberFactService(Result<NumberFactServiceAction, NSError>)

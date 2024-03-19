@@ -35,14 +35,13 @@ public final class NumberFactServiceImplementation: WebService {
 
 extension NumberFactServiceImplementation: NumberFactService {
     
-    /// Function to perform pagination
-    public func pagination(pageNumber: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>> {
+    public func obtainInfo(page: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>> {
         createCall {
             let pageData: [NumberInfoPlainObject] = .random(count: pageSize)
             let paginationMetadata = PaginationMetadataPlainObject(
-                totalObjectCount: 999_999,
-                pageCount: 999_999,
-                currentPage: pageNumber,
+                totalObjectCount: Int.max,
+                pageCount: Int.max / pageSize,
+                currentPage: page,
                 perPage: pageSize
             )
             return .success(PaginatedResponsePlainObject(
@@ -52,12 +51,10 @@ extension NumberFactServiceImplementation: NumberFactService {
         }
     }
     
-    /// Removes a number information entry with the specified ID from the data store
     public func removeNumber(with id: NumberInfoPlainObject.ID) {
         try? dao.erase(byPrimaryKey: id)
     }
     
-    /// Obtains a list of number information entries
     public func obtainNumberInfo() -> ServiceCall<[NumberInfoPlainObject]> {
         createCall {
             let result: [NumberInfoPlainObject] = .random()
@@ -65,14 +62,12 @@ extension NumberFactServiceImplementation: NumberFactService {
             if isSuccess {
                 try self.dao.persist(result)
             }
-            /// Generating an error with a 30 percent chance
             return isSuccess
             ? .success(result)
             : .failure(NSError(domain: "Unowned error", code: 303))
         }
     }
     
-    /// Obtains a list of number information entries for the specified count
     public func obtainNumbersInfo(count: Int) -> ServiceCall<[NumberInfoPlainObject]> {
         createCall {
             let result: [NumberInfoPlainObject] = .random(count: count)
@@ -80,14 +75,12 @@ extension NumberFactServiceImplementation: NumberFactService {
             if isSuccess {
                 try self.dao.persist(result)
             }
-            /// Generating an error with a 30 percent chance
             return isSuccess
             ? .success(result)
             : .failure(NSError(domain: "Unowned error", code: 303))
         }
     }
     
-    /// Obtains a fact related to the specified number
     public func obtainFact(number: Int) -> ServiceCall<String> {
         createCall {
             let request = HTTPRequest(
@@ -105,7 +98,6 @@ extension NumberFactServiceImplementation: NumberFactService {
         }
     }
     
-    /// Obtains a list of cached number information entries
     public func readNumberInfo() -> ServiceCall<[NumberInfoPlainObject]?> {
         createCall {
             do {

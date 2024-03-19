@@ -52,6 +52,6 @@ public protocol NumberFactService {
     ///   - pageNumber: The page number.
     ///   - pageSize: The size of each page.
     /// - Returns: A service call for paginated response.
-    func pagination(pageNumber: Int,pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>>
+    func obtainInfo(page: Int, pageSize: Int) -> ServiceCall<PaginatedResponsePlainObject<NumberInfoPlainObject>>
 }
 
