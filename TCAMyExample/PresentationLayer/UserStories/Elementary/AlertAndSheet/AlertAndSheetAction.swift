@@ -2,7 +2,7 @@
 //  AlertAndSheetAction.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 26.02.2024.
+//  Created by Andrey Barsukov on 26.02.2024.
 //
 
 import Foundation

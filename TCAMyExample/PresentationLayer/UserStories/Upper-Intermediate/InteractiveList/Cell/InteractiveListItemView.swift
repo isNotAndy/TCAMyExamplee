@@ -2,7 +2,7 @@
 //  InteractiveListItemView.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 29.02.2024.
+//  Created by Andrey Barsukov on 29.02.2024.
 //
 
 import ComposableArchitecture
@@ -33,7 +33,7 @@ public struct InteractiveListItemView: View {
                     .padding()
                 Text("\(viewStore.number)")
                 Text(viewStore.title)
-                Spacer(minLength: 8)
+                Spacer(minLength: 0)
                 Image(systemName: viewStore.image)
                     .renderingMode(.original)
                 Button(action: {

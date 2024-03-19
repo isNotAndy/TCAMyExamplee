@@ -2,7 +2,7 @@
 //  Int.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 05.03.2024.
+//  Created by Andrey Barsukov on 05.03.2024.
 //
 
 import Foundation

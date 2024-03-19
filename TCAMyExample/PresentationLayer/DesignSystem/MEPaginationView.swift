@@ -2,7 +2,7 @@
 //  MEPaginationView.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 19.03.2024.
+//  Created by Andrey Barsukov on 19.03.2024.
 //
 
 import Foundation
@@ -23,17 +23,17 @@ public struct MEPaginationView<Element: Equatable & Codable, ErrorType: Error & 
     
     public var store: Store<PaginationState<Element>, PaginationAction<Element, ErrorType>>
 
-    // MARK: - PaginationView
+    // MARK: - View
     
     public var body: some View {
         PaginationView(store: store) {
             HStack(spacing: 0) {
-              Spacer()
-                 ProgressView()
-                   .frame(width: 24, height: 24, alignment: .center)
-              Spacer()
+                Spacer(minLength: 0)
+                ProgressView()
+                    .frame(size: 24)
+                Spacer(minLength: 0)
             }
-             .background(Color.red)
+            .background(Color.red)
         }
     }
 }

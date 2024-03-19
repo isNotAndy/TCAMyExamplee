@@ -2,7 +2,7 @@
 //  SimpleOptionalView.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 23.02.2024.
+//  Created by Andrey Barsukov on 23.02.2024.
 //
 
 import ComposableArchitecture

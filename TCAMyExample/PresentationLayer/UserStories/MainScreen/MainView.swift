@@ -2,7 +2,7 @@
 //  MainView.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 19.02.2024.
+//  Created by Andrey Barsukov on 19.02.2024.
 //
 
 import SwiftUI

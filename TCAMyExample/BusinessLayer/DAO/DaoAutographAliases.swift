@@ -2,7 +2,7 @@
 //  DaoAutographAliases.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 07.03.2024.
+//  Created by Andrey Barsukov on 07.03.2024.
 //
 
 import SDAO

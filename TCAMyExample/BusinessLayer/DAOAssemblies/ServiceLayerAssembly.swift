@@ -2,7 +2,7 @@
 //  ServiceLayerAssembly.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 13.03.2024.
+//  Created by Andrey Barsukov on 13.03.2024.
 //
 
 import Foundation

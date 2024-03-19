@@ -2,7 +2,7 @@
 //  File.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 06.03.2024.
+//  Created by Andrey Barsukov on 06.03.2024.
 //
 
 import Foundation

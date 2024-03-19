@@ -2,7 +2,7 @@
 //  SimpleBindingView.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 23.02.2024.
+//  Created by Andrey Barsukov on 23.02.2024.
 //
 
 import ComposableArchitecture
@@ -56,7 +56,7 @@ public struct SimpleBindingView: View {
                 
                 HStack {
                     Text("This counter changes slider's max value")
-                    Spacer()
+                    Spacer(minLength: 0)
                     CounterView(
                         store: store.scope(
                             state: \.counter,
