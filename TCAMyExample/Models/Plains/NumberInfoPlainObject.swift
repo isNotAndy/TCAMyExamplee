@@ -27,7 +27,6 @@ public struct NumberInfoPlainObject: Codable, Equatable, Identifiable, Plain {
 
     /// A descriptive title providing information about the number.
     public let title: String
-
 }
 
 // MARK: - Mock

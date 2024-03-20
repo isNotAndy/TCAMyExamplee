@@ -26,23 +26,21 @@ public struct DoubleCounterView: View {
     
     public var body: some View {
         Form {
-            HStack(spacing: 4) {
+            ControlView {
                 CounterView(
                     store: store.scope(
                         state: \.counter1,
                         action: DoubleCounterAction.counter1
                     )
                 )
-                .buttonStyle(BorderlessButtonStyle())
             }
-            HStack(spacing: 4) {
+            ControlView {
                 CounterView(
                     store: store.scope(
                         state: \.counter2,
                         action: DoubleCounterAction.counter2
                     )
                 )
-                .buttonStyle(BorderlessButtonStyle())
             }
         }
         .padding([.trailing], 8)
@@ -50,7 +48,28 @@ public struct DoubleCounterView: View {
     }
 }
     
+// MARK: - ViewBuilder
 
+private struct ControlView<Content: View>: View {
+    
+    // MARK: - Properties
+
+    let content: Content
+    
+    // MARK: - Initializers
+    
+    public init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content()
+    }
+    
+    // MARK: - View
+    
+    public var body: some View {
+        HStack {
+            content
+        }
+    }
+}
 
 // MARK: - Preview
 

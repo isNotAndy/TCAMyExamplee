@@ -49,6 +49,10 @@ public struct CounterView: View {
 // MARK: - Preview
 
 #Preview {
-    CounterView(store: .init(initialState: CounterState(), 
-                             reducer: CounterReducer()))
+    CounterView(
+        store: Store(
+            initialState: CounterState(),
+            reducer: CounterReducer()
+        )
+    )
 }

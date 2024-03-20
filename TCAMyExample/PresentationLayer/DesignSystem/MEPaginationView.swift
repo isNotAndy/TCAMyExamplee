@@ -27,12 +27,8 @@ public struct MEPaginationView<Element: Equatable & Codable, ErrorType: Error & 
     
     public var body: some View {
         PaginationView(store: store) {
-            HStack(spacing: 0) {
-                Spacer(minLength: 0)
-                ProgressView()
-                    .frame(size: 24)
-                Spacer(minLength: 0)
-            }
+            ProgressView()
+                .pin(placement: .horizontal(.center))
             .background(Color.red)
         }
     }

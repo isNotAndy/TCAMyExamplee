@@ -29,19 +29,17 @@ public struct InteractiveListItemView: View {
             HStack(spacing: 8) {
                 Circle()
                     .fill(Color(hex: viewStore.color))
-                    .frame(width: 20, height: 20)
+                    .frame(size: 20)
                     .padding()
                 Text("\(viewStore.number)")
                 Text(viewStore.title)
                 Spacer(minLength: 0)
                 Image(systemName: viewStore.image)
                     .renderingMode(.original)
-                Button(action: {
+                Button {
                     viewStore.send(.checkBoxToggle)
-                    let impact = UISelectionFeedbackGenerator()
-                    impact.selectionChanged()
-                }
-                ) {
+                    UISelectionFeedbackGenerator().selectionChanged()
+                } label: {
                     Image(
                         systemName: viewStore.isChecked
                         ? "checkmark.square"

@@ -43,7 +43,7 @@ public struct InteractiveListState: Equatable {
     /// Currently inputed text
     @BindingState public var targetArraySizeString = ""
     
-    /// Pagination
+    /// Pagination state instance
     public var pagination: PaginationState<NumberInfoPlainObject>
 }
 

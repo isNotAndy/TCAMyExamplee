@@ -11,17 +11,17 @@ import ComposableArchitecture
 // MARK: - TCAMyExampleApp
 
 @main
-struct TCAMyExampleApp: App {
+public struct TCAMyExampleApp: App {
     
     // MARK: - Initializers
     
-    init() {
+    public init() {
         TCAMyExampleAssembliesCollector.collect()
     }
     
     // MARK: - App
     
-    var body: some Scene {
+    public var body: some Scene {
         WindowGroup {
             MainView()
         }

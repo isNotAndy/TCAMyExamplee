@@ -59,15 +59,12 @@ public struct InteractiveListView: View {
                     )
                 }
             }
-            .alert(store.scope(state: \.alert),
-                   dismiss: .alertDismissed)
-            .navigationBarItems(trailing:
-                                    Button {
+            .alert(store.scope(state: \.alert), dismiss: .alertDismissed)
+            .navigationBarItems(trailing: Button {
                 viewStore.send(.addRandomTapped, animation: .default)
             } label: {
                 Text("Add")
-            }
-            )
+            })
             .onAppear {
                 viewStore.send(.onAppear)
             }

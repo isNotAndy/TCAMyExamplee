@@ -24,7 +24,7 @@ public final class NumberFactServiceMock: WebService {
     // MARK: - Initializers
 
     /// Default initializer
-    init(dao: NumberInfoDAO) {
+    public init(dao: NumberInfoDAO) {
         self.dao = dao
         super.init(baseURL: Constants.Network.apiURL, transport: HTTPTransport())
     }

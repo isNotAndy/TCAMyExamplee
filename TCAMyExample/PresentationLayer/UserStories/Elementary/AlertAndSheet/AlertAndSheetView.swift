@@ -27,22 +27,21 @@ public struct AlertAndSheetView: View {
                     Button("Alert") {
                         viewStore.send(.alertButtonTapped)
                     }
-                    .alert(
-                        store.scope(state: \.alert),
-                        dismiss: .alertDismissed
-                    )
                     Button("Sheet") {
                         viewStore.send(.actionSheetButtonTapped)
-                        
                     }
-                    .confirmationDialog(
-                        store.scope(state: \.actionSheet),
-                        dismiss: .actionSheetDismissed
-                    )
                 }
                 .textCase(nil)
             }
             .navigationTitle("Alert and ActionSheet")
+            .alert(
+                store.scope(state: \.alert),
+                dismiss: .alertDismissed
+            )
+            .confirmationDialog(
+                store.scope(state: \.actionSheet),
+                dismiss: .actionSheetDismissed
+            )
         }
     }
 }

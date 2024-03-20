@@ -55,7 +55,8 @@ public struct HolderOfCountersView: View {
                 NavigationLinkStore(
                     store.scope(
                         state: \.$counter, 
-                        action: HolderOfCountersAction.counter),
+                        action: HolderOfCountersAction.counter
+                    ),
                     onTap: {},
                     destination: CounterView.init,
                     label: {

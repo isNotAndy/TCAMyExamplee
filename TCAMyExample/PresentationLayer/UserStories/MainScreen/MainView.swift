@@ -86,7 +86,7 @@ public struct MainView: View {
                         )
                         .navigationTitle("Holder of Counters")
                     }
-                    NavigationLink {
+                    NavigationLink("Interactive List (API)") {
                         InteractiveListView(
                             store: Store(
                                 initialState: InteractiveListState(defaultCount: 0),
@@ -94,10 +94,6 @@ public struct MainView: View {
                             )
                         )
                         .navigationTitle("Interactive List")
-                    } label: {
-                        HStack {
-                            Text("Interactive List (API)")
-                        }
                     }
                 }
             }

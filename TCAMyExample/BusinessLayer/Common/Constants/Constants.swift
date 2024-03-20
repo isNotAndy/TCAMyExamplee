@@ -11,8 +11,9 @@ import Foundation
 
 public enum Constants {
     
+    // MARK: - Network
+    
     public enum Network {
-        
         static let apiURL = URL(string: "http://numbersapi.com").unsafelyUnwrapped
     }
 }

@@ -23,9 +23,7 @@ public struct SimpleBindingView: View {
         WithViewStore(store) { viewStore in
             List {
                 VStack {
-                    Picker(
-                        "",
-                        selection: viewStore.binding(
+                    Picker("", selection: viewStore.binding(
                             get: \.pickedColor,
                             send: SimpleBindingAction.pickValue
                         )
@@ -54,9 +52,7 @@ public struct SimpleBindingView: View {
                 }
                 .toggleStyle(SwitchToggleStyle(tint: viewStore.pickedColor.color))
                 
-                HStack {
-                    Text("This counter changes slider's max value")
-                    Spacer(minLength: 0)
+                ControlView(title: "This counter changes slider's max value") {
                     CounterView(
                         store: store.scope(
                             state: \.counter,
@@ -68,9 +64,7 @@ public struct SimpleBindingView: View {
                 }
                 .disabled(viewStore.toggleEnabled)
                 
-                HStack {
-                    Text("Slider value: \(Int(viewStore.sliderValue))")
-                    Spacer(minLength: 0)
+                ControlView(title: "Slider value: \(Int(viewStore.sliderValue))") {
                     Slider(
                         value: viewStore.binding(
                             get: \.sliderValue,
@@ -88,6 +82,33 @@ public struct SimpleBindingView: View {
                 }
             }
             .accentColor(viewStore.pickedColor.color)
+        }
+    }
+}
+
+// MARK: - ViewBuilder
+
+private struct ControlView<Content: View>: View {
+    
+    // MARK: - Properties
+    
+    let title: String
+    let content: Content
+    
+    // MARK: - Initializers
+    
+    public init(title: String, @ViewBuilder content: @escaping () -> Content) {
+        self.title = title
+        self.content = content()
+    }
+    
+    // MARK: - View
+    
+    public var body: some View {
+        HStack {
+            Text(title)
+            Spacer(minLength: 0)
+            content
         }
     }
 }

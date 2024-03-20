@@ -35,22 +35,20 @@ public struct SimpleEffectView: View {
                     } label: {
                         HStack(spacing: 4) {
                             Spacer(minLength: 0)
-                            Text("Generate fact")
-                            Text("🔥")
+                            Text("Generate fact 🔥")
                         }
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .plain()
                 }
                 Button {
                     viewStore.send(.randomFactButtonTapped)
                 } label: {
                     HStack(spacing: 4) {
                         Spacer(minLength: 0)
-                        Text("Random fact")
-                        Text("🎲")
+                        Text("Random fact 🎲")
                     }
                 }
-                .buttonStyle(PlainButtonStyle())
+                .plain()
                 HStack(spacing: 4) {
                     Spacer(minLength: 0)
                     if viewStore.isFactRequestInFlight {
@@ -60,7 +58,6 @@ public struct SimpleEffectView: View {
                         Text($0)
                     }
                 }
-                .buttonStyle(PlainButtonStyle())
             }
             .navigationBarTitle("Effect")
         }
@@ -71,6 +68,10 @@ public struct SimpleEffectView: View {
 
 
 #Preview {
-    SimpleEffectView(store: Store(initialState: SimpleEffectState(),
-                                  reducer: SimpleEffectReducer()))
+    SimpleEffectView(
+        store: Store(
+            initialState: SimpleEffectState(),
+            reducer: SimpleEffectReducer()
+        )
+    )
 }

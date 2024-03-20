@@ -18,8 +18,10 @@ public struct SimpleEffectReducer: Reducer {
     // MARK: - Properties
     
     /// NumberFactService instance
-    public let numberFactService = NumberFactServiceImplementation(transport: HTTPTransport(), 
-                                                                   dao: DaoProvider.shared.numberInfoDAO)
+    public let numberFactService = NumberFactServiceImplementation(
+        transport: HTTPTransport(),
+        dao: DaoProvider.shared.numberInfoDAO
+    )
     
     // MARK: - Reducer
     
@@ -44,8 +46,7 @@ public struct SimpleEffectReducer: Reducer {
             case let .numberFactService(.success(.factObtained(fact))):
                 state.isFactRequestInFlight = false
                 state.numberFact = fact
-            case .numberFactService(.failure(let error)):
-                dump(error)
+            case .numberFactService(.failure):
                 state.isFactRequestInFlight = false
             default:
                 break

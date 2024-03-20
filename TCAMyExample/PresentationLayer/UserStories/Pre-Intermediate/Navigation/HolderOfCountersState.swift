@@ -24,7 +24,6 @@ public struct HolderOfCountersState: Equatable {
     /// Total negative clicks on each child counters
     public var totalNegativeClicks = 0
     
-    
     // MARK: - Children
     
     /// `CounterState` instance

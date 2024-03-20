@@ -25,7 +25,6 @@ public struct SimpleOptionalView: View {
                 Button("Toggle") {
                     viewStore.send(.toggleOptional)
                 }
-                
                 IfLetStore(
                     store.scope(
                         state: \.counter,
@@ -40,7 +39,7 @@ public struct SimpleOptionalView: View {
                 .padding(.bottom, 8)
                 .padding(.top, 8)
             }
-            .animation(.bouncy(duration: 0.1))
+            .animation(.bouncy(duration: 0.1), value: viewStore.counter)
         }
     }
 }
