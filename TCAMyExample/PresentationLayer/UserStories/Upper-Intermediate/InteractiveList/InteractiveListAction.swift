@@ -40,6 +40,12 @@ public enum InteractiveListAction: Equatable, BindableAction {
     /// The `IndexSet` parameter specifies the indices of the items to be deleted.
     case deleteItemTapped(IndexSet)
     
+    /// An action that calls when user taps on the `dismiss` button on the alert
+    case alertDismissed
+    
+    /// Button was pressed
+    case buttonPressed
+    
     // MARK: - Children
     
     /// An action that triggers a specific action on a single item in the list.
@@ -51,12 +57,6 @@ public enum InteractiveListAction: Equatable, BindableAction {
     
     /// Responce of the `NumberFactService` generation method
     case numberFactService(Result<NumberFactServiceAction, NSError>)
-    
-    /// An action that calls when user taps on the `dismiss` button on the alert
-    case alertDismissed
-    
-    /// Button was pressed
-    case buttonPressed
     
     // MARK: - Reloadable
     

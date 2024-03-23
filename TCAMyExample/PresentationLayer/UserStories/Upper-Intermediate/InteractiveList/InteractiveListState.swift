@@ -19,12 +19,6 @@ public struct InteractiveListState: Equatable {
     
     // MARK: - Properties
     
-    /// An array of items representing the data to be displayed in the interactive list.
-    ///
-    /// The `items` property is of type `IdentifiedArrayOf<CellState>`, where `CellState` is a type
-    /// describing the state of individual cells in the interactive list.
-    public var items = IdentifiedArrayOf<InteractiveListItemState>()
-    
     /// Title of element in `items`
     public var title: String = ""
     
@@ -34,18 +28,32 @@ public struct InteractiveListState: Equatable {
     /// True if controls can be touched
     public var toggle = false
     
+    /// Currently inputed text
+    @BindingState public var targetArraySizeString = ""
+    
+    // MARK: - Children
+    
+    /// An array of items representing the data to be displayed in the interactive list.
+    ///
+    /// The `items` property is of type `IdentifiedArrayOf<CellState>`, where `CellState` is a type
+    /// describing the state of individual cells in the interactive list.
+    public var items = IdentifiedArrayOf<InteractiveListItemState>()
+    
     /// Currently displaying alert
     public var alert: AlertState<InteractiveListAction>?
+    
+    // MARK: - Relodable
     
     /// ReloadableState instace for network operations
     public var reloadableNumbersInfo: IDReloadableState<[NumberInfoPlainObject], Int, NumberFactServiceError>
     
-    /// Currently inputed text
-    @BindingState public var targetArraySizeString = ""
+    // MARK: - Pagination
     
     /// Pagination state instance
     public var pagination: PaginationState<NumberInfoPlainObject>
 }
+
+// MARK: - Initializers
 
 extension InteractiveListState {
     
@@ -53,6 +61,6 @@ extension InteractiveListState {
     
     public init(defaultCount: Int) {
         reloadableNumbersInfo = IDReloadableState(id: defaultCount)
-        pagination = PaginationState(pageSize: 30)
+        pagination = PaginationState(pageSize: AppConstants.Pagination.pageSize)
     }
 }

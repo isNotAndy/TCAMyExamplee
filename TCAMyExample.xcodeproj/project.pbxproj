@@ -15,7 +15,6 @@
 		FB15E9EB2B8780B900F01DE2 /* SimpleEffectReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */; };
 		FB15E9ED2B8780D900F01DE2 /* SimpleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */; };
 		FB1A61052B91D153000930DF /* ServiceCore in Frameworks */ = {isa = PBXBuildFile; productRef = FB1A61042B91D153000930DF /* ServiceCore */; };
-		FB1A61082B91D844000930DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1A61072B91D844000930DF /* Constants.swift */; };
 		FB25D36D2B91C2BE0059D827 /* HTTPTransport in Frameworks */ = {isa = PBXBuildFile; productRef = FB25D36C2B91C2BE0059D827 /* HTTPTransport */; };
 		FB3EEB672B8D1DC00092DDB2 /* AlertAndSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */; };
 		FB3EEB692B8D1DE30092DDB2 /* AlertAndSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */; };
@@ -58,12 +57,12 @@
 		FB9D9ECE2BA9A4D400EFE983 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ECD2BA9A4D400EFE983 /* View.swift */; };
 		FB9D9ED22BAEE25700EFE983 /* PinToEdgeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ED12BAEE25700EFE983 /* PinToEdgeModifier.swift */; };
 		FB9D9ED42BAEE32000EFE983 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ED32BAEE32000EFE983 /* ButtonStyles.swift */; };
+		FB9D9ED82BAF1A7300EFE983 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ED72BAF1A7300EFE983 /* AppConstants.swift */; };
 		FBA26FE42B98834F00C1555E /* NumberFactServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */; };
 		FBA26FEC2B99AF1200C1555E /* SDAO in Frameworks */ = {isa = PBXBuildFile; productRef = FBA26FEB2B99AF1200C1555E /* SDAO */; };
 		FBA26FEF2B99B1B200C1555E /* NumberInfoModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FEE2B99B1B200C1555E /* NumberInfoModelObject.swift */; };
 		FBA26FF32B99B32300C1555E /* NumberInfoTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FF22B99B32300C1555E /* NumberInfoTranslator.swift */; };
 		FBA26FF52B99BF6B00C1555E /* DaoAutographAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FF42B99BF6B00C1555E /* DaoAutographAliases.swift */; };
-		FBA26FF82B99C6C000C1555E /* realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FF72B99C6C000C1555E /* realm.swift */; };
 		FBAFDE3F2B97112A0096276E /* TCANetworkReducers in Frameworks */ = {isa = PBXBuildFile; productRef = FBAFDE3E2B97112A0096276E /* TCANetworkReducers */; };
 		FBAFDE412B97172A0096276E /* NumberInfoPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */; };
 		FBAFDE432B9724F50096276E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFDE422B9724F50096276E /* Int.swift */; };
@@ -90,7 +89,6 @@
 		FB15E9E82B8780AB00F01DE2 /* SimpleEffectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectAction.swift; sourceTree = "<group>"; };
 		FB15E9EA2B8780B900F01DE2 /* SimpleEffectReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectReducer.swift; sourceTree = "<group>"; };
 		FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEffectView.swift; sourceTree = "<group>"; };
-		FB1A61072B91D844000930DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB3EEB662B8D1DC00092DDB2 /* AlertAndSheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetState.swift; sourceTree = "<group>"; };
 		FB3EEB682B8D1DE30092DDB2 /* AlertAndSheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetAction.swift; sourceTree = "<group>"; };
 		FB3EEB6A2B8D1E0F0092DDB2 /* AlertAndSheetReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetReducer.swift; sourceTree = "<group>"; };
@@ -130,11 +128,11 @@
 		FB9D9ECD2BA9A4D400EFE983 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		FB9D9ED12BAEE25700EFE983 /* PinToEdgeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinToEdgeModifier.swift; sourceTree = "<group>"; };
 		FB9D9ED32BAEE32000EFE983 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		FB9D9ED72BAF1A7300EFE983 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactServiceMock.swift; sourceTree = "<group>"; };
 		FBA26FEE2B99B1B200C1555E /* NumberInfoModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInfoModelObject.swift; sourceTree = "<group>"; };
 		FBA26FF22B99B32300C1555E /* NumberInfoTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInfoTranslator.swift; sourceTree = "<group>"; };
 		FBA26FF42B99BF6B00C1555E /* DaoAutographAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoAutographAliases.swift; sourceTree = "<group>"; };
-		FBA26FF72B99C6C000C1555E /* realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realm.swift; sourceTree = "<group>"; };
 		FBAFDE402B97172A0096276E /* NumberInfoPlainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInfoPlainObject.swift; sourceTree = "<group>"; };
 		FBAFDE422B9724F50096276E /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		FBC1D20E2BA1BD2600A1C8DC /* AssembliesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesHolder.swift; sourceTree = "<group>"; };
@@ -172,9 +170,8 @@
 		FB0056182B8788C900BE7E12 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D2172BA1C2B600A1C8DC /* DAOAssemblies */,
+				FB9D9ED92BAF1CC900EFE983 /* Assemblies */,
 				FBA26FED2B99B17500C1555E /* DAO */,
-				FB1A61062B91D825000930DF /* Common */,
 				FB0056192B8788FE00BE7E12 /* NumberFactService */,
 			);
 			path = BusinessLayer;
@@ -183,7 +180,7 @@
 		FB0056192B8788FE00BE7E12 /* NumberFactService */ = {
 			isa = PBXGroup;
 			children = (
-				FBA26FE92B98844600C1555E /* Implementation */,
+				FBA26FE92B98844600C1555E /* Concrete */,
 				FBA26FE82B98843B00C1555E /* Protocol */,
 			);
 			path = NumberFactService;
@@ -206,22 +203,6 @@
 				FB15E9EC2B8780D900F01DE2 /* SimpleEffectView.swift */,
 			);
 			path = SimpleEffect;
-			sourceTree = "<group>";
-		};
-		FB1A61062B91D825000930DF /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				FB1A61092B91D846000930DF /* Constants */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		FB1A61092B91D846000930DF /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				FB1A61072B91D844000930DF /* Constants.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		FB3EEB652B8D1D100092DDB2 /* AlertAndSheet */ = {
@@ -377,6 +358,33 @@
 			path = Concrete;
 			sourceTree = "<group>";
 		};
+		FB9D9ED52BAF1A3300EFE983 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FB9D9ED62BAF1A3E00EFE983 /* AppConstants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB9D9ED62BAF1A3E00EFE983 /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				FB9D9ED72BAF1A7300EFE983 /* AppConstants.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		FB9D9ED92BAF1CC900EFE983 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				FBC1D2182BA1C33500A1C8DC /* DAOAssembly.swift */,
+				FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */,
+				FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */,
+				FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
 		FBA26FE52B98840D00C1555E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,20 +410,19 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		FBA26FE92B98844600C1555E /* Implementation */ = {
+		FBA26FE92B98844600C1555E /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
 				FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */,
 				FB00561B2B87891C00BE7E12 /* NumberFactServiceImplementation.swift */,
 			);
-			path = Implementation;
+			path = Concrete;
 			sourceTree = "<group>";
 		};
 		FBA26FED2B99B17500C1555E /* DAO */ = {
 			isa = PBXGroup;
 			children = (
 				FBA26FF42B99BF6B00C1555E /* DaoAutographAliases.swift */,
-				FBA26FF72B99C6C000C1555E /* realm.swift */,
 				FBA26FF12B99B30400C1555E /* Translators */,
 			);
 			path = DAO;
@@ -464,17 +471,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		FBC1D2172BA1C2B600A1C8DC /* DAOAssemblies */ = {
-			isa = PBXGroup;
-			children = (
-				FBC1D2182BA1C33500A1C8DC /* DAOAssembly.swift */,
-				FBC1D21E2BA1D2BF00A1C8DC /* ServiceLayerAssembly.swift */,
-				FBC1D2212BA1DBF700A1C8DC /* TranslatorsAssembly.swift */,
-				FBC1D21B2BA1CECF00A1C8DC /* InfrastructureAssembly.swift */,
-			);
-			path = DAOAssemblies;
-			sourceTree = "<group>";
-		};
 		FBC1D2272BA82DDE00A1C8DC /* PropertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +482,7 @@
 		FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FB9D9ED52BAF1A3300EFE983 /* Common */,
 				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
 				FBC1D2092BA1BC2B00A1C8DC /* AssembliesCollectors */,
 			);
@@ -674,7 +671,6 @@
 				FB9503542B906CCA008A23E5 /* InteractiveListItemAction.swift in Sources */,
 				FB9D9ED42BAEE32000EFE983 /* ButtonStyles.swift in Sources */,
 				FBAFDE432B9724F50096276E /* Int.swift in Sources */,
-				FBA26FF82B99C6C000C1555E /* realm.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
 				FBC1D2222BA1DBF700A1C8DC /* TranslatorsAssembly.swift in Sources */,
 				FBFDECAB2B851EB2004C5101 /* DoubleCounterReducer.swift in Sources */,
@@ -682,7 +678,6 @@
 				FBA26FEF2B99B1B200C1555E /* NumberInfoModelObject.swift in Sources */,
 				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
 				FB9D9ED22BAEE25700EFE983 /* PinToEdgeModifier.swift in Sources */,
-				FB1A61082B91D844000930DF /* Constants.swift in Sources */,
 				FB95035C2B906D10008A23E5 /* InteractiveListAction.swift in Sources */,
 				FB95034E2B8F35B1008A23E5 /* HolderOfCountersView.swift in Sources */,
 				FB9503562B906CD6008A23E5 /* InteractiveListItemReducer.swift in Sources */,
@@ -713,6 +708,7 @@
 				FBC1D2322BA97A4F00A1C8DC /* MEPaginationView.swift in Sources */,
 				FB00561C2B87891C00BE7E12 /* NumberFactServiceImplementation.swift in Sources */,
 				FBA26FF52B99BF6B00C1555E /* DaoAutographAliases.swift in Sources */,
+				FB9D9ED82BAF1A7300EFE983 /* AppConstants.swift in Sources */,
 				FB4814E32B8739410068D161 /* CounterAction .swift in Sources */,
 				FB4814E52B873DF00068D161 /* DoubleCounterState.swift in Sources */,
 				FB95034C2B8F3226008A23E5 /* HolderOfCountersReducer.swift in Sources */,
@@ -861,7 +857,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TCAMyExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -894,7 +889,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TCAMyExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 6HH4TBW24N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

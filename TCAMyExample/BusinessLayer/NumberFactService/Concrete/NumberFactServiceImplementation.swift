@@ -27,7 +27,7 @@ public final class NumberFactServiceImplementation: WebService {
     /// - Parameter session: URLSession instance
     public init(transport: HTTPTransport, dao: NumberInfoDAO) {
         self.dao = dao
-        super.init(baseURL: Constants.Network.apiURL, transport: transport)
+        super.init(baseURL: AppConstants.Network.apiURL, transport: transport)
     }
 }
 

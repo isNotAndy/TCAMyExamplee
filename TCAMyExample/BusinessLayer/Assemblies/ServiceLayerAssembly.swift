@@ -17,6 +17,9 @@ public final class ServiceLayerAssembly: CollectableAssembly {
     
     func assemble(inContainer container: Container) {
         
+        container.register(HTTPTransport.self) { resolver in
+            HTTPTransport()
+        }
         container.register(NumberFactService.self) { resolver in
             let numberInfoDAO = container.resolve(NumberInfoDAO.self).unsafelyUnwrapped
             let transport = container.resolve(HTTPTransport.self).unsafelyUnwrapped
@@ -25,9 +28,6 @@ public final class ServiceLayerAssembly: CollectableAssembly {
                 dao: numberInfoDAO
             )
             return numberFactServiceImplementation
-        }
-        container.register(HTTPTransport.self) { resolver in
-            HTTPTransport()
         }
     }
 }
