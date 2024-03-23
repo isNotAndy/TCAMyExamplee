@@ -28,7 +28,6 @@
 		FB4814EA2B8747400068D161 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FB4814E92B8747400068D161 /* ComposableArchitecture */; };
 		FB567F612B82312000FA3D3E /* TCAMyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */; };
 		FB567F652B82312100FA3D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F642B82312100FA3D3E /* Assets.xcassets */; };
-		FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB567F672B82312100FA3D3E /* Preview Assets.xcassets */; };
 		FB567F732B8232CB00FA3D3E /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F722B8232CB00FA3D3E /* CounterReducer.swift */; };
 		FB567F752B823C2500FA3D3E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB567F742B823C2500FA3D3E /* CounterView.swift */; };
 		FB5A4CBF2B8892E7001F98AA /* SimpleOptionalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A4CBE2B8892E7001F98AA /* SimpleOptionalState.swift */; };
@@ -57,6 +56,8 @@
 		FB9503602B906D26008A23E5 /* InteractiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95035F2B906D26008A23E5 /* InteractiveListView.swift */; };
 		FB9503642B9075FC008A23E5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9503632B9075FC008A23E5 /* String.swift */; };
 		FB9D9ECE2BA9A4D400EFE983 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ECD2BA9A4D400EFE983 /* View.swift */; };
+		FB9D9ED22BAEE25700EFE983 /* PinToEdgeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ED12BAEE25700EFE983 /* PinToEdgeModifier.swift */; };
+		FB9D9ED42BAEE32000EFE983 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D9ED32BAEE32000EFE983 /* ButtonStyles.swift */; };
 		FBA26FE42B98834F00C1555E /* NumberFactServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */; };
 		FBA26FEC2B99AF1200C1555E /* SDAO in Frameworks */ = {isa = PBXBuildFile; productRef = FBA26FEB2B99AF1200C1555E /* SDAO */; };
 		FBA26FEF2B99B1B200C1555E /* NumberInfoModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26FEE2B99B1B200C1555E /* NumberInfoModelObject.swift */; };
@@ -101,7 +102,6 @@
 		FB567F5D2B82312000FA3D3E /* TCAMyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAMyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMyExampleApp.swift; sourceTree = "<group>"; };
 		FB567F642B82312100FA3D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB567F672B82312100FA3D3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB567F722B8232CB00FA3D3E /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		FB567F742B823C2500FA3D3E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		FB5A4CBE2B8892E7001F98AA /* SimpleOptionalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionalState.swift; sourceTree = "<group>"; };
@@ -128,6 +128,8 @@
 		FB95035F2B906D26008A23E5 /* InteractiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveListView.swift; sourceTree = "<group>"; };
 		FB9503632B9075FC008A23E5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FB9D9ECD2BA9A4D400EFE983 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FB9D9ED12BAEE25700EFE983 /* PinToEdgeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinToEdgeModifier.swift; sourceTree = "<group>"; };
+		FB9D9ED32BAEE32000EFE983 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		FBA26FE32B98834F00C1555E /* NumberFactServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactServiceMock.swift; sourceTree = "<group>"; };
 		FBA26FEE2B99B1B200C1555E /* NumberInfoModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInfoModelObject.swift; sourceTree = "<group>"; };
 		FBA26FF22B99B32300C1555E /* NumberInfoTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInfoTranslator.swift; sourceTree = "<group>"; };
@@ -253,24 +255,14 @@
 			isa = PBXGroup;
 			children = (
 				FB00561F2B879DF400BE7E12 /* Info.plist */,
+				FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */,
 				FB567F6E2B82317400FA3D3E /* PresentationLayer */,
 				FB0056182B8788C900BE7E12 /* BusinessLayer */,
 				FBA26FE52B98840D00C1555E /* Models */,
 				FB9503612B9075DA008A23E5 /* CoreLayer */,
-				FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */,
-				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
-				FB567F642B82312100FA3D3E /* Assets.xcassets */,
-				FB567F662B82312100FA3D3E /* Preview Content */,
+				FB9D9ECF2BAEDD6A00EFE983 /* Resourses */,
 			);
 			path = TCAMyExample;
-			sourceTree = "<group>";
-		};
-		FB567F662B82312100FA3D3E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FB567F672B82312100FA3D3E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		FB567F6E2B82317400FA3D3E /* PresentationLayer */ = {
@@ -323,12 +315,12 @@
 				FB95035B2B906D10008A23E5 /* InteractiveListAction.swift */,
 				FB95035D2B906D1B008A23E5 /* InteractiveListReducer.swift */,
 				FB95035F2B906D26008A23E5 /* InteractiveListView.swift */,
-				FB9503502B906CA8008A23E5 /* Cell */,
+				FB9503502B906CA8008A23E5 /* InteractiveListItem */,
 			);
 			path = InteractiveList;
 			sourceTree = "<group>";
 		};
-		FB9503502B906CA8008A23E5 /* Cell */ = {
+		FB9503502B906CA8008A23E5 /* InteractiveListItem */ = {
 			isa = PBXGroup;
 			children = (
 				FB9503512B906CBF008A23E5 /* InteractiveListItemState.swift */,
@@ -336,7 +328,7 @@
 				FB9503552B906CD6008A23E5 /* InteractiveListItemReducer.swift */,
 				FB9503572B906CE4008A23E5 /* InteractiveListItemView.swift */,
 			);
-			path = Cell;
+			path = InteractiveListItem;
 			sourceTree = "<group>";
 		};
 		FB9503612B9075DA008A23E5 /* CoreLayer */ = {
@@ -363,8 +355,26 @@
 			isa = PBXGroup;
 			children = (
 				FB9D9ECD2BA9A4D400EFE983 /* View.swift */,
+				FB9D9ED12BAEE25700EFE983 /* PinToEdgeModifier.swift */,
+				FB9D9ED32BAEE32000EFE983 /* ButtonStyles.swift */,
 			);
 			path = ViewModifires;
+			sourceTree = "<group>";
+		};
+		FB9D9ECF2BAEDD6A00EFE983 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				FB567F642B82312100FA3D3E /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		FB9D9ED02BAEDE0500EFE983 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				FBC1D20A2BA1BC9F00A1C8DC /* TCAMyExampleAssembliesCollector */,
+			);
+			path = Concrete;
 			sourceTree = "<group>";
 		};
 		FBA26FE52B98840D00C1555E /* Models */ = {
@@ -419,13 +429,13 @@
 			path = Translators;
 			sourceTree = "<group>";
 		};
-		FBC1D2092BA1BC2B00A1C8DC /* Swinject */ = {
+		FBC1D2092BA1BC2B00A1C8DC /* AssembliesCollectors */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D20A2BA1BC9F00A1C8DC /* TCAMyExampleAssembliesCollector */,
+				FB9D9ED02BAEDE0500EFE983 /* Concrete */,
 				FBC1D2122BA1BD6B00A1C8DC /* Protocols */,
 			);
-			path = Swinject;
+			path = AssembliesCollectors;
 			sourceTree = "<group>";
 		};
 		FBC1D20A2BA1BC9F00A1C8DC /* TCAMyExampleAssembliesCollector */ = {
@@ -476,7 +486,8 @@
 		FBC1D22C2BA83C0700A1C8DC /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FBC1D2092BA1BC2B00A1C8DC /* Swinject */,
+				FB567F602B82312000FA3D3E /* TCAMyExampleApp.swift */,
+				FBC1D2092BA1BC2B00A1C8DC /* AssembliesCollectors */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -642,7 +653,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB567F682B82312100FA3D3E /* Preview Assets.xcassets in Resources */,
 				FB567F652B82312100FA3D3E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +672,7 @@
 				FB5A4CC12B8892F7001F98AA /* SimpleOptionalAction.swift in Sources */,
 				FBC1D21C2BA1CECF00A1C8DC /* InfrastructureAssembly.swift in Sources */,
 				FB9503542B906CCA008A23E5 /* InteractiveListItemAction.swift in Sources */,
+				FB9D9ED42BAEE32000EFE983 /* ButtonStyles.swift in Sources */,
 				FBAFDE432B9724F50096276E /* Int.swift in Sources */,
 				FBA26FF82B99C6C000C1555E /* realm.swift in Sources */,
 				FB4814E72B873EE30068D161 /* DoubleCounterActon.swift in Sources */,
@@ -670,6 +681,7 @@
 				FB9503582B906CE4008A23E5 /* InteractiveListItemView.swift in Sources */,
 				FBA26FEF2B99B1B200C1555E /* NumberInfoModelObject.swift in Sources */,
 				FB15E9E62B87808F00F01DE2 /* SimpleEffectState.swift in Sources */,
+				FB9D9ED22BAEE25700EFE983 /* PinToEdgeModifier.swift in Sources */,
 				FB1A61082B91D844000930DF /* Constants.swift in Sources */,
 				FB95035C2B906D10008A23E5 /* InteractiveListAction.swift in Sources */,
 				FB95034E2B8F35B1008A23E5 /* HolderOfCountersView.swift in Sources */,

@@ -25,10 +25,10 @@ public struct InteractiveListState: Equatable {
     /// describing the state of individual cells in the interactive list.
     public var items = IdentifiedArrayOf<InteractiveListItemState>()
     
-    /// title of element in `items`
+    /// Title of element in `items`
     public var title: String = ""
     
-    /// number of element in `items`
+    /// Number of element in `items`
     public var number: Int = 0
     
     /// True if controls can be touched
@@ -48,6 +48,8 @@ public struct InteractiveListState: Equatable {
 }
 
 extension InteractiveListState {
+    
+    // MARK: - Initializers
     
     public init(defaultCount: Int) {
         reloadableNumbersInfo = IDReloadableState(id: defaultCount)

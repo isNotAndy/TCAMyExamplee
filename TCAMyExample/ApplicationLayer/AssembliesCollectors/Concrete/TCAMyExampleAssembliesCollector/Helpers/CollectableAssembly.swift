@@ -11,6 +11,8 @@ import Swinject
 
 protocol CollectableAssembly {
 
+    // MARK: - Initializers
+    
     init()
 
     /// Method for registering your assemblies

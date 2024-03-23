@@ -30,14 +30,14 @@ public struct InteractiveListItemState: Identifiable, Equatable {
     /// Hex name
     public let color: String
     
-    /// number value
+    /// Number value
     public let number: Int
     
     /// True if current item is checked
     public var isChecked = false
 }
 
-// MARK: - Initializer
+// MARK: - Initializers
 
 extension InteractiveListItemState {
     

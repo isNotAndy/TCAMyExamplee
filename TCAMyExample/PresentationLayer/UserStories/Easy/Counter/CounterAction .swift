@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 /// All available `CounterAction` module actions.
 ///
 /// It's a type that represents all of the actions that can happen in `CounterAction` feature,

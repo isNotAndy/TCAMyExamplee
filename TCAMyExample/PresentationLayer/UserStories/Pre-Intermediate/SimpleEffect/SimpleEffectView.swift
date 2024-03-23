@@ -19,7 +19,6 @@ public struct SimpleEffectView: View {
     
     // MARK: - View
     
-    
     public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
@@ -65,7 +64,6 @@ public struct SimpleEffectView: View {
 }
 
 // MARK: - Constants
-
 
 #Preview {
     SimpleEffectView(

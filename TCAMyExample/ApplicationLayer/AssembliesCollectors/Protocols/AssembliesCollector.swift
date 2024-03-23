@@ -16,6 +16,8 @@ private let collectToken = "com.incetro.TCAMyExample.Collector"
 
 protocol AssembliesCollector {
 
+    // MARK: - Initializers
+    
     init()
 
     /// Collect all Application assemblies in container
@@ -34,7 +36,7 @@ extension AssembliesCollector {
         }
     }
 
-    // Collect all Application assemblies
+    /// Collect all Application assemblies
     static func collect() {
         Self().collect()
     }

@@ -9,7 +9,6 @@ import Foundation
 import TCANetworkReducers
 import ComposableArchitecture
 
-
 // MARK: - InteractiveListAction
 
 /// All available `InteractiveList` module actions.
@@ -38,13 +37,17 @@ public enum InteractiveListAction: Equatable, BindableAction {
     case removeCheckedItems
     
     /// An action that triggers the deletion of one or more items from the list.
-    ///  The `IndexSet` parameter specifies the indices of the items to be deleted.
+    /// The `IndexSet` parameter specifies the indices of the items to be deleted.
     case deleteItemTapped(IndexSet)
+    
+    // MARK: - Children
     
     /// An action that triggers a specific action on a single item in the list.
     /// The `id` parameter specifies the unique identifier of the item,
     /// and the `action` parameter represents the specific action to be performed on the item.
     case item(id: InteractiveListItemState.ID, action: InteractiveListItemAction)
+    
+    // MARK: - Service
     
     /// Responce of the `NumberFactService` generation method
     case numberFactService(Result<NumberFactServiceAction, NSError>)
@@ -52,7 +55,7 @@ public enum InteractiveListAction: Equatable, BindableAction {
     /// An action that calls when user taps on the `dismiss` button on the alert
     case alertDismissed
     
-    /// button was pressed
+    /// Button was pressed
     case buttonPressed
     
     // MARK: - Reloadable
