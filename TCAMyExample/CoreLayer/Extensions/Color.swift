@@ -2,7 +2,7 @@
 //  Color.swift
 //  TCAMyExample
 //
-//  Created by Андрей Барсуков on 12.03.2024.
+//  Created by Andrey Barsukov on 12.03.2024.
 //
 
 import Foundation
