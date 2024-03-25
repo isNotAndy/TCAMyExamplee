@@ -28,7 +28,7 @@ public struct MEPaginationView<Element: Equatable & Codable, ErrorType: Error & 
     public var body: some View {
         PaginationView(store: store) {
             ProgressView()
-                .pinToEdge(placement: .horizontal(.center))
+                .pinTo(edge: .horizontal(.center))
             .background(Color.red)
         }
     }

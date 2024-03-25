@@ -12,8 +12,8 @@ import SwiftUI
 
 extension View {
     
-    public func pinToEdge(placement: PinToEdgeModifier.Placement) -> some View {
-        modifier(PinToEdgeModifier(placement: placement))
+    public func pinTo(edge: PinToEdgeModifier.Placement) -> some View {
+        modifier(PinToEdgeModifier(placement: edge))
     }
 }
 
@@ -72,14 +72,14 @@ public struct PinToEdgeModifier: ViewModifier {
         case .top(let aligment):
             VStack(spacing: 0) {
                 content
-                    .pinToEdge(placement: .horizontal(aligment))
+                    .pinTo(edge: .horizontal(aligment))
                 Spacer(minLength: 0)
             }
         case .bottom(let aligment):
             VStack(spacing: 0) {
                 Spacer(minLength: 0)
                 content
-                    .pinToEdge(placement: .horizontal(aligment))
+                    .pinTo(edge: .horizontal(aligment))
             }
         }
     }
